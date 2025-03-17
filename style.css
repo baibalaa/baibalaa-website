@@ -1,3 +1,4 @@
+/* Base styles for larger screens */
 body {
     font-family: Arial, sans-serif;
     background-color: #121212;
@@ -38,8 +39,69 @@ table {
     border-collapse: collapse;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 th, td {
     border: 1px solid gold;
     padding: 10px;
     text-align: center;
+}
+
+/* Responsive Design */
+
+/* For smaller screens (tablets and phones) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+
+    article, .player, .video {
+        width: 90%; /* Increase width on smaller screens */
+        margin: 10px;
+        padding: 10px;
+    }
+
+    table {
+        width: 100%; /* Table takes up the full width */
+    }
+
+    th, td {
+        font-size: 12px; /* Smaller text size for tables */
+        padding: 8px;
+    }
+
+    header h1 {
+        font-size: 22px; /* Adjust header font size */
+    }
+}
+
+/* For very small screens (mobile phones) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px; /* Smaller header on mobile */
+    }
+
+    nav a {
+        font-size: 14px; /* Smaller text for links */
+    }
+
+    article h2 {
+        font-size: 18px; /* Reduce font size for article titles */
+    }
+
+    article p {
+        font-size: 14px; /* Smaller text for paragraphs */
+    }
+
+    table th, table td {
+        padding: 5px; /* Less padding in tables on mobile */
+    }
 }
