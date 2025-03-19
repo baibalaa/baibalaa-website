@@ -50,6 +50,10 @@ th, td {
     text-align: center;
 }
 
+.justified {
+    text-align: justify;
+}
+
 /* Responsive Design */
 
 /* For smaller screens (tablets and phones) */
