@@ -32,6 +32,20 @@ article, .player, .video {
     border-radius: 10px;
     width: 80%;
 }
+/* Apply styling only to sections inside the home page */
+#index section {
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%; /* Makes it consistent with other pages */
+    max-width: 1000px; /* Limits excessive widening on large screens */
+}
+
+/* Ensure text blocks inside sections are also limited for readability */
+#index section p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 
 table {
     width: 80%;
@@ -49,6 +63,7 @@ th, td {
     padding: 10px;
     text-align: center;
 }
+
 
 .justified {
     text-align: justify;
