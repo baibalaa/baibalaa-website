@@ -126,31 +126,34 @@ footer {
 /* YouTube Link Styling */
 .youtube-link {
     margin-top: 10px;
+    text-align: center;  /* Center the logo */
 }
 
 .youtube-link a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+    display: inline-block;
 }
 
 .youtube-link img {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-    filter: brightness(0) invert(1); /* Makes icon white */
+    width: 70px;  /* Set a larger width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    transition: 0.3s;
 }
 
-.youtube-link a:hover {
-    color: red;
+/* Make the logo responsive for different screen sizes */
+@media (max-width: 768px) {
+    .youtube-link img {
+        width: 60px;  /* Slightly smaller size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .youtube-link img {
+        width: 50px;  /* Smaller size for mobile devices */
+    }
 }
 
 .youtube-link img:hover {
-    filter: brightness(0) invert(0.7);
+    opacity: 0.8; /* Slightly fade the logo on hover */
 }
 
 
