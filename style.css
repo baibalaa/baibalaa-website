@@ -69,6 +69,91 @@ th, td {
     text-align: justify;
 }
 
+/* Footer Styling */
+footer {
+    background-color: #0a0a0a;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: gold;
+}
+
+.footer-bottom {
+    border-top: 1px solid gold;
+    padding-top: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* YouTube Link Styling */
+.youtube-link {
+    margin-top: 10px;
+}
+
+.youtube-link a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.youtube-link img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    filter: brightness(0) invert(1); /* Makes icon white */
+}
+
+.youtube-link a:hover {
+    color: red;
+}
+
+.youtube-link img:hover {
+    filter: brightness(0) invert(0.7);
+}
+
+
 /* Responsive Design */
 
 /* For smaller screens (tablets and phones) */
