@@ -5,32 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baibalaa Tournament 1446</title>
     <link rel="stylesheet" href="style.css">
+    <!-- JavaScript for Toggle Functionality -->
     <script>
-        function toggleSections(value) {
-            // Get all sections
-            let teamsSection = document.getElementById("teams-section");
-            let fixturesResultsSection = document.getElementById("fixtures-results-section");
-            let honorsSection = document.getElementById("honors-section");
+        // Toggle visibility of sections based on selected radio button
+        function toggleSections() {
+            let all = document.getElementById("all").checked;
+            let teams = document.getElementById("teams").checked;
+            let fixtures = document.getElementById("fixtures").checked;
+            let honors = document.getElementById("honors").checked;
 
-            // Show/hide based on selection
-            if (value === "all") {
-                teamsSection.style.display = "block";
-                fixturesResultsSection.style.display = "block";
-                honorsSection.style.display = "block";
-            } else if (value === "teams") {
-                teamsSection.style.display = "block";
-                fixturesResultsSection.style.display = "none";
-                honorsSection.style.display = "none";
-            } else if (value === "fixtures-results") {
-                teamsSection.style.display = "none";
-                fixturesResultsSection.style.display = "block";
-                honorsSection.style.display = "none";
-            } else if (value === "honors") {
-                teamsSection.style.display = "none";
-                fixturesResultsSection.style.display = "none";
-                honorsSection.style.display = "block";
-            }
+            // Toggle sections based on selection
+            document.getElementById("teams-section").style.display = (all || teams) ? "block" : "none";
+            document.getElementById("fixtures-section").style.display = (all || fixtures) ? "block" : "none";
+            document.getElementById("honors-section").style.display = (all || honors) ? "block" : "none";
         }
+
+        // Attach event listeners to the radio buttons
+        window.onload = function() {
+            document.getElementById("all").addEventListener("change", toggleSections);
+            document.getElementById("teams").addEventListener("change", toggleSections);
+            document.getElementById("fixtures").addEventListener("change", toggleSections);
+            document.getElementById("honors").addEventListener("change", toggleSections);
+
+            // Run toggle function on page load to set initial state
+            toggleSections();
+        };
     </script>
 </head>
 <body>
@@ -52,11 +51,19 @@
     </header>
 
     <!-- Filter Options -->
+    <!-- Radio Buttons -->
     <div>
-        <input type="radio" name="filter" value="all" checked onclick="toggleSections('all')"> All
-        <input type="radio" name="filter" value="teams" onclick="toggleSections('teams')"> Teams
-        <input type="radio" name="filter" value="fixtures-results" onclick="toggleSections('fixtures-results')"> Fixtures/Results
-        <input type="radio" name="filter" value="honors" onclick="toggleSections('honors')"> Honors
+        <input type="radio" id="all" name="toggle" checked>
+        <label for="all">All</label>
+
+        <input type="radio" id="teams" name="toggle">
+        <label for="teams">Teams</label>
+
+        <input type="radio" id="fixtures" name="toggle">
+        <label for="fixtures">Fixtures/Results</label>
+
+        <input type="radio" id="honors" name="toggle">
+        <label for="honors">Honors</label>
     </div>
 
     <!-- Participating Teams -->
@@ -68,23 +75,15 @@
                 <th>Team Name</th>
             </tr>
             <tr>
-                <td>1</td>
-                <td>TC Sports Club</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>BG Sports Club</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Club Zefrol</td>
+                <td colspan="2">No teams have been registered yet.</td>
             </tr>
         </table>
     </section>
-
-    <!-- Fixtures and Results -->
-    <section id="fixtures-results-section">
-        <h2>FIXTURES</h2>
+    
+    <section id="fixtures-section">
+        <h2>FIXTURES AND RESULTS</h2>
+        
+        <h3>FIXTURES</h3>
         <table border="1">
             <tr>
                 <th>Date</th>
@@ -93,20 +92,11 @@
                 <th>Team B</th>
             </tr>
             <tr>
-                <td>10-04-1446</td>
-                <td>20:00</td>
-                <td>TC Sports Club</td>
-                <td>BG Sports Club</td>
-            </tr>
-            <tr>
-                <td>11-04-1446</td>
-                <td>21:00</td>
-                <td>Club Zefrol</td>
-                <td>TC Sports Club</td>
+                <td colspan="4">Fixtures and results will be updated soon.</td>
             </tr>
         </table>
-
-        <h2>RESULTS</h2>
+    
+        <h3>RESULTS</h3>
         <table border="1">
             <tr>
                 <th>Date</th>
@@ -117,25 +107,11 @@
                 <th>Team B</th>
             </tr>
             <tr>
-                <td>10-04-1446</td>
-                <td>20:00</td>
-                <td>TC Sports Club</td>
-                <td>5</td>
-                <td>3</td>
-                <td>BG Sports Club</td>
-            </tr>
-            <tr>
-                <td>11-04-1446</td>
-                <td>21:00</td>
-                <td>Club Zefrol</td>
-                <td>2</td>
-                <td>4</td>
-                <td>TC Sports Club</td>
+                <td colspan="6">No match results available yet.</td>
             </tr>
         </table>
     </section>
-
-    <!-- Tournament Honors -->
+    
     <section id="honors-section">
         <h2>TOURNAMENT HONORS</h2>
         <table border="1">
@@ -145,12 +121,11 @@
                 <th>Team</th>
             </tr>
             <tr>
-                <td>Mr. Baibalaa</td>
-                <td>Miral Yasir</td>
-                <td>BG Sports Club</td>
+                <td colspan="3">Honors will be announced after the tournament.</td>
             </tr>
         </table>
     </section>
+    
 
     <footer>
         <div class="footer-container">
