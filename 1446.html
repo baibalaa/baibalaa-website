@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baibalaa Tournament 1446</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleSections(value) {
+            // Get all sections
+            let teamsSection = document.getElementById("teams-section");
+            let fixturesResultsSection = document.getElementById("fixtures-results-section");
+            let honorsSection = document.getElementById("honors-section");
+
+            // Show/hide based on selection
+            if (value === "all") {
+                teamsSection.style.display = "block";
+                fixturesResultsSection.style.display = "block";
+                honorsSection.style.display = "block";
+            } else if (value === "teams") {
+                teamsSection.style.display = "block";
+                fixturesResultsSection.style.display = "none";
+                honorsSection.style.display = "none";
+            } else if (value === "fixtures-results") {
+                teamsSection.style.display = "none";
+                fixturesResultsSection.style.display = "block";
+                honorsSection.style.display = "none";
+            } else if (value === "honors") {
+                teamsSection.style.display = "none";
+                fixturesResultsSection.style.display = "none";
+                honorsSection.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="articles.html">BAIBALAA INSIGHTS</a></li>
+            <li><a href="tournaments.html">TOURNAMENTS</a></li>
+            <li><a href="champions.html">CHAMPIONS</a></li>
+            <li><a href="mrbaibalaa.html">MR. BAIBALAA</a></li>
+            <li><a href="highlights.html">HIGHLIGHTS</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>BAIBALAA TOURNAMENT 1446</h1>
+    </header>
+
+    <!-- Filter Options -->
+    <div>
+        <input type="radio" name="filter" value="all" checked onclick="toggleSections('all')"> All
+        <input type="radio" name="filter" value="teams" onclick="toggleSections('teams')"> Teams
+        <input type="radio" name="filter" value="fixtures-results" onclick="toggleSections('fixtures-results')"> Fixtures/Results
+        <input type="radio" name="filter" value="honors" onclick="toggleSections('honors')"> Honors
+    </div>
+
+    <!-- Participating Teams -->
+    <section id="teams-section">
+        <h2>PARTICIPATING TEAMS</h2>
+        <table border="1">
+            <tr>
+                <th>#</th>
+                <th>Team Name</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>TC Sports Club</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>BG Sports Club</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Club Zefrol</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Fixtures and Results -->
+    <section id="fixtures-results-section">
+        <h2>FIXTURES</h2>
+        <table border="1">
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Team A</th>
+                <th>Team B</th>
+            </tr>
+            <tr>
+                <td>10-04-1446</td>
+                <td>20:00</td>
+                <td>TC Sports Club</td>
+                <td>BG Sports Club</td>
+            </tr>
+            <tr>
+                <td>11-04-1446</td>
+                <td>21:00</td>
+                <td>Club Zefrol</td>
+                <td>TC Sports Club</td>
+            </tr>
+        </table>
+
+        <h2>RESULTS</h2>
+        <table border="1">
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Team A</th>
+                <th>Score A</th>
+                <th>Score B</th>
+                <th>Team B</th>
+            </tr>
+            <tr>
+                <td>10-04-1446</td>
+                <td>20:00</td>
+                <td>TC Sports Club</td>
+                <td>5</td>
+                <td>3</td>
+                <td>BG Sports Club</td>
+            </tr>
+            <tr>
+                <td>11-04-1446</td>
+                <td>21:00</td>
+                <td>Club Zefrol</td>
+                <td>2</td>
+                <td>4</td>
+                <td>TC Sports Club</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Tournament Honors -->
+    <section id="honors-section">
+        <h2>TOURNAMENT HONORS</h2>
+        <table border="1">
+            <tr>
+                <th>Honor</th>
+                <th>Winner</th>
+                <th>Team</th>
+            </tr>
+            <tr>
+                <td>Mr. Baibalaa</td>
+                <td>Miral Yasir</td>
+                <td>BG Sports Club</td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Baibalaa MV</h3>
+                <p>Baibalaa MV is dedicated to preserving and celebrating the history of Baibalaa, the pride of the Maldives.</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="articles.html">Baibalaa Insights</a></li>
+                    <li><a href="tournaments.html">Tournaments</a></li>
+                    <li><a href="champions.html">Champions</a></li>
+                    <li><a href="mrbaibalaa.html">Mr. Baibalaa</a></li>
+                    <li><a href="highlights.html">Highlights</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:baibalaamv@gmail.com">baibalaamv@gmail.com</a></p>
+                <div class="youtube-link">
+                    <a href="https://www.youtube.com/@baibalaamv" target="_blank">
+                        <img src="youtube.png" alt="YouTube Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Baibalaa MV. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
