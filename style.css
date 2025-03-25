@@ -32,20 +32,31 @@ article, .player, .video {
     border-radius: 10px;
     width: 80%;
 }
+
 /* Apply styling only to sections inside the home page */
 #index section {
     margin: 20px auto;
     padding: 20px;
-    width: 90%; /* Makes it consistent with other pages */
-    max-width: 1000px; /* Limits excessive widening on large screens */
+    width: 90%;
+    max-width: 1000px;
 }
+
+article img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
 
 /* Ensure text blocks inside sections are also limited for readability */
 #index section p {
     max-width: 800px;
     margin: 0 auto;
 }
-
 
 table {
     width: 80%;
@@ -63,7 +74,6 @@ th, td {
     padding: 10px;
     text-align: center;
 }
-
 
 .justified {
     text-align: justify;
@@ -126,7 +136,7 @@ footer {
 /* YouTube Link Styling */
 .youtube-link {
     margin-top: 10px;
-    text-align: center;  /* Center the logo */
+    text-align: center;
 }
 
 .youtube-link a {
@@ -134,28 +144,172 @@ footer {
 }
 
 .youtube-link img {
-    width: 70px;  /* Set a larger width for the logo */
-    height: auto; /* Maintain aspect ratio */
+    width: 70px;
+    height: auto;
     transition: 0.3s;
+}
+
+/* Comment Section Styling */
+#comments-display {
+    background: #222;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
+}
+
+#comments-display h2 {
+    color: gold;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Individual Comment Styling */
+.comment {
+    background: #333;
+    padding: 12px;
+    border-left: 4px solid gold;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    word-wrap: break-word; /* Ensures long words break */
+    overflow-wrap: break-word; /* Helps break text in small containers */
+    max-width: 100%; /* Ensures the comment doesn't exceed its container */
+}
+
+.comments-list {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* Name Styling */
+.comment .name {
+    font-weight: bold;
+    color: gold;
+    margin-bottom: 3px;
+    text-align: left;
+}
+
+/* Timestamp Styling */
+.comment .time {
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 5px;
+}
+
+/* Comment Form Styling */
+#commentForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Adds spacing between elements */
+}
+
+/* Name Input & Comment Box - Same Styling */
+#commentForm input,
+#commentForm textarea {
+    width: 90%;
+    max-width: 600px;
+    padding: 12px; /* Slightly more padding for a uniform feel */
+    border: 1px solid gold;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    font-size: 14px;
+}
+
+#commentForm textarea {
+    height: auto; /* Allows it to expand */
+    min-height: 100px;
+    resize: vertical; /* Users can expand the textarea */
+}
+
+
+/* Submit Button */
+#commentForm button {
+    background: gold;
+    color: black;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px; /* Extra space */
+}
+
+#commentForm button:hover {
+    background: #e6b800;
+}
+
+/* Visitor Name Styling */
+#visitor-name {
+    width: 90%;
+    max-width: 600px;
+    padding: 10px;
+    border: 1px solid gold;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    font-size: 14px;
+    height: 30px; /* Slightly larger for better readability */
+    resize: none;
+    margin-bottom: 20px; /* Adds space below */
+}
+
+/* Comment Box */
+#comment-box {
+    width: 90%;
+    max-width: 600px;
+    padding: 10px;
+    border: 1px solid gold;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    font-size: 14px;
+    height: 100px; /* Slightly larger for better readability */
+    resize: none;
+    margin-bottom: 20px; /* Adds space below */
+}
+
+/* Submit Comment Button */
+#submit-comment-btn {
+    background: gold;
+    color: black;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px; /* Ensures spacing */
+}
+
+#submit-comment-btn:hover {
+    background: #e6b800;
 }
 
 /* Make the logo responsive for different screen sizes */
 @media (max-width: 768px) {
     .youtube-link img {
-        width: 60px;  /* Slightly smaller size for tablets */
+        width: 60px;
     }
 }
 
 @media (max-width: 480px) {
     .youtube-link img {
-        width: 50px;  /* Smaller size for mobile devices */
+        width: 50px;
     }
 }
 
 .youtube-link img:hover {
-    opacity: 0.8; /* Slightly fade the logo on hover */
+    opacity: 0.8;
 }
-
 
 /* Responsive Design */
 
@@ -171,44 +325,44 @@ footer {
     }
 
     article, .player, .video {
-        width: 90%; /* Increase width on smaller screens */
+        width: 90%; 
         margin: 10px;
         padding: 10px;
     }
 
     table {
-        width: 100%; /* Table takes up the full width */
+        width: 100%; 
     }
 
     th, td {
-        font-size: 12px; /* Smaller text size for tables */
+        font-size: 12px; 
         padding: 8px;
     }
 
     header h1 {
-        font-size: 22px; /* Adjust header font size */
+        font-size: 22px;
     }
 }
 
 /* For very small screens (mobile phones) */
 @media (max-width: 480px) {
     header h1 {
-        font-size: 20px; /* Smaller header on mobile */
+        font-size: 20px;
     }
 
     nav a {
-        font-size: 14px; /* Smaller text for links */
+        font-size: 14px;
     }
 
     article h2 {
-        font-size: 18px; /* Reduce font size for article titles */
+        font-size: 18px;
     }
 
     article p {
-        font-size: 14px; /* Smaller text for paragraphs */
+        font-size: 14px;
     }
 
     table th, table td {
-        padding: 5px; /* Less padding in tables on mobile */
+        padding: 5px;
     }
 }
