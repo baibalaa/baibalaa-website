@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baibalaa Tournament 1446</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google AdSense Code -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8120686861734870"
+     crossorigin="anonymous"></script>
+    <!-- JavaScript for Toggle Functionality -->
+    <script>
+        // Toggle visibility of sections based on selected radio button
+        function toggleSections() {
+            let all = document.getElementById("all").checked;
+            let teams = document.getElementById("teams").checked;
+            let fixtures = document.getElementById("fixtures").checked;
+            let honors = document.getElementById("honors").checked;
+
+            // Toggle sections based on selection
+            document.getElementById("teams-section").style.display = (all || teams) ? "block" : "none";
+            document.getElementById("fixtures-section").style.display = (all || fixtures) ? "block" : "none";
+            document.getElementById("honors-section").style.display = (all || honors) ? "block" : "none";
+        }
+
+        // Attach event listeners to the radio buttons
+        window.onload = function() {
+            document.getElementById("all").addEventListener("change", toggleSections);
+            document.getElementById("teams").addEventListener("change", toggleSections);
+            document.getElementById("fixtures").addEventListener("change", toggleSections);
+            document.getElementById("honors").addEventListener("change", toggleSections);
+
+            // Run toggle function on page load to set initial state
+            toggleSections();
+        };
+    </script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="articles.html">BAIBALAA INSIGHTS</a></li>
+            <li><a href="tournaments.html">TOURNAMENTS</a></li>
+            <li><a href="champions.html">CHAMPIONS</a></li>
+            <li><a href="mrbaibalaa.html">MR. BAIBALAA</a></li>
+            <li><a href="highlights.html">HIGHLIGHTS</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>BAIBALAA TOURNAMENT 1445</h1>
+    </header>
+
+    <!-- Filter Options -->
+    <!-- Radio Buttons -->
+    <div>
+        <input type="radio" id="all" name="toggle" checked>
+        <label for="all">All</label>
+
+        <input type="radio" id="teams" name="toggle">
+        <label for="teams">Teams</label>
+
+        <input type="radio" id="fixtures" name="toggle">
+        <label for="fixtures">Fixtures/Results</label>
+
+        <input type="radio" id="honors" name="toggle">
+        <label for="honors">Honors</label>
+    </div>
+
+    <!-- Participating Teams -->
+<section id="teams-section">
+    <h2>PARTICIPATING TEAMS</h2>
+    <table border="1">
+        <tr>
+            <th>#</th>
+            <th>Team Name</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Club Teenage</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Club Zefrol</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>TC Sports Club</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Little Town</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>United East Coast</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>EC X Eagles</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>VK Sports Club</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>JK Sports Club</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Buru Sports Club</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>VK Wakanda</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Club Wanted</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>TC Goalhi</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Lions and Tigers</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Teenage T</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>LF Sports Club</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>TC Fraternity</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>Zefrol Goalhi</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>Masodi Wowo</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>Hah Haa Vai Kanmathi</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>Club Kaasinjaas</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>Club Jammies</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>Teenage Juniors</td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>Buru Conquerors</td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>Brotherhood S.C</td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>Lorenzo Hyenas</td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td>Boznia S.C</td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td>KH United</td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td>Masodi Titan</td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td>Lorenzo Park</td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td>Club O1O</td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>LT Sports Club</td>
+        </tr>
+        <tr>
+            <td>32</td>
+            <td>Vienna Sports</td>
+        </tr>
+        <tr>
+            <td>33</td>
+            <td>KH Lions</td>
+        </tr>
+    </table>
+</section>
+
+    
+    <section id="fixtures-section">
+        <h2>FIXTURES AND RESULTS</h2>
+
+<h3>FIXTURES</h3>
+<table border="1">
+    <tr>
+        <th>Date</th>
+        <th>Stage</th>
+        <th>Team A</th>
+        <th>Team B</th>
+    </tr>
+    <tr>
+        <td>11 April 2024</td>
+        <td>Group Stage</td>
+        <td>Club Teenage</td>
+        <td>Club Zefrol</td>
+    </tr>
+    <tr>
+        <td>11 April 2024</td>
+        <td>Group Stage</td>
+        <td>TC Sports Club</td>
+        <td>Little Town</td>
+    </tr>
+    <tr>
+        <td>11 April 2024</td>
+        <td>Group Stage</td>
+        <td>United East Coast</td>
+        <td>ECX Eagles</td>
+    </tr>
+    <tr>
+        <td>11 April 2024</td>
+        <td>Group Stage</td>
+        <td>VK Sports Club</td>
+        <td>JK Sports Club</td>
+    </tr>
+    <tr>
+        <td>11 April 2024</td>
+        <td>Group Stage</td>
+        <td>Buru Sports Club</td>
+        <td>VK Wakanda</td>
+    </tr>
+    <tr>
+        <td>11 April 2024</td>
+        <td>Group Stage</td>
+        <td>Club Wanted</td>
+        <td>TC Goalhi</td>
+    </tr>
+    <tr>
+        <td>12 April 2024</td>
+        <td>Group Stage</td>
+        <td>Lions and Tigers</td>
+        <td>Teenage T</td>
+    </tr>
+    <tr>
+        <td>12 April 2024</td>
+        <td>Group Stage</td>
+        <td>LF Sports Club</td>
+        <td>TC Fraternity</td>
+    </tr>
+    <tr>
+        <td>12 April 2024</td>
+        <td>Group Stage</td>
+        <td>Zefrol Goalhi</td>
+        <td>Masodi Wowo</td>
+    </tr>
+    <tr>
+        <td>12 April 2024</td>
+        <td>Group Stage</td>
+        <td>Hah Haa Vai Kanmathi</td>
+        <td>Buru Sports Club</td>
+    </tr>
+    <tr>
+        <td>12 April 2024</td>
+        <td>Group Stage</td>
+        <td>Club Kaasinjee</td>
+        <td>Club Jammies</td>
+    </tr>
+    <tr>
+        <td>12 April 2024</td>
+        <td>Group Stage</td>
+        <td>Teenage Juniors</td>
+        <td>Buru Conquerors</td>
+    </tr>
+    <tr>
+        <td>12 April 2024</td>
+        <td>Group Stage</td>
+        <td>Brotherhood S.C</td>
+        <td>Lorenzo Hyenas</td>
+    </tr>
+    <tr>
+        <td>13 April 2024</td>
+        <td>Group Stage</td>
+        <td>Boznia S.C</td>
+        <td>Club Kaasinjaas</td>
+    </tr>
+    <tr>
+        <td>13 April 2024</td>
+        <td>Group Stage</td>
+        <td>KH United</td>
+        <td>Masodi Titan</td>
+    </tr>
+    <tr>
+        <td>13 April 2024</td>
+        <td>Group Stage</td>
+        <td>Lorenzo Park</td>
+        <td>Club O1O</td>
+    </tr>
+    <tr>
+        <td>13 April 2024</td>
+        <td>Group Stage</td>
+        <td>LT Sports Club</td>
+        <td>Vienna Sports</td>
+    </tr>
+    <tr>
+        <td>13 April 2024</td>
+        <td>Group Stage</td>
+        <td>KH Lions</td>
+        <td>TC Goalhi</td>
+    </tr>
+    <tr>
+        <td>13 April 2024</td>
+        <td>Round of 16</td>
+        <td>Club Teenage</td>
+        <td>Buru Sports Club</td>
+    </tr>
+    <tr>
+        <td>13 April 2024</td>
+        <td>Round of 16</td>
+        <td>TC Sports Club</td>
+        <td>Teenage T</td>
+    </tr>
+    <tr>
+        <td>15 April 2024</td>
+        <td>Round of 16</td>
+        <td>United East Coast</td>
+        <td>TC Fraternity</td>
+    </tr>
+    <tr>
+        <td>15 April 2024</td>
+        <td>Round of 16</td>
+        <td>JK Sports Club</td>
+        <td>Zefrol Goalhi</td>
+    </tr>
+    <tr>
+        <td>15 April 2024</td>
+        <td>Round of 16</td>
+        <td>Brotherhood S.C</td>
+        <td>Vienna Sports</td>
+    </tr>
+    <tr>
+        <td>15 April 2024</td>
+        <td>Round of 16</td>
+        <td>Club Kaasinjee</td>
+        <td>CK Kaasinjaas</td>
+    </tr>
+    <tr>
+        <td>15 April 2024</td>
+        <td>Round of 16</td>
+        <td>Teenage Juniors</td>
+        <td>KH United</td>
+    </tr>
+    <tr>
+        <td>15 April 2024</td>
+        <td>Round of 16</td>
+        <td>TC Goalhi</td>
+        <td>Club O1O</td>
+    </tr>
+    <tr>
+        <td>16 April 2024</td>
+        <td>Quarter Final</td>
+        <td>Buru Sports Club</td>
+        <td>Vienna Sports</td>
+    </tr>
+    <tr>
+        <td>16 April 2024</td>
+        <td>Quarter Final</td>
+        <td>TC Sports Club</td>
+        <td>Club Kaasinjee</td>
+    </tr>
+    <tr>
+        <td>16 April 2024</td>
+        <td>Quarter Final</td>
+        <td>United East Coast</td>
+        <td>KH United</td>
+    </tr>
+    <tr>
+        <td>16 April 2024</td>
+        <td>Quarter Final</td>
+        <td>JK Sports Club</td>
+        <td>Club O1O</td>
+    </tr>
+    <tr>
+        <td>18 April 2024</td>
+        <td>Semi Final</td>
+        <td>Buru Sports Club</td>
+        <td>United East Coast</td>
+    </tr>
+    <tr>
+        <td>18 April 2024</td>
+        <td>Semi Final</td>
+        <td>JK Sports Club</td>
+        <td>Club Kaasinjee</td>
+    </tr>
+    <tr>
+        <td>18 April 2024</td>
+        <td>Final</td>
+        <td>Buru Sports Club</td>
+        <td>Club Kaasinjee</td>
+    </tr>
+</table>
+
+    
+<h3>RESULTS</h3>
+<table border="1">
+    <tr>
+        <th>Date</th>
+        <th>Stage</th>
+        <th>Team A</th>
+        <th>Score A</th>
+        <th>Score B</th>
+        <th>Team B</th>
+    </tr>
+    <tr>
+        <td>11 April 2024</td>
+        <td>Group Stage</td>
+        <td>Club Teenage</td>
+        <td>2</td>
+        <td>0</td>
+        <td>Club Zefrol</td>
+    </tr>
+    <tr>
+        <td>11 April 2024</td>
+        <td>Group Stage</td>
+        <td>TC Sports Club</td>
+        <td>2</td>
+        <td>0</td>
+        <td>Little Town</td>
+    </tr>
+    <tr>
+        <td>11 April 2024</td>
+        <td>Group Stage</td>
+        <td>United East Coast</td>
+        <td>2</td>
+        <td>0</td>
+        <td>EC X Eagles</td>
+    </tr>
+    <tr>
+        <td>11 April 2024</td>
+        <td>Group Stage</td>
+        <td>VK Sports Club</td>
+        <td>2(G)</td>
+        <td>3(G)</td>
+        <td>JK Sports Club</td>
+    </tr>
+    <tr>
+        <td>11 April 2024</td>
+        <td>Group Stage</td>
+        <td>Buru Sports Club</td>
+        <td>2</td>
+        <td>0</td>
+        <td>VK Wakanda</td>
+    </tr>
+    <tr>
+        <td>11 April 2024</td>
+        <td>Group Stage</td>
+        <td>Club Wanted</td>
+        <td>0</td>
+        <td>2</td>
+        <td>TC Goalhi</td>
+    </tr>
+    <tr>
+        <td>12 April 2024</td>
+        <td>Group Stage</td>
+        <td>Lions and Tigers</td>
+        <td>0</td>
+        <td>2</td>
+        <td>Teenage T</td>
+    </tr>
+    <tr>
+        <td>12 April 2024</td>
+        <td>Group Stage</td>
+        <td>LF Sports Club</td>
+        <td>0</td>
+        <td>2</td>
+        <td>TC Fraternity</td>
+    </tr>
+    <tr>
+        <td>12 April 2024</td>
+        <td>Group Stage</td>
+        <td>Zefrol Goalhi</td>
+        <td>2</td>
+        <td>0</td>
+        <td>Masodi Wowo</td>
+    </tr>
+    <tr>
+        <td>12 April 2024</td>
+        <td>Group Stage</td>
+        <td>Hah Haa Vai Kanmathi</td>
+        <td>0</td>
+        <td>2</td>
+        <td>Buru Sports Club</td>
+    </tr>
+    <tr>
+        <td>12 April 2024</td>
+        <td>Group Stage</td>
+        <td>Club Kaasinjee</td>
+        <td>2</td>
+        <td>0</td>
+        <td>Club Jammies</td>
+    </tr>
+    <tr>
+        <td>12 April 2024</td>
+        <td>Group Stage</td>
+        <td>Teenage Juniors</td>
+        <td>2</td>
+        <td>0</td>
+        <td>Buru Conquerors</td>
+    </tr>
+    <tr>
+        <td>12 April 2024</td>
+        <td>Group Stage</td>
+        <td>Brotherhood S.C</td>
+        <td>2</td>
+        <td>0</td>
+        <td>Lorenzo Hyenas</td>
+    </tr>
+    <tr>
+        <td>13 April 2024</td>
+        <td>Group Stage</td>
+        <td>Boznia S.C</td>
+        <td>2(G)</td>
+        <td>3(G)</td>
+        <td>Club Kaasinjaas</td>
+    </tr>
+    <tr>
+        <td>13 April 2024</td>
+        <td>Group Stage</td>
+        <td>KH United</td>
+        <td>3(G)</td>
+        <td>2(G)</td>
+        <td>Masodi Titan</td>
+    </tr>
+    <tr>
+        <td>13 April 2024</td>
+        <td>Group Stage</td>
+        <td>Lorenzo Park</td>
+        <td>0</td>
+        <td>2</td>
+        <td>Club O1O</td>
+    </tr>
+    <tr>
+        <td>13 April 2024</td>
+        <td>Group Stage</td>
+        <td>LT Sports Club</td>
+        <td>0</td>
+        <td>2</td>
+        <td>Vienna Sports</td>
+    </tr>
+    <tr>
+        <td>13 April 2024</td>
+        <td>Group Stage</td>
+        <td>KH Lions</td>
+        <td>0</td>
+        <td>2</td>
+        <td>TC Goalhi</td>
+    </tr>
+    <tr>
+        <td>18 April 2024</td>
+        <td>Final</td>
+        <td>Buru Sports Club</td>
+        <td>2</td>
+        <td>0</td>
+        <td>Club Kaasinjee</td>
+    </tr>
+</table>
+
+    </section>
+    
+    <section id="honors-section">
+        <h2>TOURNAMENT HONORS</h2>
+        <table border="1">
+            <tr>
+                <th>Honor</th>
+                <th>Winner</th>
+                <th>Team</th>
+            </tr>
+            <tr>
+                <td>Champion Team</td>
+                <td>Buru Sports Club</td>
+                <td>Buru Sports Club</td>
+            </tr>
+            <tr>
+                <td>Runners Up</td>
+                <td>Club Kaasinjee</td>
+                <td>Club Kaasinjee</td>
+            </tr>
+            <tr>
+                <td>Fair Play Team</td>
+                <td>Club Kaasinjee</td>
+                <td>Club Kaasinjee</td>
+            </tr>
+            <tr>
+                <td>Mr Baibalaa</td>
+                <td>Mohamed Mirsal Yasir</td>
+                <td>Buru Sports Club</td>
+            </tr>
+            <tr>
+                <td>Best Coach</td>
+                <td>Mohamed Yasir</td>
+                <td>Buru Sports Club</td>
+            </tr>
+            <tr>
+                <td>Top 10 Players</td>
+                <td>Mohamed Mirsal Yasir</td>
+                <td>Buru Sports Club</td>
+            </tr>
+            <tr>
+                <td>Top 10 Players</td>
+                <td>Mohamed Sajan</td>
+                <td>Club Kaasinjee</td>
+            </tr>
+            <tr>
+                <td>Top 10 Players</td>
+                <td>Mohamed Nazeeh Haneef</td>
+                <td>United East Coast</td>
+            </tr>
+            <tr>
+                <td>Top 10 Players</td>
+                <td>Sumam Latheef</td>
+                <td>Club Kaasinjee</td>
+            </tr>
+            <tr>
+                <td>Top 10 Players</td>
+                <td>Ali Wijhan</td>
+                <td>Club Kaasinjee</td>
+            </tr>
+            <tr>
+                <td>Top 10 Players</td>
+                <td>Ali Shafiu</td>
+                <td>Club Kaasinjee</td>
+            </tr>
+            <tr>
+                <td>Top 10 Players</td>
+                <td>Hussain Shimaz</td>
+                <td>JK Sports Club</td>
+            </tr>
+            <tr>
+                <td>Top 10 Players</td>
+                <td>Mohamed Rilwan</td>
+                <td>Buru Sports Club</td>
+            </tr>
+            <tr>
+                <td>Top 10 Players</td>
+                <td>Ibrahim Sameen</td>
+                <td>Club Kaasinjee</td>
+            </tr>
+            <tr>
+                <td>Top 10 Players</td>
+                <td>Vishaah Abdul Latheef</td>
+                <td>Club Kaasinjee</td>
+            </tr>
+        </table>
+    </section>
+    
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Baibalaa MV</h3>
+                <p>Baibalaa MV is dedicated to preserving and celebrating the history of Baibalaa, the pride of the Maldives.</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="articles.html">Baibalaa Insights</a></li>
+                    <li><a href="tournaments.html">Tournaments</a></li>
+                    <li><a href="champions.html">Champions</a></li>
+                    <li><a href="mrbaibalaa.html">Mr. Baibalaa</a></li>
+                    <li><a href="highlights.html">Highlights</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:baibalaamv@gmail.com">baibalaamv@gmail.com</a></p>
+                <div class="youtube-link">
+                    <a href="https://www.youtube.com/@baibalaamv" target="_blank">
+                        <img src="youtube.png" alt="YouTube Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Baibalaa MV. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
