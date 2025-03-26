@@ -27,100 +27,142 @@
     </header>
 
     <section id="articles">
-
-        <article id="article-2">
-            <h2>Who is the True King of Baibalaa?</h2>
-    <img src="https://i.imgur.com/v3XHAZn.jpg" alt="Baibalaa Championship">
-    <p><strong>Published on:</strong> 25th March 2025, 23:06</p>
-    <p class="justified">
-        Baibalaa has always been one of the most intense and celebrated sports in the Maldives. Over the years, many 
-        legendary players have dominated the game, securing multiple championships and etching their names in Baibalaa history. 
-        But one question remains unanswered: <strong>Who has won the most Baibalaa championships?</strong>
-    </p>
-    <p class="justified">
-        Many associate greatness in Baibalaa with the prestigious <strong>"Mr. Baibalaa"</strong> title, awarded to the best 
-        individual player in a tournament. However, this doesn’t necessarily indicate who has been part of the most 
-        championship-winning teams.
-    </p>
-    <p class="justified">
-        Unfortunately, there is no easily accessible record tracking the player with the most championships. Unlike 
-        some other sports that maintain detailed player statistics, Baibalaa history has largely been undocumented in this 
-        regard. So, how can we find out? Would it be possible to go through past tournament records and identify common 
-        players among winning teams? Could longtime players, teams, or Baibalaa organizers help piece together this history?
-    </p>
-    <p class="justified">
-        This has been a long-standing curiosity, and it would be exciting to uncover the answer. If anyone has insights, 
-        records, or suggestions on how we can determine the true king of Baibalaa, let’s start the discussion and solve 
-        this mystery together!
-    </p>
-        </article>
-
-        <article>
+        <article id="article-1">
             <h2>This Year's Baibalaa Tournament to be Held During Eid Holidays</h2>
             <img src="https://i.imgur.com/FVn1DMS.png" alt="Baibalaa Tournament 2025">
             <p><strong>Published on:</strong> 17th March 2025, 13:45</p>
             <p class="justified">
                 The much-awaited Baibalaa Tournament is returning this year, and it’s going to be bigger than ever! 
-                Scheduled to take place during the Eid holidays stating from April 1st, this tournament promises to deliver an exciting blend 
+                Scheduled to take place during the Eid holidays starting from April 1st, this tournament promises to deliver an exciting blend 
                 of competitive gameplay, team spirit, and festive celebrations.
             </p>
-            <p class="justified">
-                Teams are already preparing for the event, with players practicing their 
-                skills in anticipation of the intense competition. Fans can expect thrilling matches and the 
-                opportunity to witness rising stars in the Baibalaa community. The tournament will feature various 
-                teams competing for the top spot, and the winners will take home the trophy!
-            </p>
-            <p class="justified">
-                The Baibalaa Association has announced that this year’s tournament will be different from previous 
-                editions. One major improvement is addressing the past issue of limited space for supporters. To enhance
-                the viewing experience, large screens will be set up near the tournament area, allowing fans to watch the
-                matches comfortably without crowding the main venue. These changes aim to make the event more
-                enjoyable and accessible for everyone.
-            </p>
-            <p class="justified">
-                Stay tuned for more updates as the event date approaches!
-            </p>
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-1" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-1" maxlength="25" placeholder="Your Name"
+                        style="width: 50%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px;" />
+                    <textarea id="comment-box-1" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 50%; padding: 8px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px;"></textarea>
+                    <br>
+                    <button id="submit-comment-btn-1" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+                        Submit Comment
+                    </button>
+                </div>
+            </section>
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-1" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-1" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
         </article>
     </section>
-
+    
     <footer>
         <div class="footer-container">
             <div class="footer-section">
                 <h3>About Baibalaa MV</h3>
                 <p>Baibalaa MV is dedicated to preserving and celebrating the history of Baibalaa, the pride of the Maldives.</p>
             </div>
-    
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="articles.html">Baibalaa Insights</a></li>
-                    <li><a href="tournaments.html">Tournaments</a></li>
-                    <li><a href="champions.html">Champions</a></li>
-                    <li><a href="mrbaibalaa.html">Mr. Baibalaa</a></li>
-                    <li><a href="highlights.html">Highlights</a></li>
-                </ul>
-            </div>
-    
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:baibalaamv@gmail.com">baibalaamv@gmail.com</a></p>
-                <div class="youtube-link">
-                    <a href="https://www.youtube.com/@baibalaamv" target="_blank">
-                        <img src="youtube.png" alt="YouTube Logo">
-                    </a>
-                </div>
-            </div>
-        </div>
-    
-        <div class="footer-bottom">
-            <p>&copy; <span id="year"></span> Baibalaa MV. All rights reserved.</p>
         </div>
     </footer>
-    
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
 
+    <!-- Firebase SDK (CDN) -->
+    <script type="module">
+        // Import Firebase SDK for Realtime Database
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
+        import { getDatabase, ref, push, set, get, child } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-database.js";
+    
+        // Firebase configuration
+        const firebaseConfig = {
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY, // ✅ Use the environment variable
+    authDomain: "baibalaa-comments.firebaseapp.com",
+    databaseURL: "https://baibalaa-comments-default-rtdb.firebaseio.com", 
+    projectId: "baibalaa-comments",
+    storageBucket: "baibalaa-comments.appspot.com",
+    messagingSenderId: "1033627188071",
+    appId: "1:1033627188071:web:8e2f7ed4d5ae95b066cdc2"
+};
+
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        // Function to submit the comment for a specific article
+        function submitComment(articleId) {
+            const visitorName = document.getElementById(`visitor-name-${articleId}`).value.trim();
+            const commentText = document.getElementById(`comment-box-${articleId}`).value.trim();
+    
+            if (visitorName !== "" && commentText !== "") {
+                try {
+                    const commentsRef = ref(db, `comments/${articleId}`);
+                    const newCommentRef = push(commentsRef);
+                    set(newCommentRef, {
+                        name: visitorName,
+                        text: commentText,
+                        timestamp: new Date().toISOString()
+                    }).then(() => {
+                        alert("Comment added successfully!");
+                        document.getElementById(`visitor-name-${articleId}`).value = "";
+                        document.getElementById(`comment-box-${articleId}`).value = "";
+                        displayComments(articleId); 
+                    }).catch((error) => {
+                        console.error("Error adding comment: ", error);
+                        alert("Error adding comment. Please try again.");
+                    });
+                } catch (e) {
+                    console.error("Error adding comment: ", e);
+                    alert("Error adding comment. Please try again.");
+                }
+            } else {
+                alert("Please enter both your name and a comment.");
+            }
+        }
+
+        // Function to display comments for a specific article
+        function displayComments(articleId) {
+            const commentsRef = ref(db, `comments/${articleId}`);
+            get(commentsRef).then((snapshot) => {
+                const commentsList = document.getElementById(`comments-list-${articleId}`);
+                if (snapshot.exists()) {
+                    commentsList.innerHTML = "";
+                    snapshot.forEach((childSnapshot) => {
+                        const comment = childSnapshot.val();
+                        const commentElement = document.createElement("div");
+                        commentElement.classList.add("comment");
+                        commentElement.innerHTML = `
+                            <p><strong>${comment.name}</strong>:</p>
+                            <p>${comment.text}</p>
+                            <p><strong>Posted on:</strong> ${new Date(comment.timestamp).toLocaleString()}</p>
+                        `;
+                        commentsList.appendChild(commentElement);
+                    });
+                } else {
+                    commentsList.innerHTML = "<p>No comments yet.</p>";
+                }
+            }).catch((error) => {
+                console.error("Error fetching comments: ", error);
+            });
+        }
+
+        // Add event listeners for submit buttons
+        document.getElementById("submit-comment-btn-1").addEventListener("click", () => submitComment(1));
+        document.getElementById("submit-comment-btn-2").addEventListener("click", () => submitComment(2));
+        document.getElementById("submit-comment-btn-3").addEventListener("click", () => submitComment(3));
+        document.getElementById("submit-comment-btn-4").addEventListener("click", () => submitComment(4));
+
+        // Load comments on page load for each article
+        window.onload = () => {
+            displayComments(1);
+            displayComments(2);
+            displayComments(3);
+            displayComments(4);
+        };
+    </script>
+    
 </body>
 </html>
