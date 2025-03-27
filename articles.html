@@ -27,6 +27,55 @@
     </header>
 
     <section id="articles">
+
+        <article id="article-3">
+            <h2>BG Sports Club – The Undisputed Kings of Baibalaa</h2>
+    <img src="https://i.imgur.com/vamnYxe.jpg" alt="">
+    <p><strong>Published on:</strong> 27th March 2025, 12:37</p>
+    <p class="justified">
+        When it comes to Baibalaa, BG Sports Club stands above the rest as the most successful team in the sport’s history. With 10 championships and 4 runner-up finishes, their dominance is unmatched.
+    </p>
+    <p class="justified">
+        One of the greatest displays of their strength came in 1427 (2006), when both finalists were BG teams—BG Sports Club and their younger squad, BG New Generation. This moment solidified their legacy, proving that BG wasn't just a team but a Baibalaa powerhouse.
+    </p>
+    <p class="justified">
+        Beyond their official titles, BG’s impact extends even further, as many of their players have won championships while playing for other teams. Their influence on Baibalaa is undeniable, and their contribution to the sport demands the utmost respect.
+    </p>
+    <p class="justified">
+        With a history of producing champions and setting the standard for excellence, BG Sports Club is, without a doubt, the true Kings of Baibalaa.
+    </p>
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-3" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-3" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-3" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-3" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                </button>
+                <!-- Toggle Comments Button (Always Visible) -->
+                <button id="toggle-comments-btn-3" 
+                style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+    Show Comments
+</button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-3" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-3" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-1">
             <h2>Who is the True King of Baibalaa?</h2>
     <img src="https://i.imgur.com/v3XHAZn.jpg" alt="Baibalaa Championship">
@@ -254,6 +303,7 @@ function toggleComments(articleId) {
         // ✅ Attach event listeners for toggle buttons
         document.getElementById("toggle-comments-btn-1").addEventListener("click", () => toggleComments(1));
         document.getElementById("toggle-comments-btn-2").addEventListener("click", () => toggleComments(2));
+        document.getElementById("toggle-comments-btn-3").addEventListener("click", () => toggleComments(3));
 
 
     function displayComments(articleId) {
@@ -293,11 +343,13 @@ function toggleComments(articleId) {
     // ✅ Attach event listeners for submit buttons
     document.getElementById("submit-comment-btn-1").addEventListener("click", () => submitComment(1));
     document.getElementById("submit-comment-btn-2").addEventListener("click", () => submitComment(2));
+    document.getElementById("submit-comment-btn-3").addEventListener("click", () => submitComment(3));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
         displayComments(1);
         displayComments(2);
+        displayComments(3);
     };
 </script>
 
