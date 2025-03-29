@@ -28,6 +28,83 @@
 
     <section id="articles">
 
+        <article id="article-4">
+            <h2>Club Zefrol: The Factory of Mr. Baibalaa</h2>
+    <img src="https://i.imgur.com/RXgCAJF.png" alt="">
+    <p><strong>Published on:</strong> 29th March 2025, 11:44</p>
+    <p class="justified">
+        When discussing the greatest teams in Baibalaa history, Club Zefrol holds a special place. With two championships and four runner-up finishes, the club has consistently been a dominant force in the sport. However, what truly sets Club Zefrol apart is its ability to produce legendary players—earning them the title of "The Mr. Baibalaa Machine."
+    </p>
+    <p class="justified">
+       Club Zefrol has lifted the Baibalaa Championship trophy twice:
+
+    1424 (2003) 🏆
+
+    1436 (2015) 🏆
+    </p>
+    <p class="justified">
+        Additionally, they finished as runners-up four times, proving their long-standing consistency and competitiveness:
+
+    1423 (2002) 🥈
+
+    1431 (2010) 🥈
+
+    1432 (2011) 🥈
+
+    1435 (2014) 🥈
+    </p>
+    <p class="justified">
+        👑 The Mr. Baibalaa Machine,
+
+Club Zefrol has produced more Mr. Baibalaa winners than any other team—a total of five legendary players:
+1️⃣ 1423 (2002) – Asham
+2️⃣ 1424 (2003) – Mode "Varukandhu"
+3️⃣ 1425 (2004) – Hussain Shimaz "Kokky"
+4️⃣ 1432 (2011) – Ali Wijhan "Viju"
+5️⃣ 1436 (2015) – Abdulla Nishan "Abo"
+
+This dominance in producing elite-level talent is what truly defines Club Zefrol. Their players are not just stars within their own team—they become sought-after assets across all of Baibalaa.
+    </p>
+    <p class="justified">
+        In recent years, Club Zefrol's best players have been playing for other teams, contributing to their success. A clear example of this was Baibalaa 2019, where the two finalist teams—Kuda Henveiru United and VK Sports Club—both had key players from Club Zefrol.
+
+This trend has impacted the club’s dominance, as their name hasn’t been at the top lately. But the spirit of Club Zefrol lives on in its players, who continue to shape the sport at the highest level.
+    </p>
+    <p class="justified">
+        Though they may not always be in the finals, Club Zefrol’s legacy is stronger than ever. The club has not only built champions but has also shaped the very foundation of Baibalaa itself. With a rich history, a roster full of legends, and a reputation for producing the best, Club Zefrol will always be remembered as the ultimate Mr. Baibalaa machine. 🔥💪 
+    </p>
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-4" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-4" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-4" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-4" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                </button>
+                <!-- Toggle Comments Button (Always Visible) -->
+                <button id="toggle-comments-btn-4" 
+                style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+    Show Comments
+</button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-4" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-4" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-3">
             <h2>BG Sports Club – The Undisputed Kings of Baibalaa</h2>
     <img src="https://i.imgur.com/vamnYxe.jpg" alt="">
@@ -285,6 +362,7 @@
             document.getElementById("comments-display-1").style.display = "none";
             document.getElementById("comments-display-2").style.display = "none";
             document.getElementById("comments-display-3").style.display = "none";
+            document.getElementById("comments-display-4").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -305,6 +383,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-1").addEventListener("click", () => toggleComments(1));
         document.getElementById("toggle-comments-btn-2").addEventListener("click", () => toggleComments(2));
         document.getElementById("toggle-comments-btn-3").addEventListener("click", () => toggleComments(3));
+        document.getElementById("toggle-comments-btn-4").addEventListener("click", () => toggleComments(4));
 
 
     function displayComments(articleId) {
@@ -345,12 +424,14 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-1").addEventListener("click", () => submitComment(1));
     document.getElementById("submit-comment-btn-2").addEventListener("click", () => submitComment(2));
     document.getElementById("submit-comment-btn-3").addEventListener("click", () => submitComment(3));
+    document.getElementById("submit-comment-btn-4").addEventListener("click", () => submitComment(4));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
         displayComments(1);
         displayComments(2);
         displayComments(3);
+        displayComments(4);
     };
 </script>
 
