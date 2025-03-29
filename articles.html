@@ -28,6 +28,56 @@
 
     <section id="articles">
 
+        <article id="article-5">
+            <h2>Eid Mubarak to the Baibalaa Community and All Muslims!</h2>
+            <img src="https://i.imgur.com/8eWOzhD.jpg" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 29th March 2025, 23:45</p>
+            <p class="justified">
+                As the joyous occasion of Eid arrives, we extend our warmest wishes to the entire Baibalaa community and all Muslims around the world.
+            </p>
+            <p class="justified">
+                Eid is a time of unity, gratitude, and celebration—a moment to reflect on our faith, cherish our loved ones, and embrace the spirit of togetherness. Just like Baibalaa, where teamwork, resilience, and determination define the game, Eid reminds us of the strength found in unity and shared joy.
+            </p>
+            <p class="justified">
+                Baibalaa is more than just a sport; it is a tradition, a passion, and a bond that connects players and fans alike. On this special day, we celebrate both the competitive spirit of the game and the blessings of Eid, bringing together the best of both worlds—faith and sportsmanship.
+            </p>
+            <p class="justified">
+                May this Eid bring happiness, prosperity, and success to you and your loved ones. Let’s continue to support and uplift each other, both on and off the Baibalaa field.
+
+🌙 Eid Mubarak! 🎉🏆
+            </p>
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-5" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-5" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-5" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-5" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-5" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-5" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-5" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
+
         <article id="article-4">
             <h2>Club Zefrol: The Factory of Mr. Baibalaa</h2>
     <img src="https://i.imgur.com/RXgCAJF.png" alt="">
@@ -361,6 +411,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-2").style.display = "none";
             document.getElementById("comments-display-3").style.display = "none";
             document.getElementById("comments-display-4").style.display = "none";
+            document.getElementById("comments-display-5").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -382,7 +433,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-2").addEventListener("click", () => toggleComments(2));
         document.getElementById("toggle-comments-btn-3").addEventListener("click", () => toggleComments(3));
         document.getElementById("toggle-comments-btn-4").addEventListener("click", () => toggleComments(4));
-
+        document.getElementById("toggle-comments-btn-5").addEventListener("click", () => toggleComments(5));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -423,6 +474,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-2").addEventListener("click", () => submitComment(2));
     document.getElementById("submit-comment-btn-3").addEventListener("click", () => submitComment(3));
     document.getElementById("submit-comment-btn-4").addEventListener("click", () => submitComment(4));
+    document.getElementById("submit-comment-btn-5").addEventListener("click", () => submitComment(5));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -430,6 +482,7 @@ function toggleComments(articleId) {
         displayComments(2);
         displayComments(3);
         displayComments(4);
+        displayComments(5);
     };
 </script>
 
