@@ -28,6 +28,60 @@
 
     <section id="articles">
 
+        <article id="article-6">
+            <h2>Club Teenage: A Legacy of Excellence in Baibalaa</h2>
+            <img src="https://i.imgur.com/IEKxEPs.png" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 30th March 2025, 23:21</p>
+            <p class="justified">
+                In the rich history of Baibalaa, Club Teenage stands tall as one of the most successful clubs, second only to BG Sports Club. With a legacy built on dominance, consistency, and top-tier talent, Club Teenage has been a force to be reckoned with since the early days of the sport.
+            </p>
+            <p class="justified">
+                Club Teenage has claimed four Baibalaa Championship titles, securing victories in 1422 (2001), 1425 (2004), 1438 (2017), and most recently, in 1444 (2023). In addition to their championship triumphs, they also finished as runners-up in 1443 (2022), further proving their status as an elite club in the sport.
+            </p>
+            <p class="justified">
+                Beyond their titles, Club Teenage has played a crucial role in shaping the future of Baibalaa. The club has produced three Mr. Baibalaa winners, a testament to the exceptional players they have nurtured over the years. Their roster has always been stacked with top-tier athletes, many of whom have become synonymous with the club’s identity.
+            </p>
+            <p class="justified">
+                From the very beginning of competitive Baibalaa, Club Teenage has been a permanent fixture at the top. Barring a few rare instances, they have consistently reached the semi-finals, showcasing their ability to perform under pressure and maintain high standards year after year.
+            </p>
+            <p class="justified">
+                As the latest edition of the Baibalaa Championship kicks off, Club Teenage once again finds itself in a strong position to challenge for the title. The tournament draw has worked in their favor, with many of the biggest contenders—Buru Sports Club, TC Sports Club, Kuda Henveiru United, BG Sports Club, and Odi Sports Club—placed on the other side of the bracket. This gives them a clear path to yet another final, though challenges still remain.
+
+With their winning mentality, star-studded lineup, and unwavering determination, Club Teenage is well-positioned to add another championship to their name.
+
+Good luck, Club Teenage!
+            </p>
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-6" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-6" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-6" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-6" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-6" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-6" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-6" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-5">
             <h2>Eid Mubarak to the Baibalaa Community and All Muslims!</h2>
             <img src="https://i.imgur.com/8eWOzhD.jpg" alt="Baibalaa Tournament 2025">
@@ -412,6 +466,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-3").style.display = "none";
             document.getElementById("comments-display-4").style.display = "none";
             document.getElementById("comments-display-5").style.display = "none";
+            document.getElementById("comments-display-6").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -434,6 +489,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-3").addEventListener("click", () => toggleComments(3));
         document.getElementById("toggle-comments-btn-4").addEventListener("click", () => toggleComments(4));
         document.getElementById("toggle-comments-btn-5").addEventListener("click", () => toggleComments(5));
+        document.getElementById("toggle-comments-btn-6").addEventListener("click", () => toggleComments(6));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -475,6 +531,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-3").addEventListener("click", () => submitComment(3));
     document.getElementById("submit-comment-btn-4").addEventListener("click", () => submitComment(4));
     document.getElementById("submit-comment-btn-5").addEventListener("click", () => submitComment(5));
+    document.getElementById("submit-comment-btn-6").addEventListener("click", () => submitComment(6));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -483,6 +540,7 @@ function toggleComments(articleId) {
         displayComments(3);
         displayComments(4);
         displayComments(5);
+        displayComments(6);
     };
 </script>
 
