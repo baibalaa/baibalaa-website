@@ -1,0 +1,197 @@
+/* Base styles for rules page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: black;
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    background-color: black; /* Ensure consistency */
+}
+
+nav li {
+    margin: 10px;
+}
+
+nav a {
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Headings - Make them Gold */
+h1, h2, h3, h4, h5, h6 {
+    color: gold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Section styling - Fixing width issue */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 90%;
+    max-width: 1000px; /* Fixed width for all sections */
+    margin: 20px auto;
+    padding: 20px;
+    background: #222;
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* Ensure text blocks are readable */
+section p, section ul, section li {
+    max-width: 750px; /* Keep content aligned */
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Remove unwanted symbols before each sentence */
+section p::before {
+    content: none !important;
+}
+
+/* List styling */
+section ul {
+    padding-left: 20px;
+}
+
+section ul li {
+    padding: 5px 0;
+    position: relative;
+}
+
+/* Add custom bullet points */
+section ul li::before {
+    content: "●"; /* Gold bullet point */
+    color: gold;
+    font-weight: bold;
+    position: absolute;
+    left: -15px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #0a0a0a;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: gold;
+}
+
+.footer-bottom {
+    border-top: 1px solid gold;
+    padding-top: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* YouTube Link Styling */
+.youtube-link {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.youtube-link a {
+    display: inline-block;
+}
+
+.youtube-link img {
+    width: 70px;
+    height: auto;
+    transition: 0.3s;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+
+/* Make the logo responsive for different screen sizes */
+@media (max-width: 768px) {
+    .youtube-link img {
+        width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .youtube-link img {
+        width: 50px;
+    }
+}
+
+.youtube-link img:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 10px;
+    }
+}

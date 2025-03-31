@@ -6,13 +6,19 @@ body {
     text-align: center;
 }
 
+nav {
+    background-color: black;
+    padding: 10px 0;
+    margin: 0;
+}
+
 nav ul {
     display: flex;
     list-style: none;
     padding: 0;
+    margin: 0;
     justify-content: center;
-    background-color: black;
-    padding: 10px;
+    background-color: black; /* Ensure consistency */
 }
 
 nav li {
@@ -40,6 +46,17 @@ article, .player, .video {
     width: 90%;
     max-width: 1000px;
 }
+
+article img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
 
 /* Ensure text blocks inside sections are also limited for readability */
 #index section p {
@@ -152,20 +169,29 @@ footer {
 #comments-display h2 {
     color: gold;
     margin-bottom: 15px;
-    text-align: center;
+    text-align: left;
 }
 
 /* Individual Comment Styling */
 .comment {
     background: #333;
-    padding: 5px;
+    padding: 12px;
     border-left: 4px solid gold;
     border-radius: 5px;
     margin-bottom: 15px;
     font-size: 14px;
     color: white;
     text-align: left;
+    word-wrap: break-word; /* Ensures long words break */
+    overflow-wrap: break-word; /* Helps break text in small containers */
+    max-width: 100%; /* Ensures the comment doesn't exceed its container */
 }
+
+.comments-list {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 
 /* Name Styling */
 .comment .name {
@@ -180,7 +206,6 @@ footer {
     font-size: 12px;
     color: gray;
     margin-bottom: 5px;
-    text-align: left;
 }
 
 /* Comment Form Styling */
@@ -204,11 +229,12 @@ footer {
     font-size: 14px;
 }
 
-/* Ensure consistency */
 #commentForm textarea {
-    height: 100px; /* Set a fixed height for comments */
-    resize: none;
+    height: auto; /* Allows it to expand */
+    min-height: 100px;
+    resize: vertical; /* Users can expand the textarea */
 }
+
 
 /* Submit Button */
 #commentForm button {
@@ -273,17 +299,6 @@ footer {
 #submit-comment-btn:hover {
     background: #e6b800;
 }
-
-article img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-}
-
 
 /* Make the logo responsive for different screen sizes */
 @media (max-width: 768px) {
