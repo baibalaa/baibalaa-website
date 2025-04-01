@@ -29,6 +29,65 @@
 
     <section id="articles">
 
+        <article id="article-7">
+            <h2>Buru Sports Club: A Legacy of Strength and Success in Baibalaa</h2>
+            <img src="https://i.imgur.com/jygqwGT.png" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 1st April 2025, 16:08</p>
+            <p class="justified">
+                When it comes to the rich history of Baibalaa, Buru Sports Club stands tall as one of the most successful and dominant teams to ever grace the game. With three championship titles to their name, Buru has cemented its legacy as a force to be reckoned with.
+
+🏆 Championship Titles:
+
+1428 (2007) – Their first taste of glory, marking the rise of a new powerhouse.
+
+1439 (2018) – A triumphant return to the top after over a decade.
+
+1445 (2025) – Their most recent victory, proving their consistency and dominance.
+            </p>
+            <p class="justified">
+                Alongside their championship triumphs, Buru Sports Club has also produced three Mr. Baibalaa winners, highlighting the individual brilliance within their squad:
+
+1428 – Mohamed Shinan "Naani"
+
+1439 – Mohamed Rilwan "Bulhaa Mode"
+
+1445 – Mohamed Mirsal Yasir "Miru"
+            </p>
+            <p class="justified">
+                As they step onto the field tonight for their opening match of Baibalaa Challenge 1446 against TFT, all eyes will be on them. Will they start their campaign with a statement victory? Good luck, Buru Sports Club! 🏆🔥
+            </p>
+            
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-7" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-7" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-7" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-7" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-7" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-7" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-7" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-6">
             <h2>Club Teenage: A Legacy of Excellence in Baibalaa</h2>
             <img src="https://i.imgur.com/IEKxEPs.png" alt="Baibalaa Tournament 2025">
@@ -469,6 +528,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-4").style.display = "none";
             document.getElementById("comments-display-5").style.display = "none";
             document.getElementById("comments-display-6").style.display = "none";
+            document.getElementById("comments-display-7").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -492,6 +552,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-4").addEventListener("click", () => toggleComments(4));
         document.getElementById("toggle-comments-btn-5").addEventListener("click", () => toggleComments(5));
         document.getElementById("toggle-comments-btn-6").addEventListener("click", () => toggleComments(6));
+        document.getElementById("toggle-comments-btn-7").addEventListener("click", () => toggleComments(7));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -534,6 +595,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-4").addEventListener("click", () => submitComment(4));
     document.getElementById("submit-comment-btn-5").addEventListener("click", () => submitComment(5));
     document.getElementById("submit-comment-btn-6").addEventListener("click", () => submitComment(6));
+    document.getElementById("submit-comment-btn-7").addEventListener("click", () => submitComment(7));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -543,6 +605,7 @@ function toggleComments(articleId) {
         displayComments(4);
         displayComments(5);
         displayComments(6);
+        displayComments(7);
     };
 </script>
 
