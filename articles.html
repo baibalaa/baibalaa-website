@@ -629,7 +629,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-5").addEventListener("click", () => toggleComments(5));
         document.getElementById("toggle-comments-btn-6").addEventListener("click", () => toggleComments(6));
         document.getElementById("toggle-comments-btn-7").addEventListener("click", () => toggleComments(7));
-        document.getElementById("toggle-comments-btn-7").addEventListener("click", () => toggleComments(8));
+        document.getElementById("toggle-comments-btn-8").addEventListener("click", () => toggleComments(8));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -673,7 +673,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-5").addEventListener("click", () => submitComment(5));
     document.getElementById("submit-comment-btn-6").addEventListener("click", () => submitComment(6));
     document.getElementById("submit-comment-btn-7").addEventListener("click", () => submitComment(7));
-    document.getElementById("submit-comment-btn-7").addEventListener("click", () => submitComment(8));
+    document.getElementById("submit-comment-btn-8").addEventListener("click", () => submitComment(8));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
