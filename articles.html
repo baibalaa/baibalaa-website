@@ -29,6 +29,81 @@
 
     <section id="articles">
 
+        <article id="article-8">
+            <h2>Baibalaa Challenge 1446 - Match Day 1 Results</h2>
+            <img src="https://i.imgur.com/wCAinzE.jpg" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 2nd April 2025, 16:08</p>
+            <p class="justified">
+                The much-anticipated Baibalaa Challenge 1446 kicked off tonight with six thrilling matches that kept the fans on the edge of their seats. From stunning upsets to intense battles, here's a recap of tonight's action-packed games:
+            </p>
+
+            <h3>Match 1: Buru Sports Club vs TFT</h3>
+            <p class="justified">
+                In the opening match of the tournament, the reigning champions, Buru Sports Club, faced off against TFT. Despite the high expectations for the defending champions, it was TFT that came out on top with a decisive 2-0 victory. With this win, TFT eliminated the latest champions and sent a strong message to the rest of the teams.
+            </p>
+
+            <h3>Match 2: TFT Wakaruge vs The Bows Sports Club</h3>
+            <p class="justified">
+                The second match of the night saw TFT Wakaruge battle it out against The Bows Sports Club. TFT Wakaruge proved to be in fine form, securing a 2-0 victory. Their dominance was clear throughout the game, and they comfortably advanced, showcasing their strength in this early stage of the tournament.
+            </p>
+
+            <h3>Match 3: Club Kaasinjee vs Club O1O</h3>
+            <p class="justified">
+                Next up, Club Kaasinjee, last year's runners-up, went head-to-head with Club O1O, the champions of the 1442 edition. In a display of excellent teamwork and determination, Club Kaasinjee clinched a 2-0 victory, reaffirming their position as one of the top teams in this year's tournament. They sent a clear message to their rivals that they were here to compete for the title once again.
+            </p>
+
+            <h3>Match 4: Janavareemagu Sports Club vs Little Town</h3>
+            <p class="justified">
+                The fourth match of the night was a closely contested affair between Janavareemagu Sports Club and Little Town. The match ended in a Gadha Hifun result, with Janavareemagu Sports Club emerging victorious with a thrilling 3-2 scoreline. It was a nail-biting game, and the fans were left in suspense until the final whistle. Janavareemagu Sports Club celebrated their hard-fought win.
+            </p>
+
+            <h3>Match 5: Kuda Henveiru United vs BG New Generation</h3>
+            <p class="justified">
+                The fifth match featured Kuda Henveiru United against BG New Generation. In another highly competitive encounter, BG New Generation triumphed in a Gadha Hifun decision, winning 3-2. It was a game full of excitement, with both teams giving their all, but in the end, BG New Generation secured the win and advanced to the next stage.
+            </p>
+
+            <h3>Match 6: LT Sports Club vs Kaasinjaa</h3>
+            <p class="justified">
+                The final match of the night saw LT Sports Club take on Kaasinjaa. LT Sports Club dominated the game and clinched a 2-0 victory, making a strong statement in the opening round of the competition. Their performance was a testament to their preparation and determination to go far in this tournament.
+            </p>
+
+            <p class="justified">
+                Match Day 1 Summary: It was a night full of surprises and intense competition. TFT made a big statement by eliminating the defending champions, while other teams like Club Kaasinjee, Janavareemagu Sports Club, and BG New Generation showed their strength with impressive wins. The first day of the Baibalaa Challenge 1446 has set the tone for what promises to be an exciting and action-packed tournament.
+
+Stay tuned for more updates, as the competition continues to heat up! 💥⚽
+            </p>
+            
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-8" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-8" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-8" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-8" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-8" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-8" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-8" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-7">
             <h2>Buru Sports Club: A Legacy of Strength and Success in Baibalaa</h2>
             <img src="https://i.imgur.com/jygqwGT.png" alt="Baibalaa Tournament 2025">
@@ -529,6 +604,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-5").style.display = "none";
             document.getElementById("comments-display-6").style.display = "none";
             document.getElementById("comments-display-7").style.display = "none";
+            document.getElementById("comments-display-8").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -553,6 +629,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-5").addEventListener("click", () => toggleComments(5));
         document.getElementById("toggle-comments-btn-6").addEventListener("click", () => toggleComments(6));
         document.getElementById("toggle-comments-btn-7").addEventListener("click", () => toggleComments(7));
+        document.getElementById("toggle-comments-btn-7").addEventListener("click", () => toggleComments(8));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -596,6 +673,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-5").addEventListener("click", () => submitComment(5));
     document.getElementById("submit-comment-btn-6").addEventListener("click", () => submitComment(6));
     document.getElementById("submit-comment-btn-7").addEventListener("click", () => submitComment(7));
+    document.getElementById("submit-comment-btn-7").addEventListener("click", () => submitComment(8));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -606,6 +684,7 @@ function toggleComments(articleId) {
         displayComments(5);
         displayComments(6);
         displayComments(7);
+        displayComments(8);
     };
 </script>
 
