@@ -268,6 +268,19 @@ footer {
     margin-bottom: 20px; /* Adds space below */
 }
 
+.ad-container {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto; /* Adds spacing and centers it */
+    text-align: center;
+}
+
+@media (max-width: 400px) {
+    .ad-container {
+        max-width: 320px;
+        height: 50px; /* Adjust height for small screens */
+    }
+}
 /* Comment Box */
 #comment-box {
     width: 90%;
