@@ -27,10 +27,93 @@
 
     <section id="articles">
 
+        <article id="article-9">
+            <h2>Match Day 2 Recap: Thrilling Battles and a Shocking Upset!</h2>
+            <img src="https://i.imgur.com/kHjRtI7.jpg" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 3rd April 2025, 01:18</p>
+            <p class="justified">
+                Baibalaa fans were treated to an electrifying night of action on Match Day 2, with seven intense battles taking place. The matches were full of drama, surprises, and standout performances. Here’s how the night unfolded:
+            </p>
+
+            <h3>Club SDZ Secures a Comfortable Victory</h3>
+            <p class="justified">
+                The opening match saw Club SDZ take on Odi Titans, and SDZ dominated with a 2-0 win. A solid performance ensured they started their campaign on a high note.
+            </p>
+
+            <h3>Kuda Henveiru Lions Roar to Victory</h3>
+            <p class="justified">
+                In the second match, Kuda Henveiru Lions faced Eagles in EC. The Lions put on a strong display, winning 2-0, showing they mean business in this tournament.
+            </p>
+
+            <h3>TC Sports Club Shows Their Strength</h3>
+            <p class="justified">
+                Match three was a battle between TC Sports Club and Teenage Veterans. TC Sports proved too strong, securing another 2-0 victory and making a statement in the competition.
+            </p>
+
+            <h3>Lorenzo Sports Club Edges VK Sports in a Thriller</h3>
+            <p class="justified">
+                The fourth match was nothing short of a classic Gadha Hifun showdown. Lorenzo Sports Club and VK Sports went head-to-head in a tight contest, but Lorenzo emerged victorious with a 3-2 win.
+            </p>
+
+            <h3>Match of the Round: BG Sports Stuns Odi Sports Club</h3>
+            <p class="justified">
+                The most anticipated match of the night featured BG Sports, the most successful club in Baibalaa history, against a star-studded Odi Sports Club squad. Odi Sports was hyped as a strong contender, with top players, including the legendary Mr. Baibalaa, "Viju", in their lineup. However, BG Sports delivered a masterclass, securing a shocking 2-0 win and proving why they remain a dominant force.
+            </p>
+
+            <h3>Club Teenage Claims a Solid Win Over Lorenzo Hyenas</h3>
+            <p class="justified">
+                In the sixth match, Club Teenage showcased their strength against Lorenzo Hyenas, earning a 2-0 victory and boosting their position in the tournament.
+            </p>
+
+            <h3>TC Fraternity Closes the Night with a Win</h3>
+            <p class="justified">
+                The final match of the night featured TC Fraternity and Hah Ha VK. TC Fraternity wrapped up Match Day 2 with a convincing 2-0 win, capping off an action-packed night.
+            </p>
+
+            <p class="justified">
+                With some major wins and a shocking upset, the competition is heating up! BG Sports’ performance will be the talk of the tournament, and all eyes will be on the next match day as teams battle for supremacy.
+
+Stay tuned for more Baibalaa excitement! 🔥
+
+Stay tuned for more updates, as the competition continues to heat up! 💥⚽
+            </p>
+            
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-9" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-9" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-9" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-9" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-9" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-9" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-9" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
+
         <article id="article-8">
             <h2>Baibalaa Challenge 1446 - Match Day 1 Results</h2>
             <img src="https://i.imgur.com/wCAinzE.jpg" alt="Baibalaa Tournament 2025">
-            <p><strong>Published on:</strong> 2nd April 2025, 16:08</p>
+            <p><strong>Published on:</strong> 2nd April 2025, 01:34</p>
             <p class="justified">
                 The much-anticipated Baibalaa Challenge 1446 kicked off tonight with six thrilling matches that kept the fans on the edge of their seats. From stunning upsets to intense battles, here's a recap of tonight's action-packed games:
             </p>
@@ -603,6 +686,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-6").style.display = "none";
             document.getElementById("comments-display-7").style.display = "none";
             document.getElementById("comments-display-8").style.display = "none";
+            document.getElementById("comments-display-9").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -628,6 +712,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-6").addEventListener("click", () => toggleComments(6));
         document.getElementById("toggle-comments-btn-7").addEventListener("click", () => toggleComments(7));
         document.getElementById("toggle-comments-btn-8").addEventListener("click", () => toggleComments(8));
+        document.getElementById("toggle-comments-btn-9").addEventListener("click", () => toggleComments(9));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -672,6 +757,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-6").addEventListener("click", () => submitComment(6));
     document.getElementById("submit-comment-btn-7").addEventListener("click", () => submitComment(7));
     document.getElementById("submit-comment-btn-8").addEventListener("click", () => submitComment(8));
+    document.getElementById("submit-comment-btn-9").addEventListener("click", () => submitComment(9));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -683,6 +769,7 @@ function toggleComments(articleId) {
         displayComments(6);
         displayComments(7);
         displayComments(8);
+        displayComments(9);
     };
 </script>
 
