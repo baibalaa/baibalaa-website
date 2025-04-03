@@ -27,6 +27,69 @@
 
     <section id="articles">
 
+        <article id="article-10">
+            <h2>Eid Baibalaa Challenge 1446 – Match Day 3: Round of 16 Drama Unfolds</h2>
+            <img src="https://i.imgur.com/JzYa4OF.jpg" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 4th April 2025, 01:38</p>
+            <p class="justified">
+                The Round of 16 of the Eid Baibalaa Challenge 1446 delivered a night filled with dominance, heartbreak, and an unforgettable upset that left fans in disbelief. With eight crucial matches deciding the teams moving into the quarter-finals, the stakes were higher than ever.
+            </p>
+
+            <p class="justified">
+                The night kicked off with TFT taking on BG New Generation. TFT showed their superiority, controlling the match from start to finish and securing a convincing 2-0 victory. Meanwhile, LT Sports faced off against TFT Wakaruge, proving to be the stronger side as they comfortably won 2-0, eliminating their opponents with ease.
+            </p>
+
+            <p class="justified">
+                Club SDZ had a tough challenge against Club Kaasinjee, and despite their efforts, they couldn’t withstand the pressure. Club Kaasinjee advanced with a 2-0 win. Kuda Henveiru Lions continued their impressive run in the tournament as they took on Janavareemagu Sports Club. With a solid performance, Kuda Henveiru Lions secured their place in the next round with a commanding 2-0 victory.
+            </p>
+
+            <p class="justified">
+                TC Sports Club, known for their experience and discipline, proved too much for Club Wanted, eliminating them with a clean 2-0 win. Lorenzo Sports Club also delivered an outstanding performance against TC Fraternity, claiming a well-earned 2-0 victory to advance to the quarter-finals.
+            </p>
+
+            <p class="justified">
+                The highly successful BG Sports Club stepped onto the field against Teenage Juniors, looking to make a statement. They did exactly that, dominating their opponents with a confident 2-0 win, showing why they remain one of the tournament’s top contenders.
+            </p>
+
+            <p class="justified">
+                But the real shock of the night came in the final match. Club Teenage, one of the most decorated and respected teams in Baibalaa history, went up against Zeppo, a newly participating team. Fans expected an easy win for Club Teenage, but what unfolded was nothing short of incredible. After an intense gadha hifun, Zeppo pulled off the biggest upset of the tournament so far, winning 3-2 and eliminating a giant from the competition. The result sent shockwaves through the crowd, proving that in Baibalaa, anything can happen.
+            </p>
+
+            <p class="justified">
+                With the quarter-finals set, anticipation is at an all-time high. Will the favorites continue to dominate, or will there be more surprises on the road to the championship? The Eid Baibalaa Challenge 1446 is only getting more intense, and the next round promises to be an absolute spectacle. Stay tuned! 🔥🏆
+            </p>
+            
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-10" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-10" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-10" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-10" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-10" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-10" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-10" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-9">
             <h2>Match Day 2 Recap: Thrilling Battles and a Shocking Upset!</h2>
             <img src="https://i.imgur.com/kHjRtI7.jpg" alt="Baibalaa Tournament 2025">
@@ -687,6 +750,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-7").style.display = "none";
             document.getElementById("comments-display-8").style.display = "none";
             document.getElementById("comments-display-9").style.display = "none";
+            document.getElementById("comments-display-10").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -713,6 +777,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-7").addEventListener("click", () => toggleComments(7));
         document.getElementById("toggle-comments-btn-8").addEventListener("click", () => toggleComments(8));
         document.getElementById("toggle-comments-btn-9").addEventListener("click", () => toggleComments(9));
+        document.getElementById("toggle-comments-btn-10").addEventListener("click", () => toggleComments(10));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -758,6 +823,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-7").addEventListener("click", () => submitComment(7));
     document.getElementById("submit-comment-btn-8").addEventListener("click", () => submitComment(8));
     document.getElementById("submit-comment-btn-9").addEventListener("click", () => submitComment(9));
+    document.getElementById("submit-comment-btn-10").addEventListener("click", () => submitComment(10));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -770,6 +836,7 @@ function toggleComments(articleId) {
         displayComments(7);
         displayComments(8);
         displayComments(9);
+        displayComments(10);
     };
 </script>
 
