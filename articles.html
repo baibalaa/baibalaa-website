@@ -17,6 +17,7 @@
             <li><a href="tournaments.html">TOURNAMENTS</a></li>
             <li><a href="champions.html">CHAMPIONS</a></li>
             <li><a href="mrbaibalaa.html">MR. BAIBALAA</a></li>
+            <li><a href="players.html">PLAYERS</a></li>
             <li><a href="highlights.html">HIGHLIGHTS</a></li>
         </ul>
     </nav>
@@ -26,6 +27,70 @@
     </header>
 
     <section id="articles">
+
+        <article id="article-11">
+            <h2>Eid Baibalaa Challenge 1446: Quarter Finals Recap</h2>
+            <img src="https://i.imgur.com/jd2dSXs.jpg" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 5th April 2025, 00:58</p>
+            <p class="justified">
+                The much-awaited Eid Baibalaa Challenge 1446 saw an exciting night of action as the Quarter Finals were played. Here's a look at the thrilling matches that went down:
+            </p>
+
+            <h3>1st Quarter Final: TFT vs TC Sports Club</h3>
+            <p class="justified">
+                The first match of the night saw TFT taking on TC Sports Club. TFT demonstrated their strength and skill as they triumphed over TC Sports Club with a solid 2-0 win. The game was controlled by TFT, setting the tone for the night’s action.
+            </p>
+
+            <h3>2nd Quarter Final: Lorenzo Sports Club vs LT Sports Club</h3>
+            <p class="justified">The second match was another thrilling contest, with Lorenzo Sports Club going head-to-head against LT Sports Club. Lorenzo Sports Club showcased superior tactics and teamwork, claiming a decisive 2-0 victory. Their strategic approach and coordination secured them a spot in the semi-finals.</p>
+
+            <h3>3rd Quarter Final: Club Kaasinjee vs BG Sports Club</h3>
+            <p class="justified">The third quarter final was arguably the match of the tournament. Club Kaasinjee, with their star-studded lineup, faced the defending champions and "King of Baibalaa" BG Sports Club. The match was an absolute thriller, with both teams winning one game each, taking the match to the infamous Gadha Hifun.</p>
+            <p class="justified">The first two hifuns were split, and the match went to the final hifun, where the draw was won by Club Kaasinjee. They held their nerves and claimed the victory, knocking out the formidable BG Sports Club and earning a chance at their maiden trophy.</p>
+
+            <h3>4th Quarter Final: Kuda Henveriru Lions vs Zeppo</h3>
+            <p class="justified">The final match of the quarter finals featured Kuda Henveriru Lions against Zeppo, a young and promising team making their debut in the competition. Zeppo pulled off an impressive performance, securing a 2-0 victory and advancing to the semi-finals for the first time.</p>
+
+            <h3>Semi-Final Matchups:</h3>
+            <p class="justified">The stage is set for the semi-finals. The matches are as follows:
+
+                TFT will face Club Kaasinjee in a highly anticipated clash.
+                
+                Lorenzo Sports Club will take on the surprise team of the tournament, Zeppo.
+                
+                The competition is heating up, and it's all set for an exciting end to the Eid Baibalaa Challenge 1446!</p>
+            
+            
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-11" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-11" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-11" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-11" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-11" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-11" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-11" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
 
         <article id="article-10">
             <h2>Eid Baibalaa Challenge 1446 – Match Day 3: Round of 16 Drama Unfolds</h2>
@@ -665,6 +730,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
                     <li><a href="tournaments.html">Tournaments</a></li>
                     <li><a href="champions.html">Champions</a></li>
                     <li><a href="mrbaibalaa.html">Mr. Baibalaa</a></li>
+                    <li><a href="players.html">Players</a></li>
                     <li><a href="highlights.html">Highlights</a></li>
                 </ul>
             </div>
@@ -751,6 +817,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-8").style.display = "none";
             document.getElementById("comments-display-9").style.display = "none";
             document.getElementById("comments-display-10").style.display = "none";
+            document.getElementById("comments-display-11").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -778,6 +845,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-8").addEventListener("click", () => toggleComments(8));
         document.getElementById("toggle-comments-btn-9").addEventListener("click", () => toggleComments(9));
         document.getElementById("toggle-comments-btn-10").addEventListener("click", () => toggleComments(10));
+        document.getElementById("toggle-comments-btn-11").addEventListener("click", () => toggleComments(11));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -824,6 +892,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-8").addEventListener("click", () => submitComment(8));
     document.getElementById("submit-comment-btn-9").addEventListener("click", () => submitComment(9));
     document.getElementById("submit-comment-btn-10").addEventListener("click", () => submitComment(10));
+    document.getElementById("submit-comment-btn-11").addEventListener("click", () => submitComment(11));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -837,6 +906,7 @@ function toggleComments(articleId) {
         displayComments(8);
         displayComments(9);
         displayComments(10);
+        displayComments(11);
     };
 </script>
 
