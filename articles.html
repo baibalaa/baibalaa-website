@@ -28,6 +28,52 @@
 
     <section id="articles">
 
+        <article id="article-12">
+            <h2>Who Will Be Eid Baibalaa Challenge 1446 Mr. Baibalaa?</h2>
+            <img src="https://i.imgur.com/GWERNoX.jpg" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 5th April 2025, 12:36</p>
+            <p class="justified">
+                As we enter the thrilling semi-final stage of the Eid Baibalaa Challenge 1446, fans are buzzing with one burning question: who will be crowned this year’s Mr. Baibalaa?
+            </p>
+            <p class="justified">This year’s competition has been nothing short of electrifying, and the race for the most prestigious individual title in Baibalaa is tighter than ever. Among the top contenders are three powerhouses who have already etched their names in the history books — and they’re all back to fight for glory once again.</p>
+
+            <h3>The Former Kings in the Arena</h3>
+            <p class="justified">Mohamed Rilwan, known as "Bulhaa Mode" from TFT, was crowned Mr. Baibalaa in 1439 (2018). Known for his fearless raids and unmatched agility, Bulhaa Mode has proven he’s still got what it takes. If he wins, he will join the elite two-time champions’ club alongside Abo.</p>
+            <p class="justified">Then there’s the ever-dominant Abdulla Nishan from Lorenzo Sports Club, or as fans call him, "Abo", who claimed the title twice — in 1433 (2012) and 1436 (2015). Abo has remained a consistent threat over the years, and another title would tie him with legends like Mohamed Shinan “Naani” and Aslam Waheed with three Mr. Baibalaa titles.</p>
+            <p class="justified">Speaking of legends, Aslam Waheed, the deadly force on the field, already has three Mr. Baibalaa titles to his name — 1437 (2016), 1438 (2017), and 1443 (2022). If he claims victory this year, he will become the only player in history to win four Mr. Baibalaa titles, standing alone at the pinnacle of Baibalaa greatness.</p>
+            <p class="justified">Or Will a New Champion Rise?</p>
+            
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-12" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-12" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-12" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-12" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-12" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-12" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-12" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-11">
             <h2>Eid Baibalaa Challenge 1446: Quarter Finals Recap</h2>
             <img src="https://i.imgur.com/jd2dSXs.jpg" alt="Baibalaa Tournament 2025">
@@ -818,6 +864,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-9").style.display = "none";
             document.getElementById("comments-display-10").style.display = "none";
             document.getElementById("comments-display-11").style.display = "none";
+            document.getElementById("comments-display-12").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -846,6 +893,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-9").addEventListener("click", () => toggleComments(9));
         document.getElementById("toggle-comments-btn-10").addEventListener("click", () => toggleComments(10));
         document.getElementById("toggle-comments-btn-11").addEventListener("click", () => toggleComments(11));
+        document.getElementById("toggle-comments-btn-12").addEventListener("click", () => toggleComments(12));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -893,6 +941,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-9").addEventListener("click", () => submitComment(9));
     document.getElementById("submit-comment-btn-10").addEventListener("click", () => submitComment(10));
     document.getElementById("submit-comment-btn-11").addEventListener("click", () => submitComment(11));
+    document.getElementById("submit-comment-btn-12").addEventListener("click", () => submitComment(12));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -907,6 +956,7 @@ function toggleComments(articleId) {
         displayComments(9);
         displayComments(10);
         displayComments(11);
+        displayComments(12);
     };
 </script>
 
