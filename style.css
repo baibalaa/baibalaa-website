@@ -268,19 +268,30 @@ footer {
     margin-bottom: 20px; /* Adds space below */
 }
 
-.ad-container {
+.ad-banner {
     width: 100%;
-    max-width: 300px;
-    margin: 20px auto; /* Adds spacing and centers it */
-    text-align: center;
+    max-height: 100px; /* Adjust based on ad size */
+    display: block;
+    position: relative; /* Ensure it stays within its section */
+    margin-bottom: 10px; /* Add space below */
 }
 
-@media (max-width: 400px) {
-    .ad-container {
-        max-width: 320px;
-        height: 50px; /* Adjust height for small screens */
+ul.justified {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul.justified li {
+    margin-bottom: 10px; /* Adjust the value for more or less spacing */
+}
+
+
+@media screen and (max-width: 768px) {
+    .ad-banner {
+        max-height: 80px; /* Reduce height for smaller screens */
     }
 }
+
 /* Comment Box */
 #comment-box {
     width: 90%;
