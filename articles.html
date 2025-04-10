@@ -28,6 +28,58 @@
 
     <section id="articles">
 
+        <article id="article-16">
+            <h2>TC Sports Club – A Legacy of Consistency, Passion, and Historic Impact</h2>
+            <img src="https://i.imgur.com/6FlVHn1.jpg" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 10th April 2025, 23:58</p>
+            <p class="justified">In the rich history of Baibalaa, few names have echoed with as much consistency and resilience as Trust and Care Sports Club, better known as TC Sports Club. From the earliest days of the sport, TC Sports Club has remained a powerful presence, always among the top contenders, always fighting with heart.</p>
+            <p class="justified">In the early years, TC Sports Club often found themselves reaching the Quarter Final stage—always close, always strong, but unable to break through. That changed in 1427 (2006), when TC Sports made a statement. They stunned the tournament by defeating one of the top favourites, Maziya Sports Club, a team filled with legends like Ibrahim Shinaan "Naani" and Athiko. This was the turning point.</p>
+            <p class="justified">That year, TC Sports made it to the Semi Final for the first time. Although they narrowly lost in Gadha Hifun to BG New Generation, they still took home glory with Yameen Ibrahim "Yaambe" being crowned Mr Baibalaa of that edition—a moment of pride that marked TC’s rise.</p>
+            <p class="justified">From there, TC Sports entered their golden era, becoming regular semi-finalists and reaching their peak between 2011 and 2013, when they made three consecutive finals. In 1432 (2011), they finally lifted the trophy, being crowned champions of the tournament. The following two years, they remained just a step away, finishing as runners-up in both 2012 and 2013.</p>
+            <p class="justified">But TC Sports is not just a Baibalaa powerhouse—they are a true multi-sport club. As their success in Baibalaa grew, they also turned their focus to football. In 2014, TC Sports earned promotion to the First Division, and what followed was nothing short of remarkable. They won the Dhivehi Premier League, and went on to become the first Maldivian club to win an international trophy by lifting the Sheikh Kamal International Cup.</p>
+            <p class="justified">Despite their football success, TC Sports never left Baibalaa behind. They continued to reach the quarter-finals and semi-finals, proving their strength year after year. In Eid Baibalaa Challenge 1446, they once again made it to the quarter-final stage, only to be stopped by the eventual champions, T.F.T.
+
+                And their legacy goes even deeper. This year’s champion team T.F.T included two standout players who are originally from TC Sports Club:
+                
+                Hassan Thauheed "Thau", the Man of the Match in the final.
+                
+                Mohamed Ikram "Kuda Ikko", another key figure in the T.F.T squad.
+                
+                These contributions show that TC Sports Club's impact extends beyond just their own results—their influence is felt across teams and generations.</p>
+            <p class="justified">TC Sports Club may not have lifted another Baibalaa trophy in recent years, but their name remains etched in the history of the sport. Their discipline, their dedication, and the athletes they continue to produce make them a cornerstone of the Baibalaa community.</p>
+            <p class="justified">We wish TC Sports Club continued success in both Baibalaa and football. A club of champions, a club of legacy, and always a team to watch.</p>
+            
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-16" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-16" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-16" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-16" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-16" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-16" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-16" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-15">
             <h2>Warriors of the Ring – Eid Baibalaa Challenge 1446 Best of the Best</h2>
             <img src="https://i.imgur.com/lRgfWou.jpg" alt="Baibalaa Tournament 2025">
@@ -1034,6 +1086,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-13").style.display = "none";
             document.getElementById("comments-display-14").style.display = "none";
             document.getElementById("comments-display-15").style.display = "none";
+            document.getElementById("comments-display-16").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -1066,6 +1119,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-13").addEventListener("click", () => toggleComments(13));
         document.getElementById("toggle-comments-btn-14").addEventListener("click", () => toggleComments(14));
         document.getElementById("toggle-comments-btn-15").addEventListener("click", () => toggleComments(15));
+        document.getElementById("toggle-comments-btn-16").addEventListener("click", () => toggleComments(16));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -1117,6 +1171,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-13").addEventListener("click", () => submitComment(13));
     document.getElementById("submit-comment-btn-14").addEventListener("click", () => submitComment(14));
     document.getElementById("submit-comment-btn-15").addEventListener("click", () => submitComment(15));
+    document.getElementById("submit-comment-btn-16").addEventListener("click", () => submitComment(16));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -1135,6 +1190,7 @@ function toggleComments(articleId) {
         displayComments(13);
         displayComments(14);
         displayComments(15);
+        displayComments(16);
     };
 </script>
 
