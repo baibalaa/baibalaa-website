@@ -29,6 +29,49 @@
 
     <section id="articles">
 
+        <article id="article-17">
+            <h2>The Legends Beyond the Spotlight</h2>
+            <img src="https://i.imgur.com/DCcUSoi.jpg" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 23rd April 2025, 22:21</p>
+            <p class="justified">In every sport, there are those whose names are etched in trophies and headlines — and then, there are those whose legacy lives quietly in the hearts of fans.</p>
+            <p class="justified">Baibalaa, with all its adrenaline, tradition, and honor, has always had room for both. While we celebrate the official winners, there are countless others who shaped the game in ways that can’t be defined by awards alone. The players who gave everything for their team, season after season. The coaches who showed up day in and day out, building discipline, belief, and unity. The athletes who may not have had the spotlight but left the ring with the respect of everyone watching.</p>
+            <p class="justified">They were the heartbeat of their teams — the first to step in, the last to give up. Their moves, their presence, their leadership — they created unforgettable moments and carried their squads through battles many would forget if not for their grit.</p>
+            <p class="justified">These are the legends beyond the spotlight. They may not be mentioned in every record book, but their impact is written into the soul of the game.</p>
+            <h3>💬 Who do YOU remember?</h3>
+            <p class="justified">We want to hear from you. Share with us the names and stories of those Baibalaa figures who inspired you, moved you, or made you love the game — even if they never stood on the top podium.
+                Your voice could help bring their story to the light.</p>
+            
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-17" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-17" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-17" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-17" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-17" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-17" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-17" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-16">
             <h2>TC Sports Club – A Legacy of Consistency, Passion, and Historic Impact</h2>
             <img src="https://i.imgur.com/6FlVHn1.jpg" alt="Baibalaa Tournament 2025">
@@ -1089,6 +1132,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-14").style.display = "none";
             document.getElementById("comments-display-15").style.display = "none";
             document.getElementById("comments-display-16").style.display = "none";
+            document.getElementById("comments-display-17").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -1122,6 +1166,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-14").addEventListener("click", () => toggleComments(14));
         document.getElementById("toggle-comments-btn-15").addEventListener("click", () => toggleComments(15));
         document.getElementById("toggle-comments-btn-16").addEventListener("click", () => toggleComments(16));
+        document.getElementById("toggle-comments-btn-17").addEventListener("click", () => toggleComments(17));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -1174,6 +1219,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-14").addEventListener("click", () => submitComment(14));
     document.getElementById("submit-comment-btn-15").addEventListener("click", () => submitComment(15));
     document.getElementById("submit-comment-btn-16").addEventListener("click", () => submitComment(16));
+    document.getElementById("submit-comment-btn-17").addEventListener("click", () => submitComment(17));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -1193,6 +1239,7 @@ function toggleComments(articleId) {
         displayComments(14);
         displayComments(15);
         displayComments(16);
+        displayComments(17);
     };
 </script>
 
