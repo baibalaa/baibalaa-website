@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOHAMED ADAM "BODEY"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="rules.html">RULES</a></li>
+            <li><a href="articles.html">BAIBALAA INSIGHTS</a></li>
+            <li><a href="tournaments.html">TOURNAMENTS</a></li>
+            <li><a href="champions.html">CHAMPIONS</a></li>
+            <li><a href="mrbaibalaa.html">MR. BAIBALAA</a></li>
+            <li><a href="players.html">PLAYERS</a></li>
+            <li><a href="fans_dream_team.html">DREAM TEAMS</a></li>
+            <li><a href="highlights.html">HIGHLIGHTS</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>MOHAMED ADAM "BODEY"</h1>
+    </header>
+
+    <section id="player-articles">
+        <article id="article-5">
+            <img src="https://i.imgur.com/Xdc316N.jpg" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 25 April 2025, 23:48</p>
+            <h3>Mohamed Adam “Bodey” – The Man Who Kept His Promise</h3>
+            <p class="justified">Mohamed Adam, famously known as “Bodey,” began his baibalaa career with TC Sports Club — a team that consistently reached the quarterfinals but struggled to break past that stage. Even during those early years, Bodey stood out as one of the most promising and talented players on the field. His skills did not go unnoticed, and soon, top clubs were vying for his signature.</p>
+            <p class="justified">After several seasons with TC, Bodey moved on to some of the biggest names in the game — including BG Sports Club and Buru Sports Club — where he found championship success. But even as he lifted trophies with other teams, he never forgot the club where it all began.</p>
+            <p class="justified">Bodey had made a promise to TC Sports Club and its loyal fans: he would return and help them win the title they longed for. True to his word, in 2011, he came back.</p>
+            <p class="justified">At that time, TC had managed to reach the semifinals but had never made it to the final stage. With Bodey’s return, everything changed. That year, he led them to their first-ever final — and fulfilled his promise by bringing home the championship.</p>
+            <p class="justified">His performance in that tournament was nothing short of legendary. In the semifinal clash against the formidable Teenage Juniors, Bodey almost single-handedly carried his team to victory. Then in the final against Club Zefrol, his defensive display was outstanding — tactical, and rock solid.</p>
+            <p class="justified">Bodey’s name is etched among the greats of baibalaa. A player of rare loyalty, leadership, and talent — a true icon of the sport. Ask any baibalaa fan, and they’ll agree: Bodey is, without question, one of the finest to ever play the game.</p>
+            
+            <!-- Comment Section for Player Page -->
+            <section id="comment-section-5" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-5" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+
+                    <textarea id="comment-box-5" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+
+                    <button id="submit-comment-btn-5" style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+
+                    <button id="toggle-comments-btn-5" style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+                        Show Comments
+                    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Player Page -->
+            <section id="comments-display-5" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-5" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+    </section>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Baibalaa MV</h3>
+                <p>Baibalaa MV is dedicated to preserving and celebrating the history of Baibalaa, the pride of the Maldives.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rules.html">Rules</a></li>
+                    <li><a href="articles.html">Baibalaa Insights</a></li>
+                    <li><a href="tournaments.html">Tournaments</a></li>
+                    <li><a href="champions.html">Champions</a></li>
+                    <li><a href="mrbaibalaa.html">Mr. Baibalaa</a></li>
+                    <li><a href="players.html">Players</a></li>
+                    <li><a href="fans_dream_team.html">Dream Teams</a></li>
+                    <li><a href="highlights.html">Highlights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:baibalaamv@gmail.com">baibalaamv@gmail.com</a></p>
+                <div class="youtube-link">
+                    <a href="https://www.youtube.com/@baibalaamv" target="_blank">
+                        <img src="youtube.png" alt="YouTube Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Baibalaa MV. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Firebase SDK (CDN) -->
+<script src="config.js"></script>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
+    import { getDatabase, ref, push, set, onValue } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-database.js";
+
+    const firebaseConfig = {
+        apiKey: window.env.FIREBASE_API_KEY,
+        authDomain: "baibalaa-comments.firebaseapp.com",
+        databaseURL: "https://baibalaa-comments-default-rtdb.firebaseio.com", 
+        projectId: "baibalaa-comments",
+        storageBucket: "baibalaa-comments.appspot.com",
+        messagingSenderId: "1033627188071",
+        appId: "1:1033627188071:web:8e2f7ed4d5ae95b066cdc2"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    // Get the player ID dynamically from the URL (for example "player1.html")
+    const playerId = window.location.pathname.split("/").pop().replace(".html", "");
+    console.log("Player ID:", playerId);  // Debugging: Check if playerId is correctly extracted
+
+    // Function to submit a comment
+    function submitComment(playerId) {
+        const visitorName = document.getElementById(`visitor-name-${playerId}`).value.trim();
+        const commentText = document.getElementById(`comment-box-${playerId}`).value.trim();
+
+        if (visitorName !== "" && commentText !== "") {
+            try {
+                const commentsRef = ref(db, `playercomments/${playerId}`);  // Updated path for storing comments
+                const newCommentRef = push(commentsRef);  // Push a new comment under the player's unique node
+                set(newCommentRef, {
+                    name: visitorName,
+                    text: commentText,
+                    timestamp: new Date().toISOString()
+                }).then(() => {
+                    alert("Comment added successfully!");
+                    document.getElementById(`visitor-name-${playerId}`).value = "";
+                    document.getElementById(`comment-box-${playerId}`).value = "";
+                }).catch((error) => {
+                    console.error("Error adding comment: ", error);
+                    alert("Error adding comment. Please try again.");
+                });
+            } catch (e) {
+                console.error("Error adding comment: ", e);
+                alert("Error adding comment. Please try again.");
+            }
+        } else {
+            alert("Please enter both your name and a comment.");
+        }
+    }
+
+    // Ensure comments are hidden by default when the page loads
+    document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("comments-display-5").style.display = "none";
+        });
+
+    // Function to toggle the visibility of comments
+    function toggleComments(playerId) {
+        const commentsSection = document.getElementById(`comments-display-${playerId}`);
+        const toggleButton = document.getElementById(`toggle-comments-btn-${playerId}`);
+
+        if (commentsSection.style.display === "none" || commentsSection.style.display === "") {
+            commentsSection.style.display = "block";
+            toggleButton.textContent = "Hide Comments";
+        } else {
+            commentsSection.style.display = "none";
+            toggleButton.textContent = "Show Comments";
+        }
+    }
+
+    // Function to display comments for a specific player
+    function displayComments(playerId) {
+        const commentsRef = ref(db, `playercomments/${playerId}`);  // Updated path to fetch comments for each player
+        onValue(commentsRef, (snapshot) => {
+            const commentsList = document.getElementById(`comments-list-${playerId}`);
+            commentsList.innerHTML = ""; // Clear existing comments
+
+            if (snapshot.exists()) {
+                snapshot.forEach((childSnapshot) => {
+                    const comment = childSnapshot.val();
+                    const commentElement = document.createElement("div");
+                    commentElement.classList.add("comment");
+                    commentElement.innerHTML = `
+                        <p><strong>${comment.name}</strong>:</p>
+                        <p>${comment.text}</p>
+                        <p><strong>Posted on:</strong> ${new Date(comment.timestamp).toLocaleString()}</p>
+                    `;
+                    commentsList.appendChild(commentElement);
+                });
+            } else {
+                commentsList.innerHTML = "<p>No comments yet.</p>";
+            }
+        }, (error) => {
+            console.error("Error fetching comments: ", error);
+        });
+    }
+
+    // Attach event listeners
+    window.onload = () => {
+        // Display comments for the current player
+        displayComments(playerId);
+
+        // Add event listener for submit button
+        document.getElementById(`submit-comment-btn-${playerId}`).addEventListener("click", () => submitComment(playerId));
+
+        // Add event listener for toggle button
+        document.getElementById(`toggle-comments-btn-${playerId}`).addEventListener("click", () => toggleComments(playerId));
+    };
+</script>
+
+</body>
+</html>
