@@ -29,6 +29,48 @@
 
     <section id="articles">
 
+        <article id="article-18">
+            <h2>Baibalaa: A Sport We Can Proudly Call Our Own</h2>
+            <img src="https://i.imgur.com/f6cuI4L.jpg" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 28th April 2025, 22:35</p>
+            <p class="justified">Baibalaa is a sport deeply rooted in our heritage — a game we can truly call our own. It holds a special place in the hearts of Maldivians, with a rich history and a passionate following across the country. We should take pride in this unique sport, not only as a symbol of our culture but as something with the potential to reach far beyond our shores.</p>
+            <p class="justified">One of the main reasons behind launching this website was to introduce Baibalaa to a wider audience. I am happy to share that we have already seen some success in this mission. The website now has active users from countries such as the USA, Malaysia, India, Saudi Arabia, Sri Lanka, Singapore, Thailand, and France. This growing international interest shows that there is potential for Baibalaa beyond our borders, and it encourages us to continue efforts to promote the sport internationally..</p>
+            <p class="justified">In my opinion, while we look to expand the sport, it is equally important to preserve its prestige locally. Currently, we have the Baibalaa Championship organized once every year during Eid by the Baibalaa Association of Maldives. I firmly believe that this championship should remain exclusive and be held only once a year. Much like the World Cup, the anticipation and rarity of the event add to its significance and excitement. Hosting it more frequently might dilute its impact and prestige.</p>
+            <p class="justified">However, to keep the spirit of Baibalaa alive year-round, there is room for other tournaments. These can include office tournaments, regional tournaments, or club tournaments — similar to the successful office tournament held in 2023. These events can be organized by other parties or organizations, who can affiliate with the Baibalaa Association of Maldives for support and collaboration in hosting them., while the main championship remains the pinnacle event organized solely by the Association once a year.</p>
+            <p class="justified">The future of Baibalaa is bright. With the right balance between preserving tradition and expanding our horizons, we can ensure that Baibalaa not only thrives in the Maldives but also finds its place on the global sporting stage.</p>
+            <p class="justified">This is my vision — one that I am passionate about — and I fully understand that others may have different opinions. But one thing is clear: Baibalaa is something we all can be proud of, and together, we can take it to new heights.</p>
+            
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-18" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-18" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-18" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-18" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-18" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-18" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-18" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-17">
             <h2>The Legends Beyond the Spotlight</h2>
             <img src="https://i.imgur.com/DCcUSoi.jpg" alt="Baibalaa Tournament 2025">
@@ -1133,6 +1175,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-15").style.display = "none";
             document.getElementById("comments-display-16").style.display = "none";
             document.getElementById("comments-display-17").style.display = "none";
+            document.getElementById("comments-display-18").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -1167,6 +1210,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-15").addEventListener("click", () => toggleComments(15));
         document.getElementById("toggle-comments-btn-16").addEventListener("click", () => toggleComments(16));
         document.getElementById("toggle-comments-btn-17").addEventListener("click", () => toggleComments(17));
+        document.getElementById("toggle-comments-btn-18").addEventListener("click", () => toggleComments(18));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -1220,6 +1264,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-15").addEventListener("click", () => submitComment(15));
     document.getElementById("submit-comment-btn-16").addEventListener("click", () => submitComment(16));
     document.getElementById("submit-comment-btn-17").addEventListener("click", () => submitComment(17));
+    document.getElementById("submit-comment-btn-17").addEventListener("click", () => submitComment(18));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -1240,6 +1285,7 @@ function toggleComments(articleId) {
         displayComments(15);
         displayComments(16);
         displayComments(17);
+        displayComments(18);
     };
 </script>
 
