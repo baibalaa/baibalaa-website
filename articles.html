@@ -29,6 +29,63 @@
 
     <section id="articles">
 
+        <article id="article-19">
+            <h2>Ahmed Nasir "Naatte" – The Coach Who Builds Champions</h2>
+            <img src="https://i.imgur.com/tzm6Z45.jpg" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 30th April 2025, 21:05</p>
+            <p class="justified">In the world of Baibalaa, there are few names as respected and revered as Ahmed Nasir, better known as "Naatte." His legacy isn’t just built on wins — it’s built on transformation, vision, and an unwavering belief in discipline and hard work.</p>
+            <p class="justified">Naatte's journey in Baibalaa began as a player, where he carved his name into history by winning back-to-back championships — first with Maziya Sports in 2000, and then with Club Teenage in 2001. But it was as a coach that he truly changed the game.</p>
+            <p class="justified">What sets Naatte apart isn’t just the number of titles he’s won, but how he’s won them. He doesn't chase glory with already established giants. Instead, he uplifts underdogs. He takes new teams — teams with heart — and shapes them into champions. His coaching career is a testament to this remarkable ability.</p>
+            <p class="justified">His last six titles are a story of belief and transformation:
+
+                Buru Sports Club (2007)
+                
+                TC Sports Club (2011)
+                
+                UN Friends (2013)
+                
+                Kuda Henveiru United (2019)
+                
+                Club O1O (2022) and
+                
+                T.F.T (2025)</p>
+            <p class="justified">Each of these victories was historic — not only because they brought new names to the champion’s list, but because they were led by someone who saw potential in those teams.</p>
+            <p class="justified">According to Naatte, the secret to success is simple: discipline and hard work. It’s a principle he has passed on to every team he’s guided, and it’s what has made him not just a coach, but a mentor and inspiration to players across generations.</p>
+            <p class="justified">Despite all he has achieved, he shows no signs of slowing down. Teams still seek him out — not just for his tactical mind, but for the culture he instills. And as long as he’s coaching, we can expect more surprise champions, more emotional journeys, and more moments of magic.</p>
+            <p class="justified">Naatte also dreams of something bigger — to see Baibalaa reach beyond our borders, included in platforms like the SAFF tournaments and embraced across the region. With his passion and leadership, that dream doesn’t seem too far-fetched.</p>
+            <p class="justified">To the coach who never stops building champions — thank you, Naatte. The Baibalaa community stands with you, excited for whatever comes next.</p>
+            
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-19" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-19" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-19" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-19" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-19" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-19" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-19" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-18">
             <h2>Baibalaa: A Sport We Can Proudly Call Our Own</h2>
             <img src="https://i.imgur.com/f6cuI4L.jpg" alt="Baibalaa Tournament 2025">
@@ -1176,6 +1233,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-16").style.display = "none";
             document.getElementById("comments-display-17").style.display = "none";
             document.getElementById("comments-display-18").style.display = "none";
+            document.getElementById("comments-display-19").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -1211,6 +1269,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-16").addEventListener("click", () => toggleComments(16));
         document.getElementById("toggle-comments-btn-17").addEventListener("click", () => toggleComments(17));
         document.getElementById("toggle-comments-btn-18").addEventListener("click", () => toggleComments(18));
+        document.getElementById("toggle-comments-btn-19").addEventListener("click", () => toggleComments(19));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -1264,7 +1323,8 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-15").addEventListener("click", () => submitComment(15));
     document.getElementById("submit-comment-btn-16").addEventListener("click", () => submitComment(16));
     document.getElementById("submit-comment-btn-17").addEventListener("click", () => submitComment(17));
-    document.getElementById("submit-comment-btn-17").addEventListener("click", () => submitComment(18));
+    document.getElementById("submit-comment-btn-18").addEventListener("click", () => submitComment(18));
+    document.getElementById("submit-comment-btn-19").addEventListener("click", () => submitComment(19));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -1286,6 +1346,7 @@ function toggleComments(articleId) {
         displayComments(16);
         displayComments(17);
         displayComments(18);
+        displayComments(19);
     };
 </script>
 
