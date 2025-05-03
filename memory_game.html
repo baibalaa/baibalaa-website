@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="manifest" href="manifest.json" />
     <meta name="theme-color" content="#000000" />
+    <!-- Google AdSense Auto Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1848828458273100"
+  crossorigin="anonymous"></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-07QRBGZP0F"></script>
@@ -162,7 +165,7 @@
   function buildInitialBoard() {
     gameBoard.innerHTML = "";
 
-    const allImages = Array.from({ length: 27 }, (_, i) => i + 1);
+    const allImages = Array.from({ length: 28 }, (_, i) => i + 1);
     const selectedImages = shuffleArray(allImages).slice(0, totalPairs);
     const gameImages = shuffleArray([...selectedImages, ...selectedImages]);
 
@@ -267,7 +270,7 @@
 
     gameBoard.innerHTML = "";
 
-    const allImages = Array.from({ length: 27 }, (_, i) => i + 1);
+    const allImages = Array.from({ length: 28 }, (_, i) => i + 1);
     const selectedImages = shuffleArray(allImages).slice(0, totalPairs);
     const gameImages = shuffleArray([...selectedImages, ...selectedImages]);
 
