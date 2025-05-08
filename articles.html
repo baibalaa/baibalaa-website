@@ -31,6 +31,86 @@
 
     <section id="articles">
 
+        <article id="article-21">
+            <h2>Gamu Council Baibalaa Challenge 2025 – A National Stage Set in Laamu Gan</h2>
+
+<img src="https://i.imgur.com/QLrO1nt.jpg" alt="Baibalaa Tournament 2025">
+
+<p><strong>Published on:</strong> 08 May 2025, 21:23</p>
+
+<p class="justified">
+    The rich tradition of Baibalaa continues to grow stronger across the Maldives, and this year, Laamu Gan is set to become the epicenter of national-level competition with the Gamu Council Baibalaa Challenge 2025.
+</p>
+
+<p class="justified">
+    Organized by the Secretariat of Hadhdhunmathi Gan Council, in association with the Baibalaa Association of Maldives, this prestigious tournament is open to all registered clubs from across the country. It promises to bring together the very best of Maldivian Baibalaa — from seasoned powerhouses to rising challengers.
+</p>
+
+<p class="justified"><strong>Tournament Highlights:</strong></p>
+<ul class="justified">
+    <li><strong>Tournament Name:</strong> Gamu Council Baibalaa Challenge 2025</li>
+    <li><strong>Organized By:</strong> Secretariat of Hadhdhunmathi Gan Council</li>
+    <li><strong>In Association With:</strong> Baibalaa Association of Maldives</li>
+    <li><strong>Location:</strong> Laamu Gan</li>
+    <li><strong>Tournament Start Date:</strong> 7th June 2025</li>
+</ul>
+
+<p class="justified">
+    Clubs interested in participating are urged to submit their registration via the official form before the deadline on <strong>3rd June 2025 at 23:59</strong>.<br>
+    👉 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUlT24m6tgtZaTSFhFsWGuSxnyPw0sIyIiGMU7koAoMMAeFQ/viewform" target="_blank">Register Here</a>
+</p>
+
+<p class="justified">
+    Tournament rules and regulations can be reviewed here:<br>
+    📄 <a href="https://drive.google.com/file/d/1BLJsvAz-Ju8KWuqeK3JnEePn74NVUlM-/view" target="_blank">View Rules</a>
+</p>
+
+<p class="justified">
+    This tournament is more than just a sporting event — it is a celebration of Baibalaa as a proud, homegrown sport that continues to thrive through grassroots passion and community leadership.
+</p>
+
+<p class="justified">
+    A heartfelt thank you goes to the Secretariat of Hadhdhunmathi Gan Council for their incredible effort in making this event a reality. Their initiative is a strong example of how local councils can play a pivotal role in uplifting and preserving our traditional sports.
+</p>
+
+<p class="justified">
+    We encourage other councils, communities, and sports groups across the nation to follow this inspiring lead — to organize more high-quality tournaments, to nurture local talent, and to ensure that Baibalaa remains alive, competitive, and proudly ours.
+</p>
+
+<p class="justified"><strong>Let’s continue to raise the standard and spirit of Baibalaa across the Maldives — together.</strong></p>
+
+            
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-21" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-21" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-21" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-21" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-21" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-21" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-21" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-20">
             <h2>Legend of the Sand: Coach Hussain Yasir “Yaante” and His Unmatched Baibalaa Legacy</h2>
             <img src="https://i.imgur.com/AmwCbyV.jpg" alt="Baibalaa Tournament 2025">
@@ -1279,6 +1359,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-18").style.display = "none";
             document.getElementById("comments-display-19").style.display = "none";
             document.getElementById("comments-display-20").style.display = "none";
+            document.getElementById("comments-display-21").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -1316,6 +1397,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-18").addEventListener("click", () => toggleComments(18));
         document.getElementById("toggle-comments-btn-19").addEventListener("click", () => toggleComments(19));
         document.getElementById("toggle-comments-btn-20").addEventListener("click", () => toggleComments(20));
+        document.getElementById("toggle-comments-btn-21").addEventListener("click", () => toggleComments(21));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -1372,6 +1454,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-18").addEventListener("click", () => submitComment(18));
     document.getElementById("submit-comment-btn-19").addEventListener("click", () => submitComment(19));
     document.getElementById("submit-comment-btn-20").addEventListener("click", () => submitComment(20));
+    document.getElementById("submit-comment-btn-21").addEventListener("click", () => submitComment(21));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -1395,6 +1478,7 @@ function toggleComments(articleId) {
         displayComments(18);
         displayComments(19);
         displayComments(20);
+        displayComments(21);
     };
 </script>
 
