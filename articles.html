@@ -31,6 +31,49 @@
 
     <section id="articles">
 
+        <article id="article-22">
+            <h2>Club Kaasinjee (CK): Knocking on the Door of Greatness</h2>
+            <img src="https://i.imgur.com/VJQY5wA.jpg" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 12 May 2025, 22:58</p>
+            <p class="justified">Club Kaasinjee, known as "CK", has risen in recent years to become one of the most dominant and respected teams in the Baibalaa arena. Though a championship title has so far remained just out of reach, their unwavering dedication, elite preparation, and powerhouse roster have firmly established them as consistent top contenders.</p>
+            <p class="justified">Season after season, CK earns admiration for being one of the most well-prepared and strategically focused teams in the game. Their discipline and structure have shaped a squad that commands respect — one that no opponent takes lightly.</p>
+            <p class="justified">This year was no different. At the heart of their campaign were homegrown talents like Shammi, a dynamic and relentless attacker regarded as one of the finest in Baibalaa today, along with Estee, Haitte, and their inspirational leader Bandu. This core reflects CK’s deep roots and their commitment to developing talent from within.</p>
+            <p class="justified">Backing them is a roster filled with Baibalaa icons — none greater than three-time Mr. Baibalaa, Aslam. His presence alone adds a championship aura to the team. Alongside him stand multi-time champions Ammadey, Shukoo, Twobe, and Hamdh — players with proven legacies who bring calm, power, and experience to the field.</p>
+            <p class="justified">Though CK narrowly missed out on glory — losing last year’s final to Buru Sports Club and this year’s semi-final to the eventual champions T.F.T — many believe these defeats were not due to CK underperforming, but rather the result of their opponents delivering exceptional, near-perfect performances. In a sport as intense and tactical as Baibalaa, such moments can be decisive.</p>
+            <p class="justified">Their fans continue to stand strong behind them. CK’s journey has been defined by heart, resilience, and an unshakeable desire to win. And as each year passes, that long-awaited title feels closer than ever.</p>
+            <p class="justified">To the warriors of Club Kaasinjee — your moment is coming. Maybe next year. Keep pushing. Keep believing. Baibalaa is ready for your triumph.</p>
+            
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-22" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-22" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-22" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-22" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-22" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-22" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-22" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-21">
             <h2>Gamu Council Baibalaa Challenge 2025 – A National Stage Set in Laamu Gan</h2>
 
@@ -1360,6 +1403,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-19").style.display = "none";
             document.getElementById("comments-display-20").style.display = "none";
             document.getElementById("comments-display-21").style.display = "none";
+            document.getElementById("comments-display-22").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -1398,6 +1442,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-19").addEventListener("click", () => toggleComments(19));
         document.getElementById("toggle-comments-btn-20").addEventListener("click", () => toggleComments(20));
         document.getElementById("toggle-comments-btn-21").addEventListener("click", () => toggleComments(21));
+        document.getElementById("toggle-comments-btn-22").addEventListener("click", () => toggleComments(22));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -1455,6 +1500,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-19").addEventListener("click", () => submitComment(19));
     document.getElementById("submit-comment-btn-20").addEventListener("click", () => submitComment(20));
     document.getElementById("submit-comment-btn-21").addEventListener("click", () => submitComment(21));
+    document.getElementById("submit-comment-btn-22").addEventListener("click", () => submitComment(22));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -1479,6 +1525,7 @@ function toggleComments(articleId) {
         displayComments(19);
         displayComments(20);
         displayComments(21);
+        displayComments(22);
     };
 </script>
 
