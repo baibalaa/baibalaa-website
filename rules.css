@@ -4,6 +4,7 @@ body {
     background-color: #121212;
     color: white;
     text-align: center;
+    padding-bottom: 200px; /* same as banner height */
 }
 
 /* Navigation Bar */
@@ -230,3 +231,44 @@ footer {
 .youtube-link img:hover {
     opacity: 0.8;
 }
+
+  /* ✅ Updated Fixed Banner Styles */
+  .fixed-banner-ad {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    z-index: 9999;
+    overflow: hidden;
+    padding: 0 10px; /* adds spacing left/right */
+    box-sizing: border-box;
+  }
+    
+    .fixed-banner-ad .banner-slide {
+      width: 100%;
+      display: none;
+      text-align: center;
+    }
+    
+    .fixed-banner-ad .banner-slide.active {
+      display: block;
+    }
+    
+    .fixed-banner-ad img,
+    .fixed-banner-ad video {
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    
+    /* Responsive for small screens */
+    @media (max-width: 767px) {
+      .fixed-banner-ad img,
+      .fixed-banner-ad video {
+        max-height: 100px;
+      }
+    }
+    
