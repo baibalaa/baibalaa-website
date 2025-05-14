@@ -723,28 +723,32 @@ ul.justified li {
   }
   
   /* Tournament Section Styling */
-.tournament-links {
-  background-color: #1a1a1a;
-  padding: 40px 20px;
-  margin: 40px auto;
-  border-radius: 8px;
-  max-width: 600px;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
-}
-
-.tournament-links h2 {
-  margin: 20px 0;
-  font-size: 1.8em;
-}
-
-.tournament-links a {
-  color: gold;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.tournament-links a:hover {
-  color: #ffcc00;
-  text-shadow: 0 0 5px #ffcc00;
-}
+  .tournament-links {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+  }
+  
+  .tournament-item h2 {
+    font-size: 1.6em;
+    margin: 0;
+  }
+  
+  .tournament-item a {
+    color: gold;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .tournament-item a:hover {
+    color: #ffcc00;
+  }
+  
+  .divider {
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+    margin: 20px 0;
+  }
+  
