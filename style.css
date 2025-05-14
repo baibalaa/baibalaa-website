@@ -682,16 +682,18 @@ ul.justified li {
   }
   
 
-  .fixed-banner-ad {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #000;
-    z-index: 9999;
-    overflow: hidden;
-    padding: 0;
-  }
+  /* ✅ Updated Fixed Banner Styles */
+.fixed-banner-ad {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  z-index: 9999;
+  overflow: hidden;
+  padding: 0 10px; /* adds spacing left/right */
+  box-sizing: border-box;
+}
   
   .fixed-banner-ad .banner-slide {
     width: 100%;
