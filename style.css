@@ -722,7 +722,6 @@ ul.justified li {
     }
   }
   
-  /* Tournament Section Styling */
   .tournament-links {
     max-width: 600px;
     margin: 30px auto;
@@ -741,6 +740,8 @@ ul.justified li {
     color: gold;
     text-decoration: none;
     transition: color 0.3s;
+    display: inline-block;
+    width: 100%;
   }
   
   .tournament-item a:hover {
@@ -748,7 +749,20 @@ ul.justified li {
   }
   
   .divider {
-    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.5);
     margin: 20px 0;
+    width: 100%;
+  }
+  
+  /* Responsive tweaks for smaller screens */
+  @media (max-width: 600px) {
+    .tournament-item h2 {
+      font-size: 1.2em;
+    }
+  
+    .divider {
+      margin: 15px 0;
+      border-bottom: 1px solid rgba(255, 215, 0, 0.8); /* make it clearer */
+    }
   }
   
