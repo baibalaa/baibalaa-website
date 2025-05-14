@@ -8,10 +8,6 @@
         <link rel="manifest" href="manifest.json">
         <meta name="theme-color" content="#000000">
       
-        <!-- Google AdSense Auto Ads -->
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8120686861734870"
-           crossorigin="anonymous"></script>
-      
         <!-- Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-07QRBGZP0F"></script>
         <script>
@@ -142,6 +138,20 @@
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 
+<!-- Banner Ad (Fixed Bottom) -->
+<div class="fixed-banner-ad" id="bannerAd">
+    <div class="banner-slide active">
+        <video src="banner1.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="banner-slide">
+        <video src="banner1.mp4" autoplay muted loop playsinline></video>
+      </div>
+    <div class="banner-slide">
+        <video src="banner1.mp4" autoplay muted loop playsinline></video>
+      </div>
+      
+  </div>
+  
     <!-- Firebase SDK (config.js contains your key) -->
 <script src="config.js"></script>
 <script type="module">
@@ -175,6 +185,18 @@
   });
 </script>
 
-
+<script>
+    const slides = document.querySelectorAll('#bannerAd .banner-slide');
+    let current = 0;
+  
+    if (slides.length > 1) {
+      setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 10000);
+    }
+  </script>
+  
 </body>
 </html>
