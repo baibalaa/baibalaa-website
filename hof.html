@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Wall of Glory</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #000;
+      color: gold;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    h1.hof-heading {
+      margin: 40px 0 20px 0;
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: gold;
+      text-align: center;
+      text-shadow: 0 0 10px #ffcc00;
+    }
+  
+    .hof-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 images per row on desktop */
+      gap: 30px;
+      width: 90%;
+      max-width: 1200px;
+      padding-bottom: 60px;
+    }
+  
+    .hof-gallery img {
+      width: 100%;
+      height: auto;
+      border: 3px solid gold;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      display: block;
+    }
+  
+    .hof-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 215, 0, 1);
+    }
+  
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      .hof-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row on tablets */
+      }
+    }
+  
+    @media (max-width: 500px) {
+      .hof-gallery {
+        grid-template-columns: 1fr; /* 1 image per row on phones */
+      }
+    }
+  </style>
+  
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="hof.html">GLORY WALL</a></li>
+      <li><a href="rules.html">RULES</a></li>
+      <li><a href="articles.html">BAIBALAA INSIGHTS</a></li>
+      <li><a href="tournaments.html">TOURNAMENTS</a></li>
+      <li><a href="champions.html">CHAMPIONS</a></li>
+      <li><a href="mrbaibalaa.html">MR. BAIBALAA</a></li>
+      <li><a href="players.html">PLAYERS</a></li>
+      <li><a href="memory_game.html">FLIP CARD GAME</a></li>
+      <li><a href="highlights.html">HIGHLIGHTS</a></li>
+    </ul>
+  </nav>
+
+  <div class="donation-banner">
+    <button id="donateBtn">☕ Buy Us a Coffee</button>
+</div>
+
+<!-- Modal -->
+<div id="donationModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Support Baibalaa MV</h2>
+        <p>Baibalaa MV is a passion project dedicated to preserving and celebrating the spirit of Baibalaa in the Maldives. Countless hours of research, design, and development go into maintaining this platform for the community.</p>
+        <p>If you appreciate our work and would like to support us, you can buy us a coffee ;)</p>
+        <p><strong>BML Account No:</strong> <span id="accountNumber">7701700628001</span><br>
+        <strong>Name:</strong> CLUB AMIGOS <button id="copyBtn">Copy</button></p>
+        <p>If you have suggestions, ideas, or feedback, feel free to reach out at <a href="mailto:baibalaamv@gmail.com">baibalaamv@gmail.com</a>.</p>
+        <p id="copySuccess" style="display:none;color:lime;margin-top:10px;">Copied!</p>
+    </div>
+</div>
+
+
+  <h1 class="hof-heading">The Wall of Glory</h1>
+
+  <div class="hof-gallery">
+    <img src="hof/bg.png" alt="bg" />
+    <img src="hof/teenage.png" alt="teenage" />
+    <img src="hof/buru.png" alt="buru" />
+    <img src="hof/zefrol.png" alt="zefrol" />
+    <img src="hof/maziya.png" alt="maziya" />
+    <img src="hof/tc.png" alt="tc" />
+    <img src="hof/un.png" alt="un" />
+    <img src="hof/kh.png" alt="kh" />
+    <img src="hof/eagles.png" alt="eagles" />
+    <img src="hof/o1o.png" alt="o1o" />
+    <img src="hof/tft.png" alt="tft" />
+    <img src="hof/lorenzo.png" alt="lorenzo" />
+    <img src="hof/gaamagu.png" alt="gaamagu" />
+    <img src="hof/masodi.png" alt="masodi" />
+    <img src="hof/oyeha.png" alt="oyeha" />
+    <img src="hof/hulhumale.png" alt="hulhumale" />
+    <img src="hof/galolhu.png" alt="galolhu" />
+    <img src="hof/bgnew.png" alt="bgnew" />
+    <img src="hof/west.png" alt="west" />
+    <img src="hof/lt.png" alt="lt" />
+    <img src="hof/mc.png" alt="mc" />
+    <img src="hof/vk.png" alt="vk" />
+    <img src="hof/ck.png" alt="ck" />
+    <img src="hof/teenagejr.png" alt="teenagejr" />
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Baibalaa MV</h3>
+        <p>Baibalaa MV is dedicated to preserving and celebrating the history of Baibalaa, the pride of the Maldives.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="hof.html">Glory Wall</a></li>
+          <li><a href="rules.html">Rules</a></li>
+          <li><a href="articles.html">Baibalaa Insights</a></li>
+          <li><a href="tournaments.html">Tournaments</a></li>
+          <li><a href="champions.html">Champions</a></li>
+          <li><a href="mrbaibalaa.html">Mr. Baibalaa</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="memory_game.html">Flip Card Game</a></li>
+          <li><a href="highlights.html">Highlights</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:baibalaamv@gmail.com">baibalaamv@gmail.com</a></p>
+        <div class="youtube-link">
+          <a href="https://www.youtube.com/@baibalaamv" target="_blank">
+            <img src="youtube.png" alt="YouTube Logo" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Baibalaa MV. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+<script>
+  const modal = document.getElementById("donationModal");
+  const btn = document.getElementById("donateBtn");
+  const span = document.getElementsByClassName("close")[0];
+  const copyBtn = document.getElementById("copyBtn");
+  const accountNumber = document.getElementById("accountNumber").textContent;
+  const copySuccess = document.getElementById("copySuccess");
+
+  btn.onclick = () => {
+      modal.style.display = "block";
+  }
+
+  span.onclick = () => {
+      modal.style.display = "none";
+      copySuccess.style.display = "none";
+  }
+
+  window.onclick = (event) => {
+      if (event.target == modal) {
+          modal.style.display = "none";
+          copySuccess.style.display = "none";
+      }
+  }
+
+  copyBtn.onclick = () => {
+      navigator.clipboard.writeText(accountNumber).then(() => {
+          copySuccess.style.display = "block";
+      });
+  }
+</script>
+
+</body>
+</html>

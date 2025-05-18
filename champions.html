@@ -15,6 +15,7 @@
     <nav>
         <ul>
             <li><a href="index.html">HOME</a></li>
+            <li><a href="hof.html">GLORY WALL</a></li>
             <li><a href="rules.html">RULES</a></li>
             <li><a href="articles.html">BAIBALAA INSIGHTS</a></li>
             <li><a href="tournaments.html">TOURNAMENTS</a></li>
@@ -26,6 +27,23 @@
         </ul>
     </nav>
 
+    <div class="donation-banner">
+        <button id="donateBtn">☕ Buy Us a Coffee</button>
+    </div>
+    
+    <!-- Modal -->
+    <div id="donationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Support Baibalaa MV</h2>
+            <p>Baibalaa MV is a passion project dedicated to preserving and celebrating the spirit of Baibalaa in the Maldives. Countless hours of research, design, and development go into maintaining this platform for the community.</p>
+            <p>If you appreciate our work and would like to support us, you can buy us a coffee ;)</p>
+            <p><strong>BML Account No:</strong> <span id="accountNumber">7701700628001</span><br>
+            <strong>Name:</strong> CLUB AMIGOS <button id="copyBtn">Copy</button></p>
+            <p>If you have suggestions, ideas, or feedback, feel free to reach out at <a href="mailto:baibalaamv@gmail.com">baibalaamv@gmail.com</a>.</p>
+            <p id="copySuccess" style="display:none;color:lime;margin-top:10px;">Copied!</p>
+        </div>
+    </div>
     
     <header>
         <h1>PAST CHAMPIONS AND RUNNERS UP</h1>
@@ -218,6 +236,7 @@
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="hof.html">Glory Wall</a></li>
                     <li><a href="rules.html">Rules</a></li>
                     <li><a href="articles.html">Baibalaa Insights</a></li>
                     <li><a href="tournaments.html">Tournaments</a></li>
@@ -273,6 +292,38 @@
       }, 10000);
     }
   </script>
+
+<script>
+    const modal = document.getElementById("donationModal");
+    const btn = document.getElementById("donateBtn");
+    const span = document.getElementsByClassName("close")[0];
+    const copyBtn = document.getElementById("copyBtn");
+    const accountNumber = document.getElementById("accountNumber").textContent;
+    const copySuccess = document.getElementById("copySuccess");
+
+    btn.onclick = () => {
+        modal.style.display = "block";
+    }
+
+    span.onclick = () => {
+        modal.style.display = "none";
+        copySuccess.style.display = "none";
+    }
+
+    window.onclick = (event) => {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            copySuccess.style.display = "none";
+        }
+    }
+
+    copyBtn.onclick = () => {
+        navigator.clipboard.writeText(accountNumber).then(() => {
+            copySuccess.style.display = "block";
+        });
+    }
+</script>
+
 
 </body>
 </html>

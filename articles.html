@@ -14,6 +14,7 @@
     <nav>
         <ul>
             <li><a href="index.html">HOME</a></li>
+            <li><a href="hof.html">GLORY WALL</a></li>
             <li><a href="rules.html">RULES</a></li>
             <li><a href="articles.html">BAIBALAA INSIGHTS</a></li>
             <li><a href="tournaments.html">TOURNAMENTS</a></li>
@@ -25,11 +26,71 @@
         </ul>
     </nav>
 
+    <div class="donation-banner">
+        <button id="donateBtn">☕ Buy Us a Coffee</button>
+    </div>
+    
+    <!-- Modal -->
+    <div id="donationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Support Baibalaa MV</h2>
+            <p>Baibalaa MV is a passion project dedicated to preserving and celebrating the spirit of Baibalaa in the Maldives. Countless hours of research, design, and development go into maintaining this platform for the community.</p>
+            <p>If you appreciate our work and would like to support us, you can buy us a coffee ;)</p>
+            <p><strong>BML Account No:</strong> <span id="accountNumber">7701700628001</span><br>
+            <strong>Name:</strong> CLUB AMIGOS <button id="copyBtn">Copy</button></p>
+            <p>If you have suggestions, ideas, or feedback, feel free to reach out at <a href="mailto:baibalaamv@gmail.com">baibalaamv@gmail.com</a>.</p>
+            <p id="copySuccess" style="display:none;color:lime;margin-top:10px;">Copied!</p>
+        </div>
+    </div>
+    
+    
+
     <header>
         <h1>BAIBALAA INSIGHTS</h1>
     </header>
 
     <section id="articles">
+
+        <article id="article-23">
+            <h2>"Zeppo" – Surprise package of the Eid Baibalaa Challenge 1446!</h2>
+            <img src="https://i.imgur.com/iFs2Jkd.jpg" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 18 May 2025, 14:10</p>
+            <p class="justified">"Zeppo" – the young and energetic surprise package of the Eid Baibalaa Challenge 1446! In their debut tournament, they charged all the way to the Semi-Finals, making a powerful statement on the sand.</p>
+            <p class="justified">One of their biggest highlights? Defeating Club Teenage, the second most decorated team in Baibalaa history! Their defense was exceptional, managing to keep Baibalaa legends like British, Mr. Baibalaa 1429 Gabbu, and Rottey Ibuty etc.. on the sand.</p>
+            <p class="justified">They were only stopped by Lorenzo Sports Club by a masterclass performance by the legendary Mr. Baibalaa Abo, in a nail-biting penalty showdown.</p>
+            <p class="justified">This is just the beginning. We can't wait to see Team Zeppo come back even stronger next year. Good luck, Zeppo — the future of Baibalaa is bright!</p>
+            
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-23" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-23" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-23" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-23" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-23" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-23" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-23" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
 
         <article id="article-22">
             <h2>Club Kaasinjee (CK): Knocking on the Door of Greatness</h2>
@@ -1299,6 +1360,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="hof.html">Glory Wall</a></li>
                     <li><a href="rules.html">Rules</a></li>
                     <li><a href="articles.html">Baibalaa Insights</a></li>
                     <li><a href="tournaments.html">Tournaments</a></li>
@@ -1416,6 +1478,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-20").style.display = "none";
             document.getElementById("comments-display-21").style.display = "none";
             document.getElementById("comments-display-22").style.display = "none";
+            document.getElementById("comments-display-23").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -1455,6 +1518,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-20").addEventListener("click", () => toggleComments(20));
         document.getElementById("toggle-comments-btn-21").addEventListener("click", () => toggleComments(21));
         document.getElementById("toggle-comments-btn-22").addEventListener("click", () => toggleComments(22));
+        document.getElementById("toggle-comments-btn-23").addEventListener("click", () => toggleComments(23));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -1513,6 +1577,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-20").addEventListener("click", () => submitComment(20));
     document.getElementById("submit-comment-btn-21").addEventListener("click", () => submitComment(21));
     document.getElementById("submit-comment-btn-22").addEventListener("click", () => submitComment(22));
+    document.getElementById("submit-comment-btn-23").addEventListener("click", () => submitComment(23));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -1538,6 +1603,7 @@ function toggleComments(articleId) {
         displayComments(20);
         displayComments(21);
         displayComments(22);
+        displayComments(23);
     };
 </script>
 
@@ -1553,5 +1619,37 @@ function toggleComments(articleId) {
       }, 10000);
     }
   </script>
+
+<script>
+    const modal = document.getElementById("donationModal");
+    const btn = document.getElementById("donateBtn");
+    const span = document.getElementsByClassName("close")[0];
+    const copyBtn = document.getElementById("copyBtn");
+    const accountNumber = document.getElementById("accountNumber").textContent;
+    const copySuccess = document.getElementById("copySuccess");
+
+    btn.onclick = () => {
+        modal.style.display = "block";
+    }
+
+    span.onclick = () => {
+        modal.style.display = "none";
+        copySuccess.style.display = "none";
+    }
+
+    window.onclick = (event) => {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            copySuccess.style.display = "none";
+        }
+    }
+
+    copyBtn.onclick = () => {
+        navigator.clipboard.writeText(accountNumber).then(() => {
+            copySuccess.style.display = "block";
+        });
+    }
+</script>
+
 </body>
 </html>
