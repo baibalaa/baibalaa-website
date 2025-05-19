@@ -901,3 +901,97 @@ ul.justified li {
     font-size: 1.2rem;
   }
 }
+
+/* Styling for the question box */
+.question-box {
+  background-color: #000;
+  color: gold;
+  border: 2px solid gold;
+  border-radius: 10px;
+  padding: 30px 20px;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Styling for question text */
+.question-box h2 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: gold;
+}
+
+/* Layout for options */
+.options {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Styling for answer buttons */
+.option-btn {
+  background-color: black;
+  color: gold;
+  border: 2px solid gold;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  text-align: left;  /* <-- Add this */
+}
+
+.option-btn:hover {
+  background-color: gold;
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+/* Dropdown Menu */
+nav ul li.dropdown {
+  position: relative;
+}
+
+nav ul li.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #222;
+  min-width: 180px;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  border: 1px solid gold;
+  border-radius: 5px;
+  padding: 0;
+}
+
+nav ul li.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+nav ul li.dropdown .dropdown-content li {
+  display: block;
+  margin: 0;
+}
+
+nav ul li.dropdown .dropdown-content li a {
+  display: block;
+  padding: 10px;
+  color: gold;
+  text-align: left;
+  background-color: #222;
+  font-weight: normal;
+  border-bottom: 1px solid #333;
+}
+
+nav ul li.dropdown .dropdown-content li a:hover {
+  background-color: #333;
+  color: white;
+}

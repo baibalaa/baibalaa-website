@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BAIBALAA IQ</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Modal styles moved here for clarity */
+    #nameModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    #nameModal.show {
+      display: flex;
+    }
+    #nameModal .modal-content {
+      background: black;
+      color: gold;
+      border: 2px solid gold;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      width: 300px;
+      text-transform: uppercase; /* <-- added */
+    }
+    #playerNameInput {
+      width: 90%;
+      padding: 8px;
+      font-size: 16px;
+      margin-top: 10px;
+      color: black;
+      border-radius: 4px;
+      border: 1px solid gold;
+      text-transform: uppercase; /* <-- added */
+    }
+    #confirmBtn {
+      background: gold;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    #cancelBtn {
+      background-color: #888;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 6px;
+      margin-left: 15px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="hof.html">GLORY WALL</a></li>
+        <li><a href="rules.html">RULES</a></li>
+        <li><a href="articles.html">BAIBALAA INSIGHTS</a></li>
+        <li><a href="tournaments.html">TOURNAMENTS</a></li>
+        <li><a href="champions.html">CHAMPIONS</a></li>
+        <li><a href="mrbaibalaa.html">MR. BAIBALAA</a></li>
+        <li><a href="players.html">PLAYERS</a></li>
+        <li class="dropdown">
+            <a href="#">GAMES</a>
+            <ul class="dropdown-content">
+                <li><a href="memory_game.html">Flip Card Game</a></li>
+                <li><a href="baibalaaiq.html">Baibalaa IQ</a></li>
+            </ul>
+        </li>
+        <li><a href="highlights.html">HIGHLIGHTS</a></li>
+    </ul>
+</nav>
+
+  <!-- Game Content -->
+  <h1>BAIBALAA IQ</h1>
+
+<!-- Game Controls -->
+<div class="game-buttons">
+  <button id="startBtn" class="btn">Start Game</button>
+</div>
+
+<!-- Game Info -->
+<div class="game-info">
+  <div class="player-name">
+    Player: <span id="playerName"></span>
+  </div>
+  <div>
+    <span id="score">POINTS: 0</span>
+  </div>
+  <div>
+    <span id="timer">TIME REMAINING: 10s</span>
+  </div>
+</div>
+
+<!-- Question Area -->
+<div class="question-box" id="questionBox" style="display: none;">
+  <h2 id="questionText"></h2>
+  <div class="options">
+    <button class="option-btn" style="display: none;"></button>
+    <button class="option-btn" style="display: none;"></button>
+    <button class="option-btn" style="display: none;"></button>
+    <button class="option-btn" style="display: none;"></button>
+  </div>
+</div>
+
+<!-- Leaderboard Section -->
+<div class="leaderboard">
+    <h2>Leaderboard</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Player</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboardBody">
+        <!-- Dynamic content inserted via JavaScript -->
+      </tbody>
+    </table>
+  </div>
+  
+
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>About Baibalaa MV</h3>
+      <p>Baibalaa MV is dedicated to preserving and celebrating the history of Baibalaa, the pride of the Maldives.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hof.html">Glory Wall</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="articles.html">Baibalaa Insights</a></li>
+        <li><a href="tournaments.html">Tournaments</a></li>
+        <li><a href="champions.html">Champions</a></li>
+        <li><a href="mrbaibalaa.html">Mr. Baibalaa</a></li>
+        <li><a href="players.html">Players</a></li>
+        <li><a href="memory_game.html">Flip Card Game</a></li>
+        <li><a href="baibalaaiq.html">Baibalaa iQ</a></li>
+        <li><a href="highlights.html">Highlights</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:baibalaamv@gmail.com">baibalaamv@gmail.com</a></p>
+      <div class="youtube-link">
+        <a href="https://www.youtube.com/@baibalaamv" target="_blank">
+          <img src="youtube.png" alt="YouTube Logo" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Baibalaa MV. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Name Entry Modal -->
+<div id="nameModal" class="modal">
+  <div class="modal-content">
+    <h2>Enter Player Name</h2>
+    <input type="text" id="playerNameInput" maxlength="12" placeholder="Max 12 characters"
+      style="width: 90%; padding: 8px; font-size: 16px; margin-top: 10px; color: gold; background: black; border: 1px solid gold;">
+    <div style="margin-top: 20px;">
+      <button id="confirmBtn">Start Game</button>
+      <button id="cancelBtn">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- Game Over Modal -->
+<div id="gameOverModal" class="modal">
+  <div class="modal-content">
+    <h2>GAME OVER</h2>
+    <p id="gameOverMessage"></p>
+    <div style="margin-top: 20px;">
+      <button id="restartGameBtn">Restart</button>
+      <button id="cancelGameBtn" style="margin-left: 15px; background-color: #888; color: white;">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="questions.js"></script>
+
+
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const startBtn = document.getElementById("startBtn");
+  const nameModal = document.getElementById("nameModal");
+  const confirmBtn = document.getElementById("confirmBtn");
+  const cancelBtn = document.getElementById("cancelBtn");
+  const playerNameSpan = document.getElementById("playerName");
+  const playerNameInput = document.getElementById("playerNameInput");
+  const scoreSpan = document.getElementById("score");
+  const timerSpan = document.getElementById("timer");
+
+  let score = 0;
+  let remainingQuestions = [];
+  let timer;
+  let timeLeft = 10;
+  const leaderboardData = [];
+
+
+  function startTimer() {
+    timeLeft = 10;
+    timerSpan.textContent = `TIME REMAINING: ${timeLeft}s`;
+    clearInterval(timer);
+    timer = setInterval(() => {
+      timeLeft--;
+      timerSpan.textContent = `TIME REMAINING: ${timeLeft}s`;
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        endGame();
+      }
+    }, 1000);
+  }
+
+  function getRandomQuestion() {
+  if (remainingQuestions.length === 0) {
+    // Clone and shuffle all questions
+    remainingQuestions = [...questions].sort(() => 0.5 - Math.random());
+  }
+
+  const q = remainingQuestions.pop(); // take one question from the end
+  const shuffledWrong = q.wrong.sort(() => 0.5 - Math.random()).slice(0, 3);
+  const allOptions = [...shuffledWrong, q.correct].sort(() => 0.5 - Math.random());
+
+  return {
+    question: q.question,
+    options: allOptions,
+    answer: q.correct
+  };
+}
+
+
+  function showNextQuestion() {
+  const q = getRandomQuestion();
+  const questionBox = document.getElementById("questionBox");
+  const questionText = document.getElementById("questionText");
+  const optionButtons = document.querySelectorAll(".option-btn");
+
+  questionBox.style.display = "block";
+  questionText.textContent = q.question;
+
+  optionButtons.forEach((btn, index) => {
+    btn.style.display = "inline-block";
+    btn.textContent = q.options[index];
+    btn.onclick = () => {
+      if (btn.textContent === q.answer) {
+        score += 5;
+        scoreSpan.textContent = `POINTS: ${score}`;
+
+        // Reset timer
+        clearInterval(timer);
+        timeLeft = 10;
+        timerSpan.textContent = `TIME REMAINING: ${timeLeft}s`;
+        startTimer();
+
+        showNextQuestion();
+      } else {
+        endGame();
+      }
+    };
+  });
+}
+
+function loadLeaderboard() {
+  const leaderboardRef = ref(db, 'leaderboard-game');
+
+  // 🔥 Firebase: Read data from 'leaderboard-game' node
+  onValue(leaderboardRef, (snapshot) => {
+    const data = snapshot.val();
+    const entries = [];
+
+    for (const key in data) {
+      entries.push(data[key]);
+    }
+
+    // Sort leaderboard: score desc, then most recent
+    entries.sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return b.timestamp - a.timestamp;
+    });
+
+    const top5 = entries.slice(0, 5);
+
+    const leaderboardBody = document.getElementById("leaderboardBody");
+    leaderboardBody.innerHTML = "";
+
+    top5.forEach((entry, index) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${entry.name}</td>
+        <td>${entry.score}</td>
+      `;
+      leaderboardBody.appendChild(row);
+    });
+  }, {
+    onlyOnce: true // optional to prevent live updates
+  });
+}
+
+
+function endGame() {
+  clearInterval(timer);
+  document.getElementById("gameOverModal").style.display = "flex";
+  document.getElementById("gameOverMessage").textContent = `${playerNameSpan.textContent}, YOU SCORED ${score} POINTS.`.toUpperCase();
+
+  const leaderboardRef = ref(db, 'leaderboard-game');
+  const newEntry = {
+    name: playerNameSpan.textContent,
+    score: score,
+    timestamp: Date.now()
+  };
+
+  onValue(leaderboardRef, (snapshot) => {
+    const data = snapshot.val() || {};
+    const entries = Object.entries(data).map(([key, value]) => ({ key, ...value }));
+
+    // Include new entry in the list
+    entries.push({ key: null, ...newEntry });
+
+    // Sort: higher score first, if same score then newer first
+    entries.sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return b.timestamp - a.timestamp;
+    });
+
+    // Keep only top 5
+    const top5 = entries.slice(0, 5);
+
+    // Clear and write only top 5
+    const updates = {};
+    top5.forEach(entry => {
+      // If it has a Firebase key, keep it
+      if (entry.key) {
+        updates[entry.key] = {
+          name: entry.name,
+          score: entry.score,
+          timestamp: entry.timestamp
+        };
+      } else {
+        // If it's the new entry (no key), Firebase will generate one
+        const newKey = push(leaderboardRef).key;
+        updates[newKey] = {
+          name: entry.name,
+          score: entry.score,
+          timestamp: entry.timestamp
+        };
+      }
+    });
+
+    // Replace leaderboard with top 5
+    set(leaderboardRef, updates).then(() => {
+      setTimeout(loadLeaderboard, 500);
+    });
+  }, { onlyOnce: true });
+}
+
+
+
+  function restart() {
+    playerNameSpan.textContent = "";
+    playerNameInput.value = "";
+    score = 0;
+    scoreSpan.textContent = "POINTS: 0";
+    timerSpan.textContent = "TIME REMAINING: 10s";
+    document.getElementById("questionBox").style.display = "none";
+    document.querySelectorAll(".option-btn").forEach(btn => {
+      btn.style.display = "none";
+      btn.textContent = "";
+      btn.onclick = null;
+    });
+    startBtn.style.display = "inline-block";
+  }
+
+  // Button Handlers
+  startBtn.addEventListener("click", () => {
+    nameModal.style.display = "flex";
+  });
+
+  confirmBtn.addEventListener("click", () => {
+    const name = playerNameInput.value.trim();
+    if (name !== "") {
+      playerNameSpan.textContent = name;
+      nameModal.style.display = "none";
+      startBtn.style.display = "none";
+      score = 0;
+      scoreSpan.textContent = "POINTS: 0";
+      showNextQuestion();
+      startTimer();
+    }
+  });
+
+  cancelBtn.addEventListener("click", () => {
+    nameModal.style.display = "none";
+    playerNameInput.value = "";
+  });
+
+  document.getElementById("restartGameBtn").addEventListener("click", () => {
+    document.getElementById("gameOverModal").style.display = "none";
+    confirmBtn.click(); // Restart by confirming name again
+  });
+
+  document.getElementById("cancelGameBtn").addEventListener("click", () => {
+    document.getElementById("gameOverModal").style.display = "none";
+    restart();
+  });
+
+ // Init
+window.addEventListener("load", () => {
+  timerSpan.textContent = "TIME REMAINING: 10s";
+  scoreSpan.textContent = "POINTS: 0";
+
+  // ✅ Load leaderboard from Firebase on page load
+  loadLeaderboard();
+});
+
+</script>
+
+<script src="config.js"></script>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
+    import { getDatabase, ref, push, set, onValue } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-database.js";
+  
+    const firebaseConfig = {
+      apiKey: window.env.FIREBASE_API_KEY,
+      authDomain: "baibalaa-comments.firebaseapp.com",
+      databaseURL: "https://baibalaa-comments-default-rtdb.firebaseio.com", 
+      projectId: "baibalaa-comments",
+      storageBucket: "baibalaa-comments.appspot.com",
+      messagingSenderId: "1033627188071",
+      appId: "1:1033627188071:web:8e2f7ed4d5ae95b066cdc2"
+    };
+  
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+  
+    // Expose db to window so you can access in non-module scripts
+    window.db = db;
+    window.ref = ref;
+    window.push = push;
+    window.set = set;
+    window.onValue = onValue;
+  </script>
+  
+</body>
+</html>
