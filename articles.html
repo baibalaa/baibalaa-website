@@ -58,6 +58,53 @@
 
     <section id="articles">
 
+        <article id="article-25">
+            <h2>BaibalaaMV Reaches 1 Million Views: A Community Milestone</h2>
+            <img src="https://i.imgur.com/U8sy2Tl.jpg" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 21 May 2025, 09:18</p>
+            <p class="justified"><strong>We are proud to announce</strong> that <strong>Baibalaamv</strong> has officially surpassed <strong>1 million views</strong> across our social platforms — a major milestone for the sport and its passionate community.</p>
+
+<p class="justified">This achievement is not just a number. It’s a reflection of the growing love for Baibalaa, a sport deeply rooted in our culture and history. Every play, every moment captured and shared, has contributed to something bigger — the digital revival of Baibalaa.</p>
+
+<h3>A Win for the Community</h3>
+<p class="justified"><strong>This milestone belongs to you</strong> — the players, fans, teams, organizers, and everyone who has contributed to the game, both on the field and online. Your shares, comments, and love have kept the spirit of Baibalaa alive.</p>
+
+<h3>What’s Next?</h3>
+<p class="justified">This is just the beginning. Our journey continues as we work toward bringing you more engaging content, deeper stories, and bigger moments from the Baibalaa arena. We’re excited about what’s to come, and we’re glad you’re with us on this journey.</p>
+
+<p class="justified"><strong>Thank you for believing in BaibalaaMV. Thank you for watching.</strong></p>
+            
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-25" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-25" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-25" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-25" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-25" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-25" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-25" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-24">
             <h2>Nafiu Rasheed “Naappe” – The Voice of Baibalaa Today</h2>
             <img src="https://i.imgur.com/daWXn70.jpg" alt="Baibalaa Tournament 2025">
@@ -1527,6 +1574,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-22").style.display = "none";
             document.getElementById("comments-display-23").style.display = "none";
             document.getElementById("comments-display-24").style.display = "none";
+            document.getElementById("comments-display-25").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -1568,6 +1616,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-22").addEventListener("click", () => toggleComments(22));
         document.getElementById("toggle-comments-btn-23").addEventListener("click", () => toggleComments(23));
         document.getElementById("toggle-comments-btn-24").addEventListener("click", () => toggleComments(24));
+        document.getElementById("toggle-comments-btn-25").addEventListener("click", () => toggleComments(25));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -1628,6 +1677,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-22").addEventListener("click", () => submitComment(22));
     document.getElementById("submit-comment-btn-23").addEventListener("click", () => submitComment(23));
     document.getElementById("submit-comment-btn-24").addEventListener("click", () => submitComment(24));
+    document.getElementById("submit-comment-btn-25").addEventListener("click", () => submitComment(25));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -1655,6 +1705,7 @@ function toggleComments(articleId) {
         displayComments(22);
         displayComments(23);
         displayComments(24);
+        displayComments(25);
     };
 </script>
 
