@@ -806,18 +806,6 @@ const questions = [
       ]
     },
     {
-      question: "Which team won Mr. Baibalaa without reaching a final?",
-      correct: "Teenage Juni",
-      wrong: [
-        "1",
-        "3",
-        "5",
-        "4",
-        "6",
-        "7"
-      ]
-    },
-    {
       question: "Which team was the runner-up in the 1445 Baibalaa Challenge?",
       correct: "Club Kaasinjee",
       wrong: [
