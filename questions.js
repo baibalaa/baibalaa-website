@@ -962,6 +962,42 @@ const questions = [
       ]
     },
     {
+      question: "In which years did Aslam win the Mr. Baibalaa title?",
+      correct: "1437, 1438, 1443",
+      wrong: [
+        "1436, 1427, 1430",
+        "1437, 1436, 1432",
+        "1443, 1425, 1433",
+        "1423, 1426, 1434",
+        "1430, 1435, 1440",
+        "1443, 1424, 1429"
+      ]
+    },
+    {
+      question: "In which years did Abo win the Mr. Baibalaa title?",
+      correct: "1433, 1436, 1446",
+      wrong: [
+        "1436, 1427, 1430",
+        "1437, 1436, 1432",
+        "1443, 1425, 1433",
+        "1446, 1436, 1434",
+        "1430, 1435, 1440",
+        "1443, 1424, 1446"
+      ]
+    },
+    {
+      question: "In which years did Haandoo win the Mr. Baibalaa title?",
+      correct: "1434, 1440",
+      wrong: [
+        "1435, 1440",
+        "1436, 1439",
+        "1432, 1441",
+        "1443, 1446",
+        "1432, 1442",
+        "1439, 1443"
+      ]
+    },
+    {
       question: "In which years did Naani win the Mr. Baibalaa title?",
       correct: "1421, 1428, 1431",
       wrong: [
@@ -972,6 +1008,6 @@ const questions = [
         "1430, 1435, 1440",
         "1418, 1424, 1429"
       ]
-    }    
+    }
   ];
   
