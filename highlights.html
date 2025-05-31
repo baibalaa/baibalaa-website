@@ -33,25 +33,6 @@
         </ul>
     </nav>
 
-    <div class="donation-banner">
-        <button id="donateBtn">☕ Buy Us a Coffee</button>
-    </div>
-    
-    <!-- Modal -->
-    <div id="donationModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Support Baibalaa MV</h2>
-            <p>Baibalaa MV is a passion project dedicated to preserving and celebrating the spirit of Baibalaa in the Maldives. Countless hours of research, design, and development go into maintaining this platform for the community.</p>
-            <p>If you appreciate our work and would like to support us, you can buy us a coffee ;)</p>
-            <p><strong>BML Account No:</strong> <span id="accountNumber">7701700628001</span><br>
-            <strong>Name:</strong> CLUB AMIGOS <button id="copyBtn">Copy</button></p>
-            <p>If you have suggestions, ideas, or feedback, feel free to reach out at <a href="mailto:baibalaamv@gmail.com">baibalaamv@gmail.com</a>.</p>
-            <p id="copySuccess" style="display:none;color:lime;margin-top:10px;">Copied!</p>
-        </div>
-    </div>
-    
-
     <header>
         <h1>BAIBALAA HIGHLIGHTS</h1>
     </header>
@@ -59,8 +40,18 @@
     <section>
 
         <div class="video">
+            <h3>Ijaabath Latheef (Ijaa) one of the starts of Eid Baibalaa Challenge 1446</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Vy3qRM8teT8?si=ksAAQZlTtAPv6cHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="video">
+            <h3>3-star legend ⭐️⭐️⭐️ Abdulla Nishan "Abo". Mr. Baibalaa of Eid Baibalaa Challenge 1446!</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/h38yXiMZftg?si=hZDxEyVwlPwpHmgK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="video">
             <h3>Ekkala Yaambe Mr Baibalaa 1427 (2006)</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/K2SHn-ja83o?si=UADQpyc7M1PzswX5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/K2SHn-ja83o?si=ajpRWfAWlObwU1ru" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <div class="video">
@@ -180,38 +171,6 @@
       }, 10000);
     }
   </script>
-
-<script>
-    const modal = document.getElementById("donationModal");
-    const btn = document.getElementById("donateBtn");
-    const span = document.getElementsByClassName("close")[0];
-    const copyBtn = document.getElementById("copyBtn");
-    const accountNumber = document.getElementById("accountNumber").textContent;
-    const copySuccess = document.getElementById("copySuccess");
-
-    btn.onclick = () => {
-        modal.style.display = "block";
-    }
-
-    span.onclick = () => {
-        modal.style.display = "none";
-        copySuccess.style.display = "none";
-    }
-
-    window.onclick = (event) => {
-        if (event.target == modal) {
-            modal.style.display = "none";
-            copySuccess.style.display = "none";
-        }
-    }
-
-    copyBtn.onclick = () => {
-        navigator.clipboard.writeText(accountNumber).then(() => {
-            copySuccess.style.display = "block";
-        });
-    }
-</script>
-
 
 </body>
 </html>
