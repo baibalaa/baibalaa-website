@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baibalaa Tournament 1446</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        h1 {
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          color: gold;
+          text-align: center;
+          text-shadow: 0 0 10px #ffcc00;
+        }
+    
+      </style>
+    
+    <!-- JavaScript for Toggle Functionality -->
+    <script>
+        // Toggle visibility of sections based on selected radio button
+        function toggleSections() {
+            let all = document.getElementById("all").checked;
+            let teams = document.getElementById("teams").checked;
+            let fixtures = document.getElementById("fixtures").checked;
+            let honors = document.getElementById("honors").checked;
+
+            // Toggle sections based on selection
+            document.getElementById("teams-section").style.display = (all || teams) ? "block" : "none";
+            document.getElementById("fixtures-section").style.display = (all || fixtures) ? "block" : "none";
+            document.getElementById("honors-section").style.display = (all || honors) ? "block" : "none";
+        }
+
+        // Attach event listeners to the radio buttons
+        window.onload = function() {
+            document.getElementById("all").addEventListener("change", toggleSections);
+            document.getElementById("teams").addEventListener("change", toggleSections);
+            document.getElementById("fixtures").addEventListener("change", toggleSections);
+            document.getElementById("honors").addEventListener("change", toggleSections);
+
+            // Run toggle function on page load to set initial state
+            toggleSections();
+        };
+    </script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="hof.html">GLORY WALL</a></li>
+            <li><a href="rules.html">RULES</a></li>
+            <li><a href="articles.html">BAIBALAA INSIGHTS</a></li>
+            <li><a href="tournaments.html">TOURNAMENTS</a></li>
+            <li><a href="champions.html">CHAMPIONS</a></li>
+            <li><a href="mrbaibalaa.html">MR. BAIBALAA</a></li>
+            <li><a href="players.html">PLAYERS | COACHES</a></li>
+            <li class="dropdown">
+                <a href="#">GAMES</a>
+                <ul class="dropdown-content">
+                    <li><a href="memory_game.html">Flip Card Game</a></li>
+                    <li><a href="baibalaaiq.html">Baibalaa IQ</a></li>
+                </ul>
+            </li>
+            <li><a href="highlights.html">HIGHLIGHTS</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>GAMU COUNCIL BAIBALAA CHALLENGE 1446</h1>
+    </header>
+
+    <!-- Filter Options -->
+    <!-- Radio Buttons -->
+    <div>
+        <input type="radio" id="all" name="toggle" checked>
+        <label for="all">All</label>
+
+        <input type="radio" id="teams" name="toggle">
+        <label for="teams">Teams</label>
+
+        <input type="radio" id="fixtures" name="toggle">
+        <label for="fixtures">Fixtures/Results</label>
+
+        <input type="radio" id="honors" name="toggle">
+        <label for="honors">Honors</label>
+    </div>
+
+    <!-- Participating Teams -->
+    <section id="teams-section">
+        <h2>PARTICIPATING TEAMS</h2>
+        <table border="1">
+            <tr>
+                <th>#</th>
+                <th>Team Name</th>
+            </tr>
+            <tr><td>1</td><td>Best Sports Club</td></tr>
+            <tr><td>2</td><td>Finolhu Sports Club</td></tr>
+            <tr><td>3</td><td>Mukurimagu New Generation</td></tr>
+            <tr><td>4</td><td>United Finolhu Sports Club</td></tr>
+            <tr><td>5</td><td>Mukurimagu Underground</td></tr>
+            <tr><td>6</td><td>Thundi New Generation</td></tr>
+            <tr><td>7</td><td>Mukurimagu Unbeaten</td></tr>
+            <tr><td>8</td><td>Goalhi Sports Club</td></tr>
+            <tr><td>9</td><td>Foemathi</td></tr>
+        </table>
+    </section>
+    
+    
+    <section id="fixtures-section">
+        <h2>FIXTURES AND RESULTS</h2>
+
+        <h3>FIXTURES</h3>
+        <table border="1">
+            <tr>
+                <th>Date</th>
+                <th>Stage</th>
+                <th>Team A</th>
+                <th>Team B</th>
+                <th>Match Link</th>
+            </tr>
+            <tr>
+                <td>07 June 2025</td>
+                <td>League Round</td>
+                <td>Best SC</td>
+                <td>Finolhu SC</td>
+                <td>
+                    <a href="https://www.youtube.com/live/ot4euqfi3Qg?si=otnIz81m3d4nKKAw" target="_blank" class="watch-btn">▶️ Watch</a>
+                </td>
+            </tr>
+            <tr>
+                <td>07 June 2025</td>
+                <td>League Round</td>
+                <td>Mukurimagu NG</td>
+                <td>United Finolhu SC</td>
+                <td>
+                    <a href="https://www.youtube.com/live/SZkNzuI5Mjo?si=lFMe7KQI0dzfBfFT" target="_blank" class="watch-btn">▶️ Watch</a>
+                </td>
+            </tr>
+            <tr>
+                <td>07 June 2025</td>
+                <td>League Round</td>
+                <td>Mukurimagu UG</td>
+                <td>Thundi NG</td>
+                <td>
+                    <a href="https://www.youtube.com/live/5bgUG4GVSLU?si=F8Hb0k4grdL9W0rx" target="_blank" class="watch-btn">▶️ Watch</a>
+                </td>
+            </tr>
+            <tr>
+                <td>07 June 2025</td>
+                <td>League Round</td>
+                <td>Mukurimagu UB</td>
+                <td>Goalhi SC</td>
+                <td>
+                    <a href="https://youtu.be/0zHwhsdDp-c?si=RGKSWiLiDvWtQ2d8" target="_blank" class="watch-btn">▶️ Watch</a>
+                </td>
+            </tr>
+            <tr>
+                <td>07 June 2025</td>
+                <td>League Round</td>
+                <td>Foemathi</td>
+                <td>Finolhu SC</td>
+                <td>
+                    <a href="https://www.youtube.com/live/F4GeAJYDZ8w?si=9dS3I_-xYiYtePWX" target="_blank" class="watch-btn">▶️ Watch</a>
+                </td>
+            </tr>
+            <tr>
+                <td>08 June 2025</td>
+                <td>League Round</td>
+                <td>United Finolhu SC</td>
+                <td>Best SC</td>
+                <td>
+                    <a href="https://www.youtube.com/live/cwfTTjJU6Mo?si=ZFlJsDUzBZro7OSD" target="_blank" class="watch-btn">▶️ Watch</a>
+                </td>
+            </tr>
+            <tr>
+                <td>08 June 2025</td>
+                <td>League Round</td>
+                <td>Foemathi</td>
+                <td>Mukurimagu UB</td>
+                <td>
+                    <a href="https://www.youtube.com/live/euYqCcE3VxU?si=R4xuF02rWR3183_q" target="_blank" class="watch-btn">▶️ Watch</a>
+                </td>
+            </tr>
+            <tr>
+                <td>08 June 2025</td>
+                <td>League Round</td>
+                <td>Mukurimagu NG</td>
+                <td>Mukurimagu UG</td>
+                <td>
+                    <a href="https://www.youtube.com/live/K_DsUsrybIs?si=KCSo6_Lm7smOXYmA" target="_blank" class="watch-btn">▶️ Watch</a>
+                </td>
+            </tr>
+            <tr>
+                <td>08 June 2025</td>
+                <td>League Round</td>
+                <td>Finolhu SC</td>
+                <td>Goalhi SC</td>
+                <td>
+                    <a href="https://www.youtube.com/live/FBxcYA-QJ1U?si=iL5KwsJ16mfj_B0v" target="_blank" class="watch-btn">▶️ Watch</a>
+                </td>
+            </tr>
+            <tr>
+                <td>08 June 2025</td>
+                <td>League Round</td>
+                <td>United Finolhu SC</td>
+                <td>Thundi NG</td>
+                <td>
+                    <a href="https://www.youtube.com/live/Lcp4pnsUOZ8?si=PGTXlt2XdvzFrlFa" target="_blank" class="watch-btn">▶️ Watch</a>
+                </td>
+            </tr>
+            <tr>
+                <td>09 June 2025</td>
+                <td>League Round</td>
+                <td>Mukurimagu NG</td>
+                <td>Foemathi</td>
+                <td>
+                    <a href="https://www.youtube.com/live/H5e9U6JsR2A?si=13pn8JKQnaKhXPJP" target="_blank" class="watch-btn">▶️ Watch</a>
+                </td>
+            </tr>
+            <tr>
+                <td>09 June 2025</td>
+                <td>League Round</td>
+                <td>Goalhi SC</td>
+                <td>United Finolhu SC</td>
+                <td>
+                    <a href="https://www.youtube.com/live/MUAdrmKDZUU?si=5wv87kCGnt8S1hxz" target="_blank" class="watch-btn">▶️ Watch</a>
+                </td>
+            </tr>
+            <tr>
+                <td>09 June 2025</td>
+                <td>League Round</td>
+                <td>Mukurimagu UG</td>
+                <td>Finolhu SC</td>
+                <td>
+                    <a href="https://www.youtube.com/live/3KMsLSzXpz0?si=yPCAhFjt-vba5x_c" target="_blank" class="watch-btn">▶️ Watch</a>
+                </td>
+            </tr>
+            <tr>
+                <td>09 June 2025</td>
+                <td>League Round</td>
+                <td>Goalhi SC</td>
+                <td>Foemathi</td>
+                <td>
+                    <a href="https://www.youtube.com/live/HR6rQUwiD9U?si=V6QhdD7oFaxrvZdt" target="_blank" class="watch-btn">▶️ Watch</a>
+                </td>
+            </tr>
+            <tr>
+                <td>10 June 2025</td>
+                <td>Semi Final</td>
+                <td>Finolhu SC</td>
+                <td>Goalhi SC</td>
+                <td>
+                    <a href="https://www.youtube.com/live/cbCE9kzOpNs?si=p-dy-06qIRnHCh7o" target="_blank" class="watch-btn">▶️ Watch</a>
+                </td>
+            </tr>
+            <tr>
+                <td>10 June 2025</td>
+                <td>Final</td>
+                <td>Mukurimagu UG</td>
+                <td>Finolhu SC</td>
+                <td>
+                    <a href="https://www.youtube.com/live/kN6gS1wole8?si=Y1-68sNs3VoqUJ8S" target="_blank" class="watch-btn">▶️ Watch</a>
+                </td>
+            </tr>
+        </table>
+        
+    
+        <h3>RESULTS</h3>
+<table border="1">
+    <tr>
+        <th>Date</th>
+        <th>Stage</th>
+        <th>Team A</th>
+        <th>Score A</th>
+        <th>Score B</th>
+        <th>Team B</th>
+    </tr>
+    <tr><td>07 June 2025</td><td>League Round</td><td>Best SC</td><td>0</td><td>2</td><td>Finolhu SC</td></tr>
+    <tr><td>07 June 2025</td><td>League Round</td><td>Mukurimagu NG</td><td>3</td><td>2</td><td>United Finolhu SC</td></tr>
+    <tr><td>07 June 2025</td><td>League Round</td><td>Mukurimagu UG</td><td>2</td><td>0</td><td>Thundi NG</td></tr>
+    <tr><td>07 June 2025</td><td>League Round</td><td>Mukurimagu UB</td><td>0</td><td>2</td><td>Goalhi SC</td></tr>
+    <tr><td>07 June 2025</td><td>League Round</td><td>Foemathi</td><td>0</td><td>2</td><td>Finolhu SC</td></tr>
+    <tr><td>08 June 2025</td><td>League Round</td><td>United Finolhu SC</td><td>3</td><td>1</td><td>Best SC</td></tr>
+    <tr><td>08 June 2025</td><td>League Round</td><td>Foemathi</td><td>2</td><td>0</td><td>Mukurimagu UB</td></tr>
+    <tr><td>08 June 2025</td><td>League Round</td><td>Mukurimagu NG</td><td>0</td><td>2</td><td>Mukurimagu UG</td></tr>
+    <tr><td>08 June 2025</td><td>League Round</td><td>Finolhu SC</td><td>2</td><td>0</td><td>Goalhi SC</td></tr>
+    <tr><td>08 June 2025</td><td>League Round</td><td>United Finolhu SC</td><td>2</td><td>0</td><td>Thundi NG</td></tr>
+    <tr><td>09 June 2025</td><td>League Round</td><td>Mukurimagu NG</td><td>2</td><td>3</td><td>Foemathi</td></tr>
+    <tr><td>09 June 2025</td><td>League Round</td><td>Goalhi SC</td><td>2</td><td>0</td><td>United Finolhu SC</td></tr>
+    <tr><td>09 June 2025</td><td>League Round</td><td>Mukurimagu UG</td><td>2</td><td>0</td><td>Finolhu SC</td></tr>
+    <tr><td>09 June 2025</td><td>League Round</td><td>Goalhi SC</td><td>2</td><td>0</td><td>Foemathi</td></tr>
+    <tr><td>10 June 2025</td><td>Semi Final</td><td>Finolhu SC</td><td>2</td><td>0</td><td>Goalhi SC</td></tr>
+    <tr><td>10 June 2025</td><td>Final</td><td>Mukurimagu UG</td><td>1</td><td>3</td><td>Finolhu SC</td></tr>
+    
+</table>
+    </section>
+    
+    <section id="honors-section">
+        <h2>TOURNAMENT HONORS</h2>
+        <table border="1">
+            <tr>
+                <th>Honor</th>
+                <th>Winner</th>
+                <th>Team</th>
+            </tr>
+            <tr>
+                <td>Champion Team</td>
+                <td>Finolhu Sports Club</td>
+                <td>Finolhu Sports Club</td>
+            </tr>
+            <tr>
+                <td>Runners Up</td>
+                <td>Mukurimagu Underground</td>
+                <td>Mukurimagu Underground</td>
+            </tr>
+            <tr>
+                <td>Mr Baibalaa</td>
+                <td>Hassan Mahir "Hante"</td>
+                <td>Finolhu Sports Club</td>
+            </tr>
+            <tr>
+                <td>Top 5 Players</td>
+                <td>Mohamed Ahmed "Ammu"</td>
+                <td>Foemathi</td>
+            </tr>
+            <tr>
+                <td>Top 5 Players</td>
+                <td>Mohamed Mirsal Yasir</td>
+                <td>Mukurimagu Underground</td>
+            </tr>
+            <tr>
+                <td>Top 5 Players</td>
+                <td>Farah Sham</td>
+                <td>Mukurimagu Underground</td>
+            </tr>
+            <tr>
+                <td>Top 5 Players</td>
+                <td>Mohamed Rilwan "B. Mode"</td>
+                <td>Finolhu Sports Club</td>
+            </tr>
+            <tr>
+                <td>Top 5 Players</td>
+                <td>Hassan Nuaz "Nualhey"</td>
+                <td>United Finolhu Sports Club</td>
+            </tr>
+        
+        </table>
+    </section>
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Baibalaa MV</h3>
+                <p>Baibalaa MV is dedicated to preserving and celebrating the history of Baibalaa, the pride of the Maldives.</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hof.html">Glory Wall</a></li>
+                    <li><a href="rules.html">Rules</a></li>
+                    <li><a href="articles.html">Baibalaa Insights</a></li>
+                    <li><a href="tournaments.html">Tournaments</a></li>
+                    <li><a href="champions.html">Champions</a></li>
+                    <li><a href="mrbaibalaa.html">Mr. Baibalaa</a></li>
+                    <li><a href="players.html">Players | Coaches</a></li>
+                    <li><a href="memory_game.html">Flip Card Game</a></li>
+                    <li><a href="baibalaaiq.html">Baibalaa iQ</a></li>
+                    <li><a href="highlights.html">Highlights</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:baibalaamv@gmail.com">baibalaamv@gmail.com</a></p>
+                <div class="youtube-link">
+                    <a href="https://www.youtube.com/@baibalaamv" target="_blank">
+                        <img src="youtube.png" alt="YouTube Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Baibalaa MV. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
