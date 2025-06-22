@@ -269,29 +269,8 @@
     </script>
 
 <div class="fixed-banner-ad" id="bannerAd">
-    <div class="banner-slide active">
-      <video src="banner2.mp4" autoplay muted loop playsinline></video>
-    </div>
-    <div class="banner-slide">
-      <video src="banner2.mp4" autoplay muted loop playsinline></video>
-    </div>
-    <div class="banner-slide">
-      <video src="banner2.mp4" autoplay muted loop playsinline></video>
-    </div>
+    <video src="bannersky.mp4" autoplay muted loop playsinline></video>
   </div>
-
-  <script>
-    const slides = document.querySelectorAll('#bannerAd .banner-slide');
-    let current = 0;
-  
-    if (slides.length > 1) {
-      setInterval(() => {
-        slides[current].classList.remove('active');
-        current = (current + 1) % slides.length;
-        slides[current].classList.add('active');
-      }, 10000);
-    }
-  </script>
 
 </body>
 </html>
