@@ -2,74 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Wall of Glory</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baibalaa Cards Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#000000">
   <style>
-    body {
-      background-color: #000;
-      color: gold;
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    h1.hof-heading {
-      margin: 40px 0 20px 0;
-      font-size: 3rem;
+    h1 {
       text-transform: uppercase;
-      letter-spacing: 4px;
+      letter-spacing: 2px;
       color: gold;
       text-align: center;
       text-shadow: 0 0 10px #ffcc00;
     }
-  
-    .hof-gallery {
+
+    .cards-container {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 images per row on desktop */
-      gap: 30px;
-      width: 90%;
-      max-width: 1200px;
-      padding-bottom: 60px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 5vw;
+      box-sizing: border-box;
     }
-  
-    .hof-gallery img {
-      width: 100%;
-      height: auto;
-      border: 3px solid gold;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      display: block;
+
+    .card {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+  transition: transform 0.3s ease;
+  aspect-ratio: 1152 / 2058;
+}
+
+    .card:hover {
+      transform: scale(1.02);
     }
-  
-    .hof-gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(255, 215, 0, 1);
-    }
-  
-    /* Responsive adjustments */
-    @media (max-width: 900px) {
-      .hof-gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 images per row on tablets */
+
+    .card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1152 / 2058;
+  object-fit: cover;
+  display: block;
+}
+
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .cards-container {
+        padding: 20px 4vw;
+        gap: 16px;
       }
     }
-  
-    @media (max-width: 500px) {
-      .hof-gallery {
-        grid-template-columns: 1fr; /* 1 image per row on phones */
+
+    @media (min-width: 1600px) {
+      .cards-container {
+        max-width: 1400px;
+        margin: auto;
       }
     }
   </style>
-  
 </head>
+
 <body>
 
+  <!-- Navigation Bar (same as index.html) -->
   <nav>
     <ul>
       <li><a href="index.html">HOME</a></li>
@@ -92,35 +90,34 @@
     </ul>
   </nav>
 
-  <h1 class="hof-heading">The Wall of Glory</h1>
+  <!-- Header Title -->
+  <header>
+    <h1>Baibalaa Cards Gallery</h1>
+  </header>
 
-  <div class="hof-gallery">
-    <img src="hof/bg.png" alt="bg" />
-    <img src="hof/teenage.png" alt="teenage" />
-    <img src="hof/buru.png" alt="buru" />
-    <img src="hof/zefrol.png" alt="zefrol" />
-    <img src="hof/maziya.png" alt="maziya" />
-    <img src="hof/tc.png" alt="tc" />
-    <img src="hof/un.png" alt="un" />
-    <img src="hof/kh.png" alt="kh" />
-    <img src="hof/eagles.png" alt="eagles" />
-    <img src="hof/o1o.png" alt="o1o" />
-    <img src="hof/tft.png" alt="tft" />
-    <img src="hof/lorenzo.png" alt="lorenzo" />
-    <img src="hof/gaamagu.png" alt="gaamagu" />
-    <img src="hof/masodi.png" alt="masodi" />
-    <img src="hof/oyeha.png" alt="oyeha" />
-    <img src="hof/hulhumale.png" alt="hulhumale" />
-    <img src="hof/galolhu.png" alt="galolhu" />
-    <img src="hof/bgnew.png" alt="bgnew" />
-    <img src="hof/west.png" alt="west" />
-    <img src="hof/lt.png" alt="lt" />
-    <img src="hof/mc.png" alt="mc" />
-    <img src="hof/vk.png" alt="vk" />
-    <img src="hof/ck.png" alt="ck" />
-    <img src="hof/teenagejr.png" alt="teenagejr" />
+  <!-- Gallery Grid -->
+  <div class="cards-container">
+    <!-- Cards 1–17 -->
+    <div class="card"><img src="cardimages/1.jpeg" alt="Card 1"></div>
+    <div class="card"><img src="cardimages/2.jpeg" alt="Card 2"></div>
+    <div class="card"><img src="cardimages/3.jpeg" alt="Card 3"></div>
+    <div class="card"><img src="cardimages/4.jpeg" alt="Card 4"></div>
+    <div class="card"><img src="cardimages/5.jpeg" alt="Card 5"></div>
+    <div class="card"><img src="cardimages/6.jpeg" alt="Card 6"></div>
+    <div class="card"><img src="cardimages/7.jpeg" alt="Card 7"></div>
+    <div class="card"><img src="cardimages/8.jpeg" alt="Card 8"></div>
+    <div class="card"><img src="cardimages/9.jpeg" alt="Card 9"></div>
+    <div class="card"><img src="cardimages/10.jpeg" alt="Card 10"></div>
+    <div class="card"><img src="cardimages/11.jpeg" alt="Card 11"></div>
+    <div class="card"><img src="cardimages/12.jpeg" alt="Card 12"></div>
+    <div class="card"><img src="cardimages/13.jpeg" alt="Card 13"></div>
+    <div class="card"><img src="cardimages/14.jpeg" alt="Card 14"></div>
+    <div class="card"><img src="cardimages/15.jpeg" alt="Card 15"></div>
+    <div class="card"><img src="cardimages/16.jpeg" alt="Card 16"></div>
+    <div class="card"><img src="cardimages/17.jpeg" alt="Card 17"></div>
   </div>
 
+  <!-- Footer (same as index.html) -->
   <footer>
     <div class="footer-container">
       <div class="footer-section">
@@ -151,7 +148,7 @@
         <p>Email: <a href="mailto:baibalaamv@gmail.com">baibalaamv@gmail.com</a></p>
         <div class="youtube-link">
           <a href="https://www.youtube.com/@baibalaamv" target="_blank">
-            <img src="youtube.png" alt="YouTube Logo" />
+            <img src="youtube.png" alt="YouTube Logo" style="height: 24px;">
           </a>
         </div>
       </div>
