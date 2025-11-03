@@ -50,6 +50,46 @@
 
     <section id="articles">
 
+        <article id="article-28">
+            <h2>The Countdown Begins: Teams Eye Top Players Ahead of Eid Baibalaa Challenge 1447</h2>
+            <img src="https://i.imgur.com/rZa9L3Q.jpeg" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 03 November 2025, 14:19</p>
+            <p class="justified">With only a few months remaining for the Eid Baibalaa Challenge 1447, preparations are gradually taking shape across the Baibalaa community. The annual tournament, recognized as one of the most prestigious events in the sport, is expected to attract top players and highly competitive teams once again.</p>
+            <p class="justified">Although official training typically begins during Ramadan, early discussions among clubs suggest that the search for skilled players has already begun. Teams are assessing potential signings, aiming to strengthen their squads ahead of the short but high-stakes competition.</p>
+            <p class="justified">The Eid Baibalaa Challenge is known for its brief duration yet intense competition, where clubs are often willing to invest significantly in players despite the limited number of matches. The tournament’s reputation as one of the most expensive player markets in Baibalaa highlights the value placed on securing experienced and impactful athletes.</p>
+            <p class="justified">As anticipation builds, attention now turns to how teams will shape their rosters in the coming months. With Ramadan marking the start of active preparations, fans await the return of one of the sport’s most exciting and tradition-filled tournament — the Eid Baibalaa Challenge 1447</p>
+            
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-28" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-28" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-28" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-28" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-28" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-28" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-28" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-27">
             <h2>Gamu Council Baibalaa Challenge 1446 Mr Baibalaa: Hante Shines Bright</h2>
             <img src="https://i.imgur.com/qL5rZBQ.jpg" alt="Baibalaa Tournament 2025">
@@ -1543,6 +1583,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-25").style.display = "none";
             document.getElementById("comments-display-26").style.display = "none";
             document.getElementById("comments-display-27").style.display = "none";
+            document.getElementById("comments-display-28").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -1585,6 +1626,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-25").addEventListener("click", () => toggleComments(25));
         document.getElementById("toggle-comments-btn-26").addEventListener("click", () => toggleComments(26));
         document.getElementById("toggle-comments-btn-27").addEventListener("click", () => toggleComments(27));
+        document.getElementById("toggle-comments-btn-28").addEventListener("click", () => toggleComments(28));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -1646,6 +1688,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-25").addEventListener("click", () => submitComment(25));
     document.getElementById("submit-comment-btn-26").addEventListener("click", () => submitComment(26));
     document.getElementById("submit-comment-btn-27").addEventListener("click", () => submitComment(27));
+    document.getElementById("submit-comment-btn-28").addEventListener("click", () => submitComment(28));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -1674,6 +1717,7 @@ function toggleComments(articleId) {
         displayComments(25);
         displayComments(26);
         displayComments(27);
+        displayComments(28);
     };
 </script>
 
