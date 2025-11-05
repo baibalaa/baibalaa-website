@@ -895,3 +895,49 @@ nav ul li.dropdown .dropdown-content li a:hover {
   background-color: #333;
   color: white;
 }
+
+
+
+/* =========================
+   Responsive Banner Ads
+========================= */
+.ad-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 95%;
+  max-width: 1000px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  aspect-ratio: 16 / 4; /* Makes the banner slightly taller while staying proportional */
+}
+
+/* Make banner images fill the area nicely */
+.ad-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.ad-banner img:hover {
+  transform: scale(1.02);
+}
+
+/* Optional spacing between ad sections */
+.top-ad { margin-top: 10px; }
+.mid-ad { margin: 40px auto; }
+.footer-ad { margin-bottom: 40px; }
+
+/* Make sure ads look great on mobile */
+@media (max-width: 768px) {
+  .ad-banner {
+    width: 98%;
+    aspect-ratio: 16 / 6; /* Slightly taller on mobile for better visibility */
+  }
+}
