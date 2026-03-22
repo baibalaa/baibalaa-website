@@ -57,6 +57,72 @@
 
     <section id="articles">
 
+        <article id="article-31">
+            <h2>The King Leaves the Arena — A Tribute to Mohamed Shinan “Naani” 👑</h2>
+            <img src="https://i.imgur.com/s7NtU8r.png" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 19 March 2026, 15:58</p>
+            <p class="justified">The arena will never feel the same again.</p>
+            <p class="justified">In a sport that has witnessed countless warriors, moments of brilliance, and unforgettable battles, there are only a few who rise above it all — not just as players, but as legends. And among them stands one name that echoes louder than the rest: Mohamed Shinan “Naani.”</p>
+            <p class="justified">Today, the King of Baibalaa leaves the arena.
+                Baibalaa has seen many great players over the years. But Naani was different. He wasn’t just great — he was complete. Widely regarded as the best all-rounder the game has ever seen, he dominated both ends of the arena. In attack, he was fast, fearless, and relentless. In defence, he was a wall — aggressive, commanding, and unbreakable.</p>
+            <p class="justified">He was not a player teams could prepare for. He was a player teams feared.
+                There were moments when his presence alone changed the game. Attacking players hesitated. Strategies shifted. Confidence dropped. That is the kind of impact only a true king can have — when the game begins to revolve around you.</p>
+            <p class="justified">And then there are the records — not just numbers, but milestones that shaped Baibalaa history.
+                Naani became the first player to be crowned Mr Baibalaa three times, each time with a different team — a feat that speaks volumes about his adaptability, leadership, and unmatched influence.
+                - 1421 — Maziya Sports: Champion & Mr Baibalaa
+                - 1428 — Buru Sports Club: Champion & Mr Baibalaa
+                - 1431 — BG Sports Club: Champion & Mr Baibalaa
+                Three different teams. Three different journeys. One constant — Naani at the top.</p>
+            <p class="justified">A champion with three clubs, a seven-time champion overall, and one of the most consistent players in Baibalaa history, his career was built not just on talent, but on something even rarer — discipline.</p>
+            <p class="justified">For over two decades, he gave everything to the game. And in a sport where longevity itself is a challenge, Naani didn’t just last — he remained at the very top.</p>
+            <p class="justified">His final chapter only adds to the legend.
+                In the 1445 tournament, representing Buru Sports Club, Naani once again stood tall — not as a fading legend, but as a champion. While many players step away when their time has passed, he chose a different path. He left the arena at the peak, as a champion, with dignity and pride.
+                A beginning that was great.
+                An ending that was even greater.
+                Not every player gets that story.
+                His journey feels almost unreal — like a fairytale written in sand, sweat, and gold. A career every player dreams of, but only a few could ever achieve.</p>
+            <p class="justified">But beyond the titles, beyond the victories, beyond the fear he instilled in opponents — Naani’s legacy is something deeper. It is in his discipline. His mentality. His respect for the game. The standard he set for generations to come.</p>
+            <p class="justified">As he steps away from the arena, Naani leaves not just memories, but heartfelt gratitude. He thanks everyone who stood by him throughout his journey — the clubs that became part of his story: Maziya Sports, BG Sports Club, Buru Sports Club, Club Teenage, United Henveirans, and TC Sports Club. He extends his appreciation to their management and the fans who supported him through every victory and every challenge.</p>
+            <p class="justified">And to the next generation, the King leaves behind a message:
+                Believe in yourself. Discipline is the power behind success. And Baibalaa is a truly outstanding sport — respect it, play it, and carry it forward.</p>
+            <p class="justified">And that is why his name will never fade.
+                Long after the matches are over, long after new champions rise, one thing will remain unchanged —
+                the echo of his name in the Baibalaa arena.
+                The throne may now stand empty.
+                But the legacy of the King will live on.</p>
+            <p class="justified">Thank you, Naani. 👑</p>
+            
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-31" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-31" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-31" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-31" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-31" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-31" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-31" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-30">
             <h2>Ramadan Mubarak to the Baibalaa Family and Muslims Around the World</h2>
             <img src="https://i.imgur.com/tizOJPZ.png" alt="Baibalaa Tournament 2025">
@@ -1698,6 +1764,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-28").style.display = "none";
             document.getElementById("comments-display-29").style.display = "none";
             document.getElementById("comments-display-30").style.display = "none";
+            document.getElementById("comments-display-31").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -1743,6 +1810,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-28").addEventListener("click", () => toggleComments(28));
         document.getElementById("toggle-comments-btn-29").addEventListener("click", () => toggleComments(29));
         document.getElementById("toggle-comments-btn-30").addEventListener("click", () => toggleComments(30));
+        document.getElementById("toggle-comments-btn-31").addEventListener("click", () => toggleComments(31));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -1807,6 +1875,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-28").addEventListener("click", () => submitComment(28));
     document.getElementById("submit-comment-btn-29").addEventListener("click", () => submitComment(29));
     document.getElementById("submit-comment-btn-30").addEventListener("click", () => submitComment(30));
+    document.getElementById("submit-comment-btn-31").addEventListener("click", () => submitComment(31));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -1838,6 +1907,7 @@ function toggleComments(articleId) {
         displayComments(28);
         displayComments(29);
         displayComments(30);
+        displayComments(31);
     };
 </script>
 
