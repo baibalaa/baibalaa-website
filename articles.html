@@ -57,6 +57,61 @@
 
     <section id="articles">
 
+        <article id="article-32">
+            <h2>Match Day 3 Delivers Intensity, Rivalries, and Strong Statements</h2>
+            <img src="https://i.imgur.com/6HbF8PC.jpeg" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 24th March 2026, 01:35</p>
+            <p class="justified"><strong>Match Day 3 of the Baibalaa tournament was successfully held on Monday, 23rd March 2026, featuring six exciting encounters that kept fans engaged throughout the evening. With strong performances, revenge battles, and dominant displays, the competition continues to heat up as teams push for qualification.</p>
+            <p class="justified"><strong>Match 17: THE ONE SPORTS CLUB 2 – 0 TC RED LIONS</strong></p>
+            <p class="justified">The opening match of the night saw THE ONE SPORTS CLUB take on TC RED LIONS. Displaying solid teamwork and disciplined defending, THE ONE SPORTS CLUB secured a comfortable 2–0 victory, earning crucial points and setting the tone for the evening.</p>
+            <p class="justified"><strong>Match 18: THE BEEGEES 2 – 0 KUDA HENVEIRU STREET</strong></p>
+            <p class="justified">Match 18 featured the second teams of two well-known clubs — KUDA HENVEIRU STREET and THE BEEGEES (BG). In this competitive clash, THE BEEGEES emerged victorious with a 2–0 win, showcasing depth and promising talent within their squad structure.</p>
+            <p class="justified"><strong>Match 19: LORENZO SPORTS CLUB 2 – 0 LT SPORTS CLUB</strong></p>
+            <p class="justified">Last year’s finalists, LORENZO SPORTS CLUB, continued their impressive form this season. Facing LT SPORTS CLUB, Lorenzo demonstrated experience and composure to secure another 2–0 victory. The previous year’s finalists are clearly building momentum and once again proving they are strong contenders for the title.</p>
+            <p class="justified"><strong>Match 20: BG SPORTS CLUB vs CLUB KAASINJEE – A Thriller Decided in Gadha Hifun</strong></p>
+            <p class="justified">One of the most anticipated fixtures of the night lived up to every expectation. The rivalry between BG SPORTS CLUB and CLUB KAASINJEE added extra intensity, especially after their dramatic Quarter Final meeting last year where Club Kaasinjee triumphed.</p>
+            <p class="justified">The match was fiercely contested, with both teams winning one game each, forcing the encounter into Gadha Hifun. The atmosphere was electric as fans witnessed a true battle of strength and strategy.</p>
+            <p class="justified">In the decisive hifun contest, BG SPORTS CLUB won 3 out of 5 hifun, securing a dramatic and memorable victory.</p>
+            <p class="justified">A standout moment of the match came from Mifu of BG SPORTS CLUB, who delivered an outstanding performance by holding Nick of CLUB KAASINJEE inside the ring for a remarkable 15 seconds — a moment that shifted momentum and ignited celebrations among BG supporters.</p>
+            <p class="justified">This was undoubtedly the match of the night.</p>
+            <p class="justified"><strong>Match 21: KAASINJAAS 2 – 0 MEET THE EAGLES</strong></p>
+            <p class="justified">In Match 21, KAASINJAAS delivered a strong performance against MEET THE EAGLES. Controlling the game effectively, Kaasinjaas secured a confident 2–0 victory, keeping their campaign on track.</p>
+            <p class="justified"><strong>Match 22: THE WOLVES CLUB 2 – 0 HULHUMALE SPORTS CLUB</strong></p>
+            <p class="justified">The final match of the night saw tournament's one of the favourites THE WOLVES CLUB face HULHUMALE SPORTS CLUB. Living up to expectations, THE WOLVES CLUB dominated proceedings and secured a convincing 2–0 win. As one of the tournament’s favourites, they continue to show why many consider them serious title challengers.</p>
+            <p class="justified">A Competitive Night of Baibalaa</p>
+            <p class="justified">Match Day 3 showcased tactical discipline, physical strength, and rising momentum from several strong contenders. With former finalists building confidence, favourites asserting dominance, and rivalries delivering unforgettable moments, Baibalaa 2026 continues to raise its level of excitement.</p>
+            
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-32" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-32" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-32" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-32" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-32" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-32" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-32" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-31">
             <h2>The King Leaves the Arena — A Tribute to Mohamed Shinan “Naani” 👑</h2>
             <img src="https://i.imgur.com/s7NtU8r.png" alt="Baibalaa Tournament 2025">
@@ -1765,6 +1820,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-29").style.display = "none";
             document.getElementById("comments-display-30").style.display = "none";
             document.getElementById("comments-display-31").style.display = "none";
+            document.getElementById("comments-display-32").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -1811,6 +1867,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-29").addEventListener("click", () => toggleComments(29));
         document.getElementById("toggle-comments-btn-30").addEventListener("click", () => toggleComments(30));
         document.getElementById("toggle-comments-btn-31").addEventListener("click", () => toggleComments(31));
+        document.getElementById("toggle-comments-btn-32").addEventListener("click", () => toggleComments(32));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -1876,6 +1933,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-29").addEventListener("click", () => submitComment(29));
     document.getElementById("submit-comment-btn-30").addEventListener("click", () => submitComment(30));
     document.getElementById("submit-comment-btn-31").addEventListener("click", () => submitComment(31));
+    document.getElementById("submit-comment-btn-32").addEventListener("click", () => submitComment(32));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -1908,6 +1966,7 @@ function toggleComments(articleId) {
         displayComments(29);
         displayComments(30);
         displayComments(31);
+        displayComments(32);
     };
 </script>
 
