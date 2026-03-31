@@ -57,6 +57,61 @@
 
     <section id="articles">
 
+        <article id="article-34">
+            <h2>The Final Showdown – Kings vs Challengers</h2>
+            <img src="https://i.imgur.com/uLTJidh.jpeg" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 31st March 2026, 19:17</p>
+            <p class="justified">The stage is set for the ultimate clash in the Eid Baibalaa Challenge 1447 as two powerful teams — BG Sports Club and Zeppo — go head-to-head for the championship.</p>
+            <h2>BG Sports Club – The Kings of Baibalaa</h2>
+            <p class="justified">When it comes to legacy, few can match BG Sports Club. Widely known as the kings of Baibalaa, BG carry a remarkable history with 10 championship titles, 4 runner-up finishes, and 3 Mr Baibalaa winners.</p>
+            <p class="justified">This year is no different. With experienced names and also Sham, Haandoo, and Miru — all Mr Baibalaa winners — BG enter the final with confidence, depth, and championship mentality. They are no strangers to big moments, and once again, they stand on the biggest stage.</p>
+            <h3>Zeppo – The Rising Contenders</h3>
+            <p class="justified">On the other side, Zeppo’s journey has been one of growth and determination. Last year’s semi-finalists, they came into last year's tournament as underdogs — but this season tells a different story.</p>
+            <p class="justified">With a strengthened squad and improved performances, Zeppo have taken the next step, reaching the final and proving they belong among the best. Led by last year’s Mr Baibalaa Abo and supported by a solid group of talented players, they have the momentum and belief to challenge the giants.</p>
+            <h3>Experience vs Momentum</h3>
+            <p class="justified">This final sets up a classic battle — experience vs hunger.
+                BG Sports Club bring history, dominance, and proven winners.
+                Zeppo bring energy, ambition, and a point to prove.
+                </p>
+            <h3>One Match, One Champion</h3>
+            <p class="justified">Everything now comes down to one match. Legacy is on the line for BG, while Zeppo have the chance to create history of their own.
+
+                Who will rise?
+                
+                The answer will be decided on the sand. 
+                </p>
+            
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-34" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-34" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-34" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-34" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-34" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-34" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-34" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-33">
             <h2>Title Race Intensifies – Fans Divided as Contenders Rise</h2>
             <img src="https://i.imgur.com/vqK573x.jpeg" alt="Baibalaa Tournament 2025">
@@ -1884,6 +1939,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-31").style.display = "none";
             document.getElementById("comments-display-32").style.display = "none";
             document.getElementById("comments-display-33").style.display = "none";
+            document.getElementById("comments-display-34").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -1932,6 +1988,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-31").addEventListener("click", () => toggleComments(31));
         document.getElementById("toggle-comments-btn-32").addEventListener("click", () => toggleComments(32));
         document.getElementById("toggle-comments-btn-33").addEventListener("click", () => toggleComments(33));
+        document.getElementById("toggle-comments-btn-34").addEventListener("click", () => toggleComments(34));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -1999,6 +2056,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-31").addEventListener("click", () => submitComment(31));
     document.getElementById("submit-comment-btn-32").addEventListener("click", () => submitComment(32));
     document.getElementById("submit-comment-btn-33").addEventListener("click", () => submitComment(33));
+    document.getElementById("submit-comment-btn-34").addEventListener("click", () => submitComment(34));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -2033,6 +2091,7 @@ function toggleComments(articleId) {
         displayComments(31);
         displayComments(32);
         displayComments(33);
+        displayComments(34);
     };
 </script>
 
