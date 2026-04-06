@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baibalaa Tournament 1447</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        h1 {
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          color: gold;
+          text-align: center;
+          text-shadow: 0 0 10px #ffcc00;
+        }
+    
+      </style>
+    
+    <!-- JavaScript for Toggle Functionality -->
+    <script>
+        // Toggle visibility of sections based on selected radio button
+        function toggleSections() {
+            let all = document.getElementById("all").checked;
+            let teams = document.getElementById("teams").checked;
+            let fixtures = document.getElementById("fixtures").checked;
+            let honors = document.getElementById("honors").checked;
+
+            // Toggle sections based on selection
+            document.getElementById("teams-section").style.display = (all || teams) ? "block" : "none";
+            document.getElementById("fixtures-section").style.display = (all || fixtures) ? "block" : "none";
+            document.getElementById("honors-section").style.display = (all || honors) ? "block" : "none";
+        }
+
+        // Attach event listeners to the radio buttons
+        window.onload = function() {
+            document.getElementById("all").addEventListener("change", toggleSections);
+            document.getElementById("teams").addEventListener("change", toggleSections);
+            document.getElementById("fixtures").addEventListener("change", toggleSections);
+            document.getElementById("honors").addEventListener("change", toggleSections);
+
+            // Run toggle function on page load to set initial state
+            toggleSections();
+        };
+    </script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="hof.html">GLORY WALL</a></li>
+          <li><a href="rules.html">RULES</a></li>
+          <li><a href="articles.html">BAIBALAA INSIGHTS</a></li>
+          <li><a href="tournaments.html">TOURNAMENTS</a></li>
+          <li><a href="champions.html">CHAMPIONS</a></li>
+          <li><a href="mrbaibalaa.html">MR. BAIBALAA</a></li>
+          <li><a href="players.html">PLAYERS | COACHES</a></li>
+          <li class="dropdown">
+            <a href="#">GAMES</a>
+            <ul class="dropdown-content">
+              <li><a href="memory_game.html">Flip Card Game</a></li>
+              <li><a href="baibalaaiq.html">Baibalaa IQ</a></li>
+            </ul>
+          </li>
+          <li><a href="cards.html">CARDS</a></li>
+          <li><a href="highlights.html">HIGHLIGHTS</a></li>
+        </ul>
+      </nav>
+
+    <header>
+        <h1>EID BAIBALAA CHALLENGE 1446</h1>
+    </header>
+
+    <!-- Filter Options -->
+    <!-- Radio Buttons -->
+    <div>
+        <input type="radio" id="all" name="toggle" checked>
+        <label for="all">All</label>
+
+        <input type="radio" id="teams" name="toggle">
+        <label for="teams">Teams</label>
+
+        <input type="radio" id="fixtures" name="toggle">
+        <label for="fixtures">Fixtures/Results</label>
+
+        <input type="radio" id="honors" name="toggle">
+        <label for="honors">Honors</label>
+    </div>
+
+    <!-- Participating Teams -->
+    <section id="teams-section">
+        <h2>PARTICIPATING TEAMS</h2>
+        <table border="1">
+            <tr>
+                <th>#</th>
+                <th>Team Name</th>
+            </tr>
+            <tr><td>1</td><td>Alpha Wolves</td></tr>
+<tr><td>2</td><td>BG Sports Club</td></tr>
+<tr><td>3</td><td>Buru Sports Club</td></tr>
+<tr><td>4</td><td>Club Kaasinjee</td></tr>
+<tr><td>5</td><td>Club O1O</td></tr>
+<tr><td>6</td><td>Club Teenage</td></tr>
+<tr><td>7</td><td>Club Zefrol</td></tr>
+<tr><td>8</td><td>Hahha Vaikanmathi</td></tr>
+<tr><td>9</td><td>Hulhumale Sports Club</td></tr>
+<tr><td>10</td><td>Janavareemagu SC</td></tr>
+<tr><td>11</td><td>Janavareeyans</td></tr>
+<tr><td>12</td><td>J.E.B United</td></tr>
+<tr><td>13</td><td>Kaasinjaas</td></tr>
+<tr><td>14</td><td>Kuda Henveiru Lions</td></tr>
+<tr><td>15</td><td>Kuda Henveiru Street</td></tr>
+<tr><td>16</td><td>Kuda Henveiru United</td></tr>
+<tr><td>17</td><td>Lions &amp; Tigers</td></tr>
+<tr><td>18</td><td>Lorenzo Sports Club</td></tr>
+<tr><td>19</td><td>Lorenzo Hyenas</td></tr>
+<tr><td>20</td><td>LT Sports Club</td></tr>
+<tr><td>21</td><td>Meet the Eagles</td></tr>
+<tr><td>22</td><td>Odi Sports Club</td></tr>
+<tr><td>23</td><td>Odi Titans</td></tr>
+<tr><td>24</td><td>SDZ Sharks</td></tr>
+<tr><td>25</td><td>TC Classique</td></tr>
+<tr><td>26</td><td>TC Fraternity</td></tr>
+<tr><td>27</td><td>TC Red Lions</td></tr>
+<tr><td>28</td><td>TC Sports Club</td></tr>
+<tr><td>29</td><td>Teenage Veterans</td></tr>
+<tr><td>30</td><td>T.F.T</td></tr>
+<tr><td>31</td><td>The Beegees</td></tr>
+<tr><td>32</td><td>The One Sports Club</td></tr>
+<tr><td>33</td><td>The Wolves Club</td></tr>
+<tr><td>34</td><td>VK Sports Club</td></tr>
+<tr><td>35</td><td>VNT Sports Club</td></tr>
+<tr><td>36</td><td>West Sports Club</td></tr>
+<tr><td>37</td><td>Zeppo New Generation</td></tr>
+<tr><td>38</td><td>Zeppo Sports Club</td></tr>
+        </table>
+    </section>
+    
+    
+    <section id="fixtures-section">
+        <h2>FIXTURES AND RESULTS</h2>
+
+        <h3>FIXTURES</h3>
+        <table border="1">
+            <tr>
+                <th>Date</th>
+                <th>Stage</th>
+                <th>Team A</th>
+                <th>Team B</th>
+                <th>Match Link</th>
+            </tr>
+            <tr>
+                <td>21st March 2026</td>
+                <td>Group Stage</td>
+                <td>Kuda Henveiru United</td>
+                <td>The One Sports Club</td>
+                <td><a href="https://www.youtube.com/live/DlUgclvVS2Q?si=VnnVVCw4DQTMA7pU" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>21st March 2026</td>
+                <td>Group Stage</td>
+                <td>Kuda Henveiru Lions</td>
+                <td>The Beegees</td>
+                <td><a href="https://www.youtube.com/live/0hIJjV6odLo?si=i5gtjNtaTOoE_h2y" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>21st March 2026</td>
+                <td>Group Stage</td>
+                <td>Lorenzo Sports Club</td>
+                <td>TC Sports Club</td>
+                <td><a href="https://www.youtube.com/live/2dQS90tO_38?si=-7hRR1K2iigSjHRg" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>21st March 2026</td>
+                <td>Group Stage</td>
+                <td>Buru Sports Club</td>
+                <td>Club Kaasinjee</td>
+                <td><a href="https://www.youtube.com/live/4jCpfJswDyc?si=B5rvC7ncncuq8Mxj" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>21st March 2026</td>
+                <td>Group Stage</td>
+                <td>Kaasinjaas</td>
+                <td>TC Fraternity</td>
+                <td><a href="https://www.youtube.com/live/WGWbB8oRvEo?si=wg3xGbHL_WMepXJz" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>21st March 2026</td>
+                <td>Group Stage</td>
+                <td>The Wolves Club</td>
+                <td>Janavareeyans</td>
+                <td><a href="https://www.youtube.com/live/7xTbZbS4nqw?si=XIxdwBFPr8ZRq3uP" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>21st March 2026</td>
+                <td>Group Stage</td>
+                <td>Club Teenage</td>
+                <td>Club Zefrol</td>
+                <td><a href="https://www.youtube.com/live/C_RwgIb7Deg?si=16QcmFtNfxk5x__S" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>22nd March 2026</td>
+                <td>Group Stage</td>
+                <td>Odi Sports Club</td>
+                <td>SDZ Sharks</td>
+                <td><a href="https://www.youtube.com/live/-RmQW16MyzY?si=tWojCyAx29nsqem2" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>22nd March 2026</td>
+                <td>Group Stage</td>
+                <td>Odi Titans</td>
+                <td>Zeppo New Generation</td>
+                <td><a href="https://www.youtube.com/live/m8D2lTDGLUM?si=jrSJqklK_JajsHbZ" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>22nd March 2026</td>
+                <td>Group Stage</td>
+                <td>Zeppo Sports Club</td>
+                <td>TC Classique</td>
+                <td><a href="https://www.youtube.com/live/npx-i5Zczgw?si=i5No7kJfsYO1bb_v" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>22nd March 2026</td>
+                <td>Group Stage</td>
+                <td>Hahha Vaikanmathi</td>
+                <td>West Sports Club</td>
+                <td><a href="https://www.youtube.com/live/jHFhopeyZrI?si=ctFehZfK26ykUjQW" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>22nd March 2026</td>
+                <td>Group Stage</td>
+                <td>Janavareemagu SC</td>
+                <td>Alpha Wolves</td>
+                <td><a href="https://www.youtube.com/live/5bJKQw8T4HE?si=4U6WInkHGeh8O8sX" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>22nd March 2026</td>
+                <td>Group Stage</td>
+                <td>Lorenzo Hyenas</td>
+                <td>J.E.B United</td>
+                <td><a href="https://www.youtube.com/live/PlYK-2pwZXE?si=T-QXUDvn_rU8zKOX" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>22nd March 2026</td>
+                <td>Group Stage</td>
+                <td>Teenage Veterans</td>
+                <td>Club O1O</td>
+                <td><a href="https://www.youtube.com/live/N5gIfu0MKoU?si=1u2bJHNne_IpjmnX" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>22nd March 2026</td>
+                <td>Group Stage</td>
+                <td>VNT Sports Club</td>
+                <td>VK Sports Club</td>
+                <td><a href="https://www.youtube.com/live/RxleOoqGNvs?si=0ozhR8J05A5NhkAv" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>22nd March 2026</td>
+                <td>Group Stage</td>
+                <td>Lions &amp; Tigers</td>
+                <td>T.F.T</td>
+                <td><a href="https://www.youtube.com/live/BuGZqcVKUd4?si=vszQx6vo8GszcfBE" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>23rd March 2026</td>
+                <td>Group Stage</td>
+                <td>TC Red Lions</td>
+                <td>The One Sports Club</td>
+                <td><a href="https://www.youtube.com/live/3sLbLOkGFsA?si=TAO_v_FJcbxDoHhx" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>23rd March 2026</td>
+                <td>Group Stage</td>
+                <td>Kuda Henveiru Street</td>
+                <td>The Beegees</td>
+                <td><a href="https://www.youtube.com/live/Xj2ZCiL4mvE?si=PoFvHqeDIPS2PAKq" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>23rd March 2026</td>
+                <td>Group Stage</td>
+                <td>LT Sports Club</td>
+                <td>Lorenzo Sports Club</td>
+                <td><a href="https://www.youtube.com/live/vvWzXWG16dA?si=J6rxmRJDgrMsH8NO" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>23rd March 2026</td>
+                <td>Group Stage</td>
+                <td>BG Sports Club</td>
+                <td>Club Kaasinjee</td>
+                <td><a href="https://www.youtube.com/live/5Y9x2fheyqM?si=rcF0KWccSLmIs1ER" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>23rd March 2026</td>
+                <td>Group Stage</td>
+                <td>Meet the Eagles</td>
+                <td>Kaasinjaas</td>
+                <td><a href="https://www.youtube.com/live/j1QMXr7-EbI?si=2j8izpSpVXgBa8Jn" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                
+                <tr>
+                <td>23rd March 2026</td>
+                <td>Group Stage</td>
+                <td>Hulhumale Sports Club</td>
+                <td>The Wolves Club</td>
+                <td><a href="https://www.youtube.com/live/dOLo6aW8-pU?si=wvRIfC8Ml5r8YVAI" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                </tr>
+                <tr>
+                    <td>24th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>Club Teenage</td>
+                    <td>Janavareeyans</td>
+                    <td><a href="https://www.youtube.com/live/gLiugmMsbB4?si=EVCLj9ObesQgA_fM" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>24th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>Zeppo New Generation</td>
+                    <td>TC Fraternity</td>
+                    <td><a href="https://www.youtube.com/live/MDGOdEpJd9M?si=51kqphwoni5jLXpI" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>24th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>Hahha Vaikanmathi</td>
+                    <td>Buru Sports Club</td>
+                    <td><a href="https://www.youtube.com/live/A_9yPlPuZT4?si=uhV7-O3clIQFTU79" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>24th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>Janavareemagu SC</td>
+                    <td>TC Sports Club</td>
+                    <td><a href="https://www.youtube.com/live/4ELgO0JUj4g?si=dZ3SusauurQq1n8X" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>24th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>Teenage Veterans</td>
+                    <td>Kuda Henveiru Lions</td>
+                    <td><a href="https://www.youtube.com/live/ft_Mip6UwBk?si=cGH5kSZDvbMlYzQJ" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>24th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>Lions &amp; Tigers</td>
+                    <td>Kuda Henveiru United</td>
+                    <td><a href="https://www.youtube.com/live/KA1Jtu0jzsw?si=UhuQYE8IdE2NP95C" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>24th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>TC Classique</td>
+                    <td>Kuda Henveiru Street</td>
+                    <td><a href="https://www.youtube.com/live/TBiGebQBamQ?si=PL2nsjw29PPoUmkO" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>24th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>VK Sports Club</td>
+                    <td>Meet the Eagles</td>
+                    <td><a href="https://www.youtube.com/live/0HgyX5OGHds?si=mUES-SILFbzZFGZl" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>25th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>TC Red Lions</td>
+                    <td>Club Teenage</td>
+                    <td><a href="https://www.youtube.com/live/O-pPgI0nJqg?si=afSeQym082N8vq-6" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>25th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>SDZ Sharks</td>
+                    <td>TC Fraternity</td>
+                    <td><a href="https://www.youtube.com/live/ngkqmL6yiHo?si=FCmbcL7zrqxCHRJe" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>25th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>LT Sports Club</td>
+                    <td>Buru Sports Club</td>
+                    <td><a href="https://www.youtube.com/live/qhHgOzBxTSY?si=rwqwvw8wMvKwcuV4" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>25th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>Club Kaasinjee</td>
+                    <td>TC Sports Club</td>
+                    <td><a href="https://www.youtube.com/live/ZstrILARg-A?si=XeEWuJUT18llVDFu" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>25th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>Lorenzo Hyenas</td>
+                    <td>Kuda Henveiru Lions</td>
+                    <td><a href="https://www.youtube.com/live/O0wIpmIbk3s?si=XmmpRM1IJLrMkUNG" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>25th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>Hulhumale Sports Club</td>
+                    <td>Kuda Henveiru United</td>
+                    <td><a href="https://www.youtube.com/live/tBP-ay4zkVU?si=zUaH98a2h4uRC6lw" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>26th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>Odi Sports Club</td>
+                    <td>Odi Titans</td>
+                    <td><a href="https://www.youtube.com/live/Jgw2ojHZ1eY?si=s-VWKV95Hgwdgmih" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>26th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>J.E.B United</td>
+                    <td>Club O1O</td>
+                    <td><a href="https://www.youtube.com/live/j90SX3B9V9s?si=q5GNxK0x8oP85u3V" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>26th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>The One Sports Club</td>
+                    <td>Club Zefrol</td>
+                    <td><a href="https://www.youtube.com/live/bugujWxrDEY?si=jDAoyXaAVbK9NXPv" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>26th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>The Beegees</td>
+                    <td>Zeppo Sports Club</td>
+                    <td><a href="https://www.youtube.com/live/DEqSSGJCc84?si=sJX2PjWm_Q0QVi-M" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>26th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>Lorenzo Sports Club</td>
+                    <td>West Sports Club</td>
+                    <td><a href="https://www.youtube.com/live/XZtjngMgrM4?si=6j_NV6JDt0oZhNYt" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>26th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>BG Sports Club</td>
+                    <td>Alpha Wolves</td>
+                    <td><a href="https://www.youtube.com/live/x7eKxK5mqYQ?si=jZdbwaOMJzpxLfKz" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>26th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>Kaasinjaas</td>
+                    <td>VNT Sports Club</td>
+                    <td><a href="https://www.youtube.com/live/i1Ja9_rp44Q?si=20fpwUXA5nkqtqWZ" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>26th March 2026</td>
+                    <td>Group Stage</td>
+                    <td>The Wolves Club</td>
+                    <td>T.F.T</td>
+                    <td><a href="https://www.youtube.com/live/ZwRD5gctLmU?si=Qnqv-ziu8xIiWkkw" target="_blank" class="watch-btn">▶️ Watch</a></td>
+                    </tr>
+                    
+<!-- 27th March 2026 -->
+
+<tr>
+    <td>27th March 2026</td>
+    <td>Group Stage</td>
+    <td>Odi Titans</td>
+    <td>Kuda Henveiru Lions</td>
+    <td><a href="https://www.youtube.com/live/E4dtOvLRGTM?si=i1RYoJox7mwkriXr" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>27th March 2026</td>
+    <td>Group Stage</td>
+    <td>J.E.B United</td>
+    <td>TC Fraternity</td>
+    <td><a href="https://www.youtube.com/live/8_hf1ZZmE-4?si=bccOeur4CMSPqyHZ" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>27th March 2026</td>
+    <td>Group Stage</td>
+    <td>The One Sports Club</td>
+    <td>Club Kaasinjee</td>
+    <td><a href="https://www.youtube.com/live/56ncaieGyaI?si=yBqDmi9pkinaWndm" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>27th March 2026</td>
+    <td>Group Stage</td>
+    <td>The Beegees</td>
+    <td>VK Sports Club</td>
+    <td><a href="https://www.youtube.com/live/pz2al8ocNOY?si=2v7MnRNW7uOZOagS" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>27th March 2026</td>
+    <td>Group Stage</td>
+    <td>West Sports Club</td>
+    <td>Kuda Henveiru United</td>
+    <td><a href="https://www.youtube.com/live/oUJHhv04eWs?si=wS9v5nwu2M80BKYw" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>27th March 2026</td>
+    <td>Group Stage</td>
+    <td>Alpha Wolves</td>
+    <td>Club Teenage</td>
+    <td><a href="https://www.youtube.com/live/rfn0e9P5e8I?si=uihdZ5DzehV0xF4V" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>27th March 2026</td>
+    <td>Group Stage</td>
+    <td>Kaasinjaas</td>
+    <td>Kuda Henveiru Street</td>
+    <td><a href="https://www.youtube.com/live/voVmm7hSAC4?si=lRnf4FLWeJ-Yesd0" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>27th March 2026</td>
+    <td>Group Stage</td>
+    <td>T.F.T</td>
+    <td>LT Sports Club</td>
+    <td><a href="https://www.youtube.com/live/5XKbvGFbzJU?si=arChctBY9gNuAW_S" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <!-- 28th March 2026 -->
+    
+    <tr>
+    <td>28th March 2026</td>
+    <td>Group Stage</td>
+    <td>Odi Titans</td>
+    <td>Club Kaasinjee</td>
+    <td><a href="https://www.youtube.com/live/jAvY83Hkx0w?si=0FkgXBhDTT6dtous" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>28th March 2026</td>
+    <td>Group Stage</td>
+    <td>Kuda Henveiru United</td>
+    <td>The Beegees</td>
+    <td><a href="https://www.youtube.com/live/5cN9gBXiOPk?si=nOoMDZN2lAuMP50C" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>28th March 2026</td>
+    <td>Group Stage</td>
+    <td>TC Fraternity</td>
+    <td>Alpha Wolves</td>
+    <td><a href="https://www.youtube.com/live/AELbhrV7HuU?si=zvapPeaPCCeCa4Fy" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>28th March 2026</td>
+    <td>Group Stage</td>
+    <td>T.F.T</td>
+    <td>Kaasinjaas</td>
+    <td><a href="https://www.youtube.com/live/lPPkS5IDGBs?si=6f-7716cWbIhiEVo" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>28th March 2026</td>
+    <td>Group Stage</td>
+    <td>Zefrol Sports Club</td>
+    <td>Odi Sports Club</td>
+    <td><a href="https://www.youtube.com/live/HHi7f6gQI0Q?si=8vEUs9vHe9bns9L4" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>28th March 2026</td>
+    <td>Group Stage</td>
+    <td>Zeppo Sports Club</td>
+    <td>Lorenzo Sports Club</td>
+    <td><a href="https://www.youtube.com/live/RSln7hhQypY?si=V4DwcM5swRKdFQVn" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>28th March 2026</td>
+    <td>Group Stage</td>
+    <td>BG Sports Club</td>
+    <td>Club O1O</td>
+    <td><a href="https://www.youtube.com/live/GSQopvD4nNg?si=z30al5zhNoqewI3J" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>28th March 2026</td>
+    <td>Group Stage</td>
+    <td>VNT Sports Club</td>
+    <td>The Wolves Club</td>
+    <td><a href="https://www.youtube.com/live/E2tqbHMtigM?si=7y1rAIH-21iVdBTj" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <!-- 29th March 2026 -->
+    
+    <tr>
+    <td>29th March 2026</td>
+    <td>Group Stage</td>
+    <td>Kuda Henveiru United</td>
+    <td>Club O1O</td>
+    <td><a href="https://www.youtube.com/live/_WBuvHIs1R8?si=KzkWbW0G7wSS4CoT" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>29th March 2026</td>
+    <td>Group Stage</td>
+    <td>Club Kaasinjee</td>
+    <td>VNT Sports Club</td>
+    <td><a href="https://www.youtube.com/live/jF57cxhXCE4?si=YnGXTLVqWoUIc55Q" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>29th March 2026</td>
+    <td>Group Stage</td>
+    <td>T.F.T</td>
+    <td>Club Zefrol</td>
+    <td><a href="https://www.youtube.com/live/5CXfKGoiFR4?si=3k8opu-VhLCzP9s2" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>29th March 2026</td>
+    <td>Group Stage</td>
+    <td>TC Fraternity</td>
+    <td>Lorenzo Sports Club</td>
+    <td><a href="https://www.youtube.com/live/safVGkgMQH4?si=CFDg1y7SWIVK8eP_" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <!-- 30th March 2026 – Quarter Finals -->
+    
+    <tr>
+    <td>30th March 2026</td>
+    <td>Quarter Final</td>
+    <td>Odi Sports Club</td>
+    <td>Club O1O</td>
+    <td><a href="https://www.youtube.com/live/UqAbnT3qahY?si=2ZHQ6KmWT4ChTyeo" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>30th March 2026</td>
+    <td>Quarter Final</td>
+    <td>Zeppo Sports Club</td>
+    <td>Club Kaasinjee</td>
+    <td><a href="https://www.youtube.com/live/CZrJyeobbSM?si=NHJRbNdeg3-qtFHC" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>30th March 2026</td>
+    <td>Quarter Final</td>
+    <td>BG Sports Club</td>
+    <td>Club Zefrol</td>
+    <td><a href="https://www.youtube.com/live/cNzA_gRsErc?si=tcUG3TFjImdgBV7Z" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>30th March 2026</td>
+    <td>Quarter Final</td>
+    <td>The Wolves Club</td>
+    <td>Lorenzo Sports Club</td>
+    <td><a href="https://www.youtube.com/live/IZWdnU-Ogu4?si=OX9KAwnu8n1e1zJ1" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <!-- 30th March 2026 – Semi Finals -->
+    
+    <tr>
+    <td>30th March 2026</td>
+    <td>Semi Final</td>
+    <td>Odi Sports Club</td>
+    <td>Zeppo Sports Club</td>
+    <td><a href="https://www.youtube.com/live/F6P1gzclSsg?si=AtNSpQuHejGB92k6" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <tr>
+    <td>30th March 2026</td>
+    <td>Semi Final</td>
+    <td>BG Sports Club</td>
+    <td>The Wolves Club</td>
+    <td><a href="https://www.youtube.com/live/3jwLK5xifWU?si=JYlALuM2qpKdvL_Z" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+    
+    <!-- 31st March 2026 – Final -->
+    
+    <tr>
+    <td>31st March 2026</td>
+    <td>Final</td>
+    <td>Zeppo Sports Club</td>
+    <td>BG Sports Club</td>
+    <td><a href="https://www.youtube.com/live/D-leXVITGNM?si=-J6q_-PHjrNruT3R" target="_blank" class="watch-btn">▶️ Watch</a></td>
+    </tr>
+        </table>
+        
+    
+        <h3>RESULTS</h3>
+<table border="1">
+    <tr>
+        <th>Date</th>
+        <th>Stage</th>
+        <th>Team A</th>
+        <th>Score A</th>
+        <th>Score B</th>
+        <th>Team B</th>
+    </tr>
+    <tr><td>21st March 2026</td><td>Group Stage</td><td>Kuda Henveiru United</td><td>1</td><td>2</td><td>The One Sports Club</td></tr>
+<tr><td>21st March 2026</td><td>Group Stage</td><td>Kuda Henveiru Lions</td><td>0</td><td>2</td><td>The Beegees</td></tr>
+<tr><td>21st March 2026</td><td>Group Stage</td><td>Lorenzo Sports Club</td><td>2</td><td>0</td><td>TC Sports Club</td></tr>
+<tr><td>21st March 2026</td><td>Group Stage</td><td>Buru Sports Club</td><td>0</td><td>2</td><td>Club Kaasinjee</td></tr>
+<tr><td>21st March 2026</td><td>Group Stage</td><td>Kaasinjaas</td><td>2</td><td>0</td><td>TC Fraternity</td></tr>
+<tr><td>21st March 2026</td><td>Group Stage</td><td>The Wolves Club</td><td>2</td><td>0</td><td>Janavareeyans</td></tr>
+<tr><td>21st March 2026</td><td>Group Stage</td><td>Club Teenage</td><td>0</td><td>2</td><td>Club Zefrol</td></tr>
+
+<tr><td>22nd March 2026</td><td>Group Stage</td><td>Odi Sports Club</td><td>2</td><td>0</td><td>SDZ Sharks</td></tr>
+<tr><td>22nd March 2026</td><td>Group Stage</td><td>Odi Titans</td><td>2</td><td>0</td><td>Zeppo New Generation</td></tr>
+<tr><td>22nd March 2026</td><td>Group Stage</td><td>Zeppo Sports Club</td><td>2</td><td>0</td><td>TC Classique</td></tr>
+<tr><td>22nd March 2026</td><td>Group Stage</td><td>Hahha Vaikanmathi</td><td>0</td><td>2</td><td>West Sports Club</td></tr>
+<tr><td>22nd March 2026</td><td>Group Stage</td><td>Janavareemagu SC</td><td>0</td><td>2</td><td>Alpha Wolves</td></tr>
+<tr><td>22nd March 2026</td><td>Group Stage</td><td>Lorenzo Hyenas</td><td>0</td><td>2</td><td>J.E.B United</td></tr>
+<tr><td>22nd March 2026</td><td>Group Stage</td><td>Teenage Veterans</td><td>0</td><td>2</td><td>Club O1O</td></tr>
+<tr><td>22nd March 2026</td><td>Group Stage</td><td>VNT Sports Club</td><td>2</td><td>0</td><td>VK Sports Club</td></tr>
+<tr><td>22nd March 2026</td><td>Group Stage</td><td>Lions & Tigers</td><td>0</td><td>2</td><td>T.F.T</td></tr>
+
+<tr><td>23rd March 2026</td><td>Group Stage</td><td>TC Red Lions</td><td>0</td><td>2</td><td>The One Sports Club</td></tr>
+<tr><td>23rd March 2026</td><td>Group Stage</td><td>Kuda Henveiru Street</td><td>0</td><td>2</td><td>The Beegees</td></tr>
+<tr><td>23rd March 2026</td><td>Group Stage</td><td>LT Sports Club</td><td>0</td><td>2</td><td>Lorenzo Sports Club</td></tr>
+<tr><td>23rd March 2026</td><td>Group Stage</td><td>BG Sports Club</td><td>2</td><td>1</td><td>Club Kaasinjee</td></tr>
+<tr><td>23rd March 2026</td><td>Group Stage</td><td>Meet the Eagles</td><td>0</td><td>2</td><td>Kaasinjaas</td></tr>
+<tr><td>23rd March 2026</td><td>Group Stage</td><td>Hulhumale Sports Club</td><td>0</td><td>2</td><td>The Wolves Club</td></tr>
+
+<tr><td>24th March 2026</td><td>Group Stage</td><td>Club Teenage</td><td>2</td><td>0</td><td>Janavareeyans</td></tr>
+<tr><td>24th March 2026</td><td>Group Stage</td><td>Zeppo New Generation</td><td>1</td><td>2</td><td>TC Fraternity</td></tr>
+<tr><td>24th March 2026</td><td>Group Stage</td><td>Hahha Vaikanmathi</td><td>1</td><td>2</td><td>Buru Sports Club</td></tr>
+<tr><td>24th March 2026</td><td>Group Stage</td><td>Janavareemagu SC</td><td>0</td><td>2</td><td>TC Sports Club</td></tr>
+<tr><td>24th March 2026</td><td>Group Stage</td><td>Teenage Veterans</td><td>0</td><td>2</td><td>Kuda Henveiru Lions</td></tr>
+<tr><td>24th March 2026</td><td>Group Stage</td><td>Lions & Tigers</td><td>0</td><td>2</td><td>Kuda Henveiru United</td></tr>
+<tr><td>24th March 2026</td><td>Group Stage</td><td>TC Classique</td><td>1</td><td>2</td><td>Kuda Henveiru Street</td></tr>
+<tr><td>24th March 2026</td><td>Group Stage</td><td>VK Sports Club</td><td>2</td><td>0</td><td>Meet the Eagles</td></tr>
+<tr><td>25th March 2026</td><td>Group Stage</td><td>TC Red Lions</td><td>0</td><td>2</td><td>Club Teenage</td></tr>
+<tr><td>25th March 2026</td><td>Group Stage</td><td>SDZ Sharks</td><td>1</td><td>2</td><td>TC Fraternity</td></tr>
+<tr><td>25th March 2026</td><td>Group Stage</td><td>LT Sports Club</td><td>2</td><td>0</td><td>Buru Sports Club</td></tr>
+<tr><td>25th March 2026</td><td>Group Stage</td><td>Club Kaasinjee</td><td>2</td><td>0</td><td>TC Sports Club</td></tr>
+<tr><td>25th March 2026</td><td>Group Stage</td><td>Lorenzo Hyenas</td><td>0</td><td>2</td><td>Kuda Henveiru Lions</td></tr>
+<tr><td>25th March 2026</td><td>Group Stage</td><td>Hulhumale Sports Club</td><td>0</td><td>2</td><td>Kuda Henveiru United</td></tr>
+
+<tr><td>26th March 2026</td><td>Group Stage</td><td>Odi Sports Club</td><td>2</td><td>0</td><td>Odi Titans</td></tr>
+<tr><td>26th March 2026</td><td>Group Stage</td><td>J.E.B United</td><td>0</td><td>2</td><td>Club O1O</td></tr>
+<tr><td>26th March 2026</td><td>Group Stage</td><td>The One Sports Club</td><td>0</td><td>2</td><td>Club Zefrol</td></tr>
+<tr><td>26th March 2026</td><td>Group Stage</td><td>The Beegees</td><td>0</td><td>2</td><td>Zeppo Sports Club</td></tr>
+<tr><td>26th March 2026</td><td>Group Stage</td><td>Lorenzo Sports Club</td><td>2</td><td>0</td><td>West Sports Club</td></tr>
+<tr><td>26th March 2026</td><td>Group Stage</td><td>BG Sports Club</td><td>2</td><td>0</td><td>Alpha Wolves</td></tr>
+<tr><td>26th March 2026</td><td>Group Stage</td><td>Kaasinjaas</td><td>1</td><td>2</td><td>VNT Sports Club</td></tr>
+<tr><td>26th March 2026</td><td>Group Stage</td><td>The Wolves Club</td><td>2</td><td>0</td><td>T.F.T</td></tr>
+
+<tr><td>27th March 2026</td><td>Group Stage</td><td>Odi Titans</td><td>2</td><td>1</td><td>Kuda Henveiru Lions</td></tr>
+<tr><td>27th March 2026</td><td>Group Stage</td><td>J.E.B United</td><td>1</td><td>2</td><td>TC Fraternity</td></tr>
+<tr><td>27th March 2026</td><td>Group Stage</td><td>The One Sports Club</td><td>0</td><td>2</td><td>Club Kaasinjee</td></tr>
+<tr><td>27th March 2026</td><td>Group Stage</td><td>The Beegees</td><td>2</td><td>0</td><td>VK Sports Club</td></tr>
+<tr><td>27th March 2026</td><td>Group Stage</td><td>West Sports Club</td><td>0</td><td>2</td><td>Kuda Henveiru United</td></tr>
+<tr><td>27th March 2026</td><td>Group Stage</td><td>Alpha Wolves</td><td>2</td><td>0</td><td>Club Teenage</td></tr>
+<tr><td>27th March 2026</td><td>Group Stage</td><td>Kaasinjaas</td><td>2</td><td>0</td><td>Kuda Henveiru Street</td></tr>
+<tr><td>27th March 2026</td><td>Group Stage</td><td>T.F.T</td><td>2</td><td>0</td><td>LT Sports Club</td></tr>
+
+<tr><td>28th March 2026</td><td>Group Stage</td><td>Odi Titans</td><td>0</td><td>2</td><td>Club Kaasinjee</td></tr>
+<tr><td>28th March 2026</td><td>Group Stage</td><td>Kuda Henveiru United</td><td>2</td><td>0</td><td>The Beegees</td></tr>
+<tr><td>28th March 2026</td><td>Group Stage</td><td>TC Fraternity</td><td>2</td><td>0</td><td>Alpha Wolves</td></tr>
+<tr><td>28th March 2026</td><td>Group Stage</td><td>T.F.T</td><td>2</td><td>0</td><td>Kaasinjaas</td></tr>
+<tr><td>28th March 2026</td><td>Group Stage</td><td>Zefrol Sports Club</td><td>0</td><td>2</td><td>Odi Sports Club</td></tr>
+<tr><td>28th March 2026</td><td>Group Stage</td><td>Zeppo Sports Club</td><td>2</td><td>0</td><td>Lorenzo Sports Club</td></tr>
+<tr><td>28th March 2026</td><td>Group Stage</td><td>BG Sports Club</td><td>2</td><td>0</td><td>Club O1O</td></tr>
+<tr><td>28th March 2026</td><td>Group Stage</td><td>VNT Sports Club</td><td>0</td><td>2</td><td>The Wolves Club</td></tr>
+
+<tr><td>29th March 2026</td><td>Group Stage</td><td>Kuda Henveiru United</td><td>1</td><td>2</td><td>Club O1O</td></tr>
+<tr><td>29th March 2026</td><td>Group Stage</td><td>Club Kaasinjee</td><td>2</td><td>0</td><td>VNT Sports Club</td></tr>
+<tr><td>29th March 2026</td><td>Group Stage</td><td>T.F.T</td><td>0</td><td>2</td><td>Club Zefrol</td></tr>
+<tr><td>29th March 2026</td><td>Group Stage</td><td>TC Fraternity</td><td>0</td><td>2</td><td>Lorenzo Sports Club</td></tr>
+
+<tr><td>30th March 2026</td><td>Quarter Final</td><td>Odi Sports Club</td><td>2</td><td>0</td><td>Club O1O</td></tr>
+<tr><td>30th March 2026</td><td>Quarter Final</td><td>Zeppo Sports Club</td><td>2</td><td>1</td><td>Club Kaasinjee</td></tr>
+<tr><td>30th March 2026</td><td>Quarter Final</td><td>BG Sports Club</td><td>2</td><td>0</td><td>Club Zefrol</td></tr>
+<tr><td>30th March 2026</td><td>Quarter Final</td><td>The Wolves Club</td><td>2</td><td>0</td><td>Lorenzo Sports Club</td></tr>
+
+<tr><td>30th March 2026</td><td>Semi Final</td><td>Odi Sports Club</td><td>1</td><td>2</td><td>Zeppo Sports Club</td></tr>
+<tr><td>30th March 2026</td><td>Semi Final</td><td>BG Sports Club</td><td>2</td><td>1</td><td>The Wolves Club</td></tr>
+
+<tr><td>31st March 2026</td><td>Final</td><td>Zeppo Sports Club</td><td>2</td><td>1</td><td>BG Sports Club</td></tr>
+</table>
+    </section>
+    
+    <section id="honors-section">
+        <h2>TOURNAMENT HONORS</h2>
+        <table border="1">
+            <tr>
+                <th>Honor</th>
+                <th>Winner</th>
+                <th>Team</th>
+            </tr>
+            <tr>
+                <td>Champion Team</td>
+                <td>Zeppo</td>
+                <td>Zeppo</td>
+            </tr>
+            <tr>
+                <td>Runners Up</td>
+                <td>BG Sports Club</td>
+                <td>BG Sports Club</td>
+            </tr>
+            <tr>
+                <td>Fair Play Team</td>
+                <td>Odi Sports Club</td>
+                <td>Odi Sports Club</td>
+            </tr>
+            <tr>
+                <td>Fans Favourite Team</td>
+                <td>Odi Sports Club</td>
+                <td>Odi Sports Club</td>
+            </tr>
+            <tr>
+                <td>Fans Favourite Player</td>
+                <td>Abdulla Mohamed</td>
+                <td>Kaasinjaas</td>
+            </tr>
+            <tr>
+                <td>Mr Baibalaa</td>
+                <td>Mohamed Nawwaf "Maaky"</td>
+                <td>Zeppo</td>
+            </tr>
+            <tr>
+                <td>Best Coach</td>
+                <td>Farish Khalid "Faadde"</td>
+                <td>Zeppo</td>
+            </tr>
+            <tr>
+                <td>Top 5 Players</td>
+                <td>Mohamed Nawwaf "Maaky"</td>
+                <td>Zeppo</td>
+            </tr>
+            <tr>
+                <td>Top 5 Players</td>
+                <td>Farah Sham</td>
+                <td>BG Sports Club</td>
+            </tr>
+            <tr>
+                <td>Top 5 Players</td>
+                <td>Mohamed Mirsal Yasir "Miru"</td>
+                <td>BG Sports Club</td>
+            </tr>
+            <tr>
+                <td>Top 5 Players</td>
+                <td>Nuhaadh Rasheed "Noody"</td>
+                <td>Zeppo</td>
+            </tr>
+            <tr>
+                <td>Top 5 Players</td>
+                <td>Abdulla Nishan "Abo"</td>
+                <td>Zeppo</td>
+            </tr>
+        </table>
+    </section>
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Baibalaa MV</h3>
+                <p>Baibalaa MV is dedicated to preserving and celebrating the history of Baibalaa, the pride of the Maldives.</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hof.html">Glory Wall</a></li>
+                    <li><a href="rules.html">Rules</a></li>
+                    <li><a href="articles.html">Baibalaa Insights</a></li>
+                    <li><a href="tournaments.html">Tournaments</a></li>
+                    <li><a href="champions.html">Champions</a></li>
+                    <li><a href="mrbaibalaa.html">Mr. Baibalaa</a></li>
+                    <li><a href="players.html">Players | Coaches</a></li>
+                    <li><a href="memory_game.html">Flip Card Game</a></li>
+                    <li><a href="baibalaaiq.html">Baibalaa iQ</a></li>
+                    <li><a href="cards.html">Cards</a></li>
+                    <li><a href="highlights.html">Highlights</a></li>
+                  </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:baibalaamv@gmail.com">baibalaamv@gmail.com</a></p>
+                <div class="youtube-link">
+                    <a href="https://www.youtube.com/@baibalaamv" target="_blank">
+                        <img src="youtube.png" alt="YouTube Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Baibalaa MV. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
