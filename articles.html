@@ -50,6 +50,57 @@
 
     <section id="articles">
 
+        <article id="article-35">
+            <h2>🏆 Zeppo’s Rise to Glory — Champions of Eid Baibalaa Challenge 1447</h2>
+            <img src="https://i.imgur.com/BJJ1cCu.jpeg" alt="Baibalaa Tournament 2025">
+            <p><strong>Published on:</strong> 6th April 2026, 16:13</p>
+            <p class="justified">From a promising young squad to champions of the biggest stage, Zeppo’s journey in Eid Baibalaa Challenge 1447 is a story of belief, preparation, and determination.</p>
+            <p class="justified">Last year, Zeppo showed glimpses of their potential. A young and energetic team, they fought their way to the semi-finals before falling short against Lorenzo Sports Club. Despite the loss, that campaign laid the foundation — it was clear that this was a team building towards something bigger.</p>
+            <p class="justified">This year, Zeppo returned with a clear mission: not just to compete, but to win.</p>
+            <p class="justified">They strengthened their squad with key additions, including last year’s Mr Baibalaa, Abo, alongside impactful players like Maaky, Hambe, and Noody. With Faadde continuing as head coach — the same mastermind who guided the young squad to the semi-finals the previous year — there was already a strong system in place. This time, it was sharper, more experienced, and fully focused.</p>
+            <p class="justified">But this success wasn’t just about players on the field. The preparation involved everyone — players, coach, management, and passionate supporters — all aligned with one goal: the championship.</p>
+            <p class="justified">And when the tournament began, Zeppo delivered.</p>
+            <p class="justified">They proved their strength against top teams, defeating Odi Sports Club, Club Kaasinjee, and Lorenzo Sports Club along the way. Each victory showed their growth — not just in skill, but in composure, teamwork, and belief.
+
+Then came the ultimate test.
+</p>
+            <p class="justified">In the final, Zeppo faced the kings of Baibalaa — BG Sports Club, a team rich in history with 10 championship titles. It was the toughest challenge possible, but Zeppo rose to the occasion. With confidence, discipline, and championship mentality, they overcame the giants and clinched the title.</p>
+            <p class="justified">From a young team with potential to champions of Eid Baibalaa Challenge 1447, Zeppo’s journey is proof that success is built over time — through hard work, smart preparation, and unwavering belief.</p>
+            <p class="justified">This wasn’t only luck.
+This was a team that prepared for gold — and earned it. 🏆
+</p>
+        
+            <!-- Comment Section for Article 1 -->
+            <section id="comment-section-35" class="comment-section">
+                <h2>Leave a Comment</h2>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="text" id="visitor-name-35" maxlength="25" placeholder="Your Name"
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;" />
+            
+                    <textarea id="comment-box-35" rows="4" cols="50" maxlength="150" placeholder="Write your comment here..."
+                        style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #333; color: white; border-left: 4px solid gold;"></textarea>
+            
+                    <button id="submit-comment-btn-35" 
+                        style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin-top: 15px;">
+                        Submit Comment
+                    </button>
+                    <!-- Toggle Comments Button (Always Visible) -->
+                    <button id="toggle-comments-btn-35" 
+                    style="margin-top: 10px; padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+        Show Comments
+    </button>
+                </div>
+            </section>
+            
+            <!-- Comments Display for Article 1 -->
+            <section id="comments-display-35" class="comments-display">
+                <h2>Comments</h2>
+                <div id="comments-list-35" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </section>
+        </article>
+
         <article id="article-34">
             <h2>The Final Showdown – Kings vs Challengers</h2>
             <img src="https://i.imgur.com/uLTJidh.jpeg" alt="Baibalaa Tournament 2025">
@@ -1929,6 +1980,7 @@ This trend has impacted the club’s dominance, as their name hasn’t been at t
             document.getElementById("comments-display-32").style.display = "none";
             document.getElementById("comments-display-33").style.display = "none";
             document.getElementById("comments-display-34").style.display = "none";
+            document.getElementById("comments-display-35").style.display = "none";
         });
 
     // Function to toggle the comments visibility
@@ -1978,6 +2030,7 @@ function toggleComments(articleId) {
         document.getElementById("toggle-comments-btn-32").addEventListener("click", () => toggleComments(32));
         document.getElementById("toggle-comments-btn-33").addEventListener("click", () => toggleComments(33));
         document.getElementById("toggle-comments-btn-34").addEventListener("click", () => toggleComments(34));
+        document.getElementById("toggle-comments-btn-35").addEventListener("click", () => toggleComments(35));
 
     function displayComments(articleId) {
     const commentsRef = ref(db, `comments/${articleId}`); // Fetch comments for the specific articleId
@@ -2046,6 +2099,7 @@ function toggleComments(articleId) {
     document.getElementById("submit-comment-btn-32").addEventListener("click", () => submitComment(32));
     document.getElementById("submit-comment-btn-33").addEventListener("click", () => submitComment(33));
     document.getElementById("submit-comment-btn-34").addEventListener("click", () => submitComment(34));
+    document.getElementById("submit-comment-btn-35").addEventListener("click", () => submitComment(35));
 
     // ✅ Load comments on page load for all articles
     window.onload = () => {
@@ -2081,6 +2135,7 @@ function toggleComments(articleId) {
         displayComments(32);
         displayComments(33);
         displayComments(34);
+        displayComments(35);
     };
 </script>
 
