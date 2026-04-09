@@ -941,3 +941,8 @@ nav ul li.dropdown .dropdown-content li a:hover {
     aspect-ratio: 16 / 6; /* Slightly taller on mobile for better visibility */
   }
 }
+
+.no-video {
+    color: #999;
+    font-style: italic;
+}
